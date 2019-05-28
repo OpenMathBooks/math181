@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-pizza-splitting-problem">
+  
+  <title>Pizza Splitting Problem</title>
+  
+  <introduction>
+    <p>
+      At a birthday party everyone is about to sit down for pizza.  All the pizzas in this problem are the same size, and the same toppings are distributed evenly on all pizzas.
+    </p>
+    
+    <p>
+      (Quick Warm UP Problem) At one table there are 4 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Carlos knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, so he wants to sit at the table at which he will end up with the most pizza.  Which table should he choose?  Assume that the pizzas are uncut until all chairs at the table are occupied.   
+    </p>
+  </introduction>
+  
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        What if, at one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly.  He still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied. 
+      </p>
+    </statement>
+  </exercise>
+  
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Now, assume that each pizza is already cut into 12 equal pieces. At one table there are 3 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Which table should he choose? 
+      </p>
+    </statement>
+  </exercise>
+  
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Suppose now that, instead of dividing up the pizza separately at each table, the hosts decide to give all 18 people equal amounts from the 7 pizzas.  Carlos realizes that this means that the amount everyone ends up with is in between the amounts they would have ended up with if each pizza had only been shared among those at the same table.  How can we state this observation in terms of fractions?  How can we state this observation in terms of straight-line graphs?  Is there a general relationship about fractions that this is illustrating?  Is there a general graphical relationship that this is illustrating? 
+      </p>
+    </statement>
+  </exercise>
+  
+  <pagebreak />
+  
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Maria solved problem 2 on handout 1 by using graph paper and drawing two straight lines.  She is wondering what the lines represent, what their equations are and what other problems could be solved with them, now that the lines are drawn.  She is also wondering what the slope of each line represents.  What can we tell Maria on these questions?
+      </p>
+      <sidebyside width="90%">
+        <image source="images/pizza-splitting-problem.png"/>     
+      </sidebyside>
+    </statement>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        (Problem 2 on Handout 1) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.   
+      </p>
+    </statement>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Create and interpret a double number line way to solve this problem.
+      </p>
+    </statement>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Create and interpret a People vs Pizza graph to solve this problem, and relate it to the previous double number line.
+      </p>
+    </statement>
+  </exercise>
+</worksheet>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <xi:include href="./bookinfo.ptx"/>
+
+  <book xml:id="workbook">
+    <title>Mathematics for Elementary Teachers</title>
+    <subtitle>A Workbook</subtitle>
+    
+    <xi:include href="./frontmatter.ptx"/>
+    <chapter>
+      <title>Worksheets</title>
+
+    <xi:include href="./worksheets/ws-pizza-splitting-problem.ptx"/>
+    
+    
+    </chapter>
+    
+    <!-- <xi:include href="./backmatter.ptx"/> -->
+  </book>
+</pretext>
+

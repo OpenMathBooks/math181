@@ -34,15 +34,15 @@
 
 # PreTeXt distribution root
 # Example: PTX = ../mathbook  (or PTX = /users/oscar/GitHub/mathbook)
-PTX =
+PTX = ../mathbook
 
 # source clone location
-# Example: BOOK = ./ (or DMOI = /users/oscar/GitHub/book)
-BOOK =
+# Example: BOOK = . (or DMOI = /users/oscar/GitHub/book)
+BOOK = .
 
 # Products are built in subdirectories
 # of a "scratch" directory
-SCRATCH =
+SCRATCH = .
 
 
 # These are executables to helper applications
@@ -53,10 +53,10 @@ SAGE = sage
 
 # LaTeX engine, executable
 # xelatex is preferable, but pdflatex is another option
-ENGINE = xelatex
+ENGINE = pdflatex
 
 # PDF viewer (eg "open -a preview" on Mac)
-PDFVIEWER = okular
+PDFVIEWER = open -a preview
 
 # HTML viewer  (eg "open -a firefox", "open -a safari", on Mac)
-HTMLVIEWER = chrome
+HTMLVIEWER = open -a chrome

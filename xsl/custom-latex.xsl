@@ -11,7 +11,7 @@
 <!-- Parts of this file were adapted from the author guide at https://github.com/rbeezer/mathbook and the analagous file at https://github.com/twjudson/aata -->
 <!-- Conveniences for classes of similar elements -->
 <!DOCTYPE xsl:stylesheet [
-    <!ENTITY % entities SYSTEM "entities.ent">
+    <!ENTITY % entities SYSTEM "../../mathbook/xsl/entities.ent">
     %entities;
 ]>
 
@@ -20,7 +20,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
 <!-- Assumes current file is in discrete-text/xsl and that the mathbook repository is adjacent -->
-<xsl:import href="mathbook-latex.xsl" />
+<xsl:import href="../../mathbook/xsl/mathbook-latex.xsl" />
 <!-- Assumes next file can be found in discrete-text/xsl -->
 <xsl:import href="custom-common.xsl" />
 
@@ -52,8 +52,8 @@
 <!-- Non-empty string makes it happen    -->
 <!-- Scale works well for "CONFIDENTIAL" -->
 <!-- or  for "DRAFT YYYY/MM/DD"          -->
-<xsl:param name="latex.watermark" select="''"/>
-<xsl:param name="latex.watermark.scale" select="2.0"/>
+<xsl:param name="watermark" select="''"/>
+<xsl:param name="watermark.scale" select="2.0"/>
 <!--  -->
 <!-- Author's Tools                                            -->
 <!-- Set the author-tools parameter to 'yes'                   -->
@@ -129,8 +129,8 @@
 <!-- Include a style file at the end of the preamble: -->
 
 <xsl:param name="latex.preamble.late">
-  <xsl:text>%This should load all the style information that ptx does not.&#xa;</xsl:text>
-    <xsl:text>\input{latex-preamble-styles}&#xa;</xsl:text>
+  <!-- <xsl:text>%This should load all the style information that ptx does not.&#xa;</xsl:text>
+    <xsl:text>\input{latex-preamble-styles}&#xa;</xsl:text> -->
 </xsl:param>
 
 
@@ -143,94 +143,44 @@
 
 <!-- Remove "half-title" leading page with -->
 <!-- title only, at about 1:2 split    -->
-<xsl:template match="book" mode="half-title" >
+<!-- <xsl:template match="book" mode="half-title" >
     <xsl:text>%% no half-title&#xa;</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 <!-- Remove Ad card (may contain list of other books        -->
 <!-- Or may be overridden to make title page spread -->
 <!-- Obverse of half-title                          -->
-<xsl:template match="book" mode="ad-card">
+<!-- <xsl:template match="book" mode="ad-card">
     <xsl:text>%% No adcard&#xa;</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 
 <!-- Import custom title page -->
-<xsl:template match="book" mode="title-page">
+<!-- <xsl:template match="book" mode="title-page">
     <xsl:text>%% begin: title page&#xa;</xsl:text>
     <xsl:text>%% my custom page.&#xa;</xsl:text>
     <xsl:text>\input{frontmatter/title-page}&#xa;</xsl:text>
     <xsl:text>%% end: title page&#xa;</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 <!-- Import custom copyright page -->
-<xsl:template match="book" mode="copyright-page" >
+<!-- <xsl:template match="book" mode="copyright-page" >
     <xsl:text>%% begin: copyright-page&#xa;</xsl:text>
     <xsl:text>\input{frontmatter/copyright-page}&#xa;</xsl:text>
     <xsl:text>%% end:   copyright-page&#xa;</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 <!-- Dedication style -->
-<xsl:template match="dedication/p|dedication/p[1]" priority="1">
+<!-- <xsl:template match="dedication/p|dedication/p[1]" priority="1">
     <xsl:text>\begin{flushright}\large%&#xa;</xsl:text>
         <xsl:apply-templates />
     <xsl:text>%&#xa;</xsl:text>
     <xsl:text>\end{flushright}&#xa;</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 
 
 
-<!-- answer blank for other kinds of answers                 -->
-<!-- TODO: gradually eliminate "var"'s presence from static  -->
-<!-- coming from a WeBWorK server, similar to how the above  -->
-<!-- replaced var with fillin for quantitative answers.      -->
-<xsl:template match="webwork-reps/static//statement//var[@form]">
-    <xsl:choose>
-        <!-- TODO: make semantic list style in preamble -->
-        <xsl:when test="@form='popup'" >
-            <!-- <xsl:text>\quad(\begin{itemize*}[label=$\square$,leftmargin=3em,itemjoin=\hspace{1em}]&#xa;</xsl:text>
-            <xsl:for-each select="li">
-                <xsl:if test="not(p[.='?']) and not(normalize-space(.)='?')">
-                    <xsl:text>\item{}</xsl:text>
-                    <xsl:apply-templates select='.' />
-                    <xsl:text>&#xa;</xsl:text>
-                </xsl:if>
-            </xsl:for-each>
-            <xsl:text>\end{itemize*})\quad&#xa;</xsl:text> -->
-        </xsl:when>
-        <!-- Radio button alternatives:                                -->
-        <!--     \ocircle (wasysym), \circledcirc (amssymb),           -->
-        <!--     \textopenbullet, \textbigcircle (textcomp)            -->
-        <!-- To adjust in preamble, test on:                           -->
-        <!-- $document-root//webwork-reps/static//var[@form='buttons'] -->
-        <xsl:when test="@form='buttons'" >
-            <xsl:text>\par&#xa;</xsl:text>
-            <xsl:text>\begin{itemize}[label=$\odot$,leftmargin=3em,]&#xa;</xsl:text>
-            <xsl:for-each select="li">
-                <xsl:text>\item{}</xsl:text>
-                <xsl:apply-templates select='.' />
-                <xsl:text>&#xa;</xsl:text>
-            </xsl:for-each>
-            <xsl:text>\end{itemize}&#xa;</xsl:text>
-        </xsl:when>
-        <xsl:when test="@form='checkboxes'" >
-            <xsl:text>\par&#xa;</xsl:text>
-            <xsl:text>\begin{itemize*}[label=$\square$,leftmargin=3em,itemjoin=\hspace{4em plus 1em minus 3em}]&#xa;</xsl:text>
-            <xsl:for-each select="li">
-                <xsl:if test="not(p[.='?']) and not(normalize-space(.)='?')">
-                    <xsl:text>\item{}</xsl:text>
-                    <xsl:apply-templates select='.' />
-                    <xsl:text>&#xa;</xsl:text>
-                </xsl:if>
-            </xsl:for-each>
-            <xsl:text>\end{itemize*}&#xa;</xsl:text>
-        </xsl:when>
-        <xsl:when test="@form='essay'" >
-            <xsl:text>\quad\lbrack Essay Answer\rbrack</xsl:text>
-        </xsl:when>
-    </xsl:choose>
-</xsl:template>
 
 <!-- Restyle paragraphs: -->
 <!-- "paragraphs" -->
