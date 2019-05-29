@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-ID-HERE">
+  
+  <title>[title]</title>
+  
+  <introduction>  
+    <p>
+ 
+    </p>
+  </introduction>
+  
+  <exercise workspace="10%">
+    <statement>
+      <p>
+
+      </p>
+    </statement>
+  </exercise>
+  
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </exercise>
+  
+  <pagebreak />
+  
+  <exercise workspace="10%">
+    <statement>
+      <p>
+      </p>
+      <sidebyside width="90%">
+        <image source="images/img.png"/>     
+      </sidebyside>
+    </statement>
+  </exercise>
+
+</worksheet>
