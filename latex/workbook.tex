@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2019-05-28T16:57:15-06:00    *%
+%*    on 2019-06-13T13:20:27-06:00    *%
 %*                                    *%
 %*      https://pretextbook.org       *%
 %*                                    *%
@@ -197,7 +197,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \label{#6}%
 }{}%
 %%
-%% Styles for the traditional LaTeX divisions
+%% Styles for six traditional LaTeX divisions
 \titleformat{\chapter}[display]
 {\normalfont\huge\bfseries}{\divisionnameptx\space\thechapter}{20pt}{\Huge#1}
 [{\Large\authorsptx}]
@@ -226,12 +226,19 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 {\normalfont\normalsize\bfseries}{}{0pt}{#1}
 [{\normalsize\authorsptx}]
 \titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titleformat{\paragraph}[hang]
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{#1}
+[{\small\authorsptx}]
+\titleformat{name=\paragraph,numberless}[block]
+{\normalfont\normalsize\bfseries}{}{0pt}{#1}
+[{\normalsize\authorsptx}]
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5em}
 %%
 %% Semantic Macros
 %% To preserve meaning in a LaTeX file
 %% Only defined here if required in this document
-%% Subdivision Numbering, Chapters, Sections, Subsections, etc
-%% Subdivision numbers may be turned off at some level ("depth")
+%% Division Numbering: Chapters, Sections, Subsections, etc
+%% Division numbers may be turned off at some level ("depth")
 %% A section *always* has depth 1, contrary to us counting from the document root
 %% The latex default is 3.  If a larger number is present here, then
 %% removing this command may make some cross-references ambiguous
@@ -273,6 +280,36 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% Localize LaTeX supplied names (possibly none)
 \renewcommand*{\chaptername}{Chapter}
 \setcounter{chapter}{-1}
+%% For improved tables
+\usepackage{array}
+%% Some extra height on each row is desirable, especially with horizontal rules
+%% Increment determined experimentally
+\setlength{\extrarowheight}{0.2ex}
+%% Define variable thickness horizontal rules, full and partial
+%% Thicknesses are 0.03, 0.05, 0.08 in the  booktabs  package
+\newcommand{\hrulethin}  {\noalign{\hrule height 0.04em}}
+\newcommand{\hrulemedium}{\noalign{\hrule height 0.07em}}
+\newcommand{\hrulethick} {\noalign{\hrule height 0.11em}}
+%% We preserve a copy of the \setlength package before other
+%% packages (extpfeil) get a chance to load packages that redefine it
+\let\oldsetlength\setlength
+\newlength{\Oldarrayrulewidth}
+\newcommand{\crulethin}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.04em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}%
+\newcommand{\crulemedium}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.07em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+\newcommand{\crulethick}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.11em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%% Single letter column specifiers defined via array package
+\newcolumntype{A}{!{\vrule width 0.04em}}
+\newcolumntype{B}{!{\vrule width 0.07em}}
+\newcolumntype{C}{!{\vrule width 0.11em}}
 %% Figures, Tables, Listings, Named Lists, Floats
 %% The [H]ere option of the float package fixes floats in-place,
 %% in deference to web usage, where floats are totally irrelevant
@@ -290,6 +327,13 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% http://tex.stackexchange.com/questions/16195
 \makeatletter
 \let\c@figure\c@cthm
+\makeatother
+%% Adjust stock table environment so that it no longer floats
+\SetupFloatingEnvironment{table}{fileext=lot,placement={H},within=section,name=Table}
+\captionsetup[table]{labelfont=bf}
+%% http://tex.stackexchange.com/questions/16195
+\makeatletter
+\let\c@table\c@cthm
 \makeatother
 %% hyperref driver does not need to be specified, it will be detected
 %% Footnote marks in tcolorbox have broken linking under
@@ -376,17 +420,17 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 {\centering
 \vspace*{0.14\textheight}
 %% Target for xref to top-level element is ToC
-\addtocontents{toc}{\protect\hypertarget{workbook}{}}
+\addtocontents{toc}{\protect\hypertarget{book-337162172672}{}}
 {\Huge Mathematics for Elementary Teachers}\\[\baselineskip]
 {\LARGE A Workbook}\\[3\baselineskip]
 {\Large \textbraceleft{}author\textbraceright{}}\\[0.5\baselineskip]
 {\Large \textbraceleft{}institution\textbraceright{}}\\[3\baselineskip]
-{\Large May 28, 2019}\\}
+{\Large June 13, 2019}\\}
 \clearpage
 %% end:   title page
 %% begin: copyright-page
 \thispagestyle{empty}
-\hypertarget{colophon-1}{}\vspace*{\stretch{2}}
+\hypertarget{colophon-337162152000}{}\vspace*{\stretch{2}}
 \noindent{\bfseries Website}: \href{[website]}{\mono{[website]}}\par\medskip
 \noindent\textcopyright{}[copyright-year]\quad{}[copyright-holder]\\[0.5\baselineskip]
  This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/4.0/}{http:\slash{}\slash{}creativecommons.org\slash{}licenses\slash{}by-sa\slash{}4.0\slash{}}\par\medskip
@@ -406,7 +450,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \typeout{Chapter 0 Worksheets}
 \typeout{************************************************}
 %
-\begin{chapterptx}{Worksheets}{}{Worksheets}{}{}{chapter-1}
+\begin{chapterptx}{Worksheets}{}{Worksheets}{}{}{chapter-337162170704}
 %
 %
 \typeout{************************************************}
@@ -414,29 +458,36 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \typeout{************************************************}
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-section-numberless}{Pizza Splitting Problem}{}{Pizza Splitting Problem}{}{}{ws-pizza-splitting-problem}
+\begin{worksheet-section-numberless}{Pizza Splitting Problem}{}{Pizza Splitting Problem}{}{}{worksheet-337162165808}
 \begin{introduction}{}%
-\hypertarget{p-1}{}%
+\hypertarget{p-337162164704}{}%
 At a birthday party everyone is about to sit down for pizza.  All the pizzas in this problem are the same size, and the same toppings are distributed evenly on all pizzas.%
-\par
-\hypertarget{p-2}{}%
-(Quick Warm UP Problem) At one table there are 4 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Carlos knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, so he wants to sit at the table at which he will end up with the most pizza.  Which table should he choose?  Assume that the pizzas are uncut until all chairs at the table are occupied.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{exercise-1}%
-\hypertarget{p-3}{}%
+\hypertarget{p-337162136528}{}%
+(Quick Warm UP Problem) At one table there are 4 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Carlos knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, so he wants to sit at the table at which he will end up with the most pizza.  Which table should he choose?  Assume that the pizzas are uncut until all chairs at the table are occupied.%
+\begin{divisionexercise}{1}{}{0.1}{
+        What if, at one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly.  He still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.
+      }%
+\hypertarget{p-337162135056}{}%
 What if, at one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly.  He still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{exercise-2}%
-\hypertarget{p-4}{}%
+\begin{divisionexercise}{2}{}{0.1}{
+        Now, assume that each pizza is already cut into 12 equal pieces. At one table there are 3 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Which table should he choose?
+      }%
+\hypertarget{p-337162133296}{}%
 Now, assume that each pizza is already cut into 12 equal pieces. At one table there are 3 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Which table should he choose?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{exercise-3}%
-\hypertarget{p-5}{}%
+\begin{divisionexercise}{3}{}{0.1}{
+        Suppose now that, instead of dividing up the pizza separately at each table, the hosts decide to give all 18 people equal amounts from the 7 pizzas.  Carlos realizes that this means that the amount everyone ends up with is in between the amounts they would have ended up with if each pizza had only been shared among those at the same table.  How can we state this observation in terms of fractions?  How can we state this observation in terms of straight-line graphs?  Is there a general relationship about fractions that this is illustrating?  Is there a general graphical relationship that this is illustrating?
+      }%
+\hypertarget{p-337162131664}{}%
 Suppose now that, instead of dividing up the pizza separately at each table, the hosts decide to give all 18 people equal amounts from the 7 pizzas.  Carlos realizes that this means that the amount everyone ends up with is in between the amounts they would have ended up with if each pizza had only been shared among those at the same table.  How can we state this observation in terms of fractions?  How can we state this observation in terms of straight-line graphs?  Is there a general relationship about fractions that this is illustrating?  Is there a general graphical relationship that this is illustrating?%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{4}{}{0.1}{exercise-4}%
-\hypertarget{p-6}{}%
+\begin{divisionexercise}{4}{}{0.1}{
+        Maria solved problem 2 on handout 1 by using graph paper and drawing two straight lines.  She is wondering what the lines represent, what their equations are and what other problems could be solved with them, now that the lines are drawn.  She is also wondering what the slope of each line represents.  What can we tell Maria on these questions?
+      }%
+\hypertarget{p-337162129280}{}%
 Maria solved problem 2 on handout 1 by using graph paper and drawing two straight lines.  She is wondering what the lines represent, what their equations are and what other problems could be solved with them, now that the lines are drawn.  She is also wondering what the slope of each line represents.  What can we tell Maria on these questions?%
 \begin{sidebyside}{1}{0.05}{0.05}{0}%
 \begin{sbspanel}{0.9}%
@@ -444,17 +495,132 @@ Maria solved problem 2 on handout 1 by using graph paper and drawing two straigh
 \end{sbspanel}%
 \end{sidebyside}%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{}{exercise-5}%
-\hypertarget{p-7}{}%
+\begin{divisionexercise}{5}{}{}{
+        (Problem 2 on Handout 1) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.
+      }%
+\hypertarget{p-337162126480}{}%
 (Problem 2 on Handout 1) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{}{exercise-6}%
-\hypertarget{p-8}{}%
+\begin{divisionexercise}{6}{}{}{
+        Create and interpret a double number line way to solve this problem.
+      }%
+\hypertarget{p-337162124752}{}%
 Create and interpret a double number line way to solve this problem.%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{}{}{exercise-7}%
-\hypertarget{p-9}{}%
+\begin{divisionexercise}{7}{}{}{
+        Create and interpret a People vs Pizza graph to solve this problem, and relate it to the previous double number line.
+      }%
+\hypertarget{p-337162123424}{}%
 Create and interpret a People vs Pizza graph to solve this problem, and relate it to the previous double number line.%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 A Trip to Quintopia!}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{A Trip to Quintopia!}{}{A Trip to Quintopia!}{}{}{worksheet-337162160096}
+\begin{introduction}{}%
+\hypertarget{p-337162154000}{}%
+While on an Intergalactic Numismatics Tour, you encounter a meteor shower and are forced to make an unscheduled stop on the planet Quintopia.  The monetary system used in Quintopia consists of three coins:  a yellow coin (worth \textdollar{}1US), a red coin (worth five yellow coins), and a blue coin (worth five red coins).%
+\par
+\hypertarget{p-337162112384}{}%
+Quintopia turns out to be a rather dull place to visit.  To help pass the time at the shuttle docking area, you and a fellow passenger play a game with the Quintopia currency.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{0.1}{Coin Trading GameMaterials:  Quintopia coins (yellow, red and blue), one die (number cube)Players:  2 or moreRules:  The youngest player starts, and players alternate turns afterwards.On each turn, a player rolls the die and places that many yellow coins on his or her game sheet (see below).Whenever possible, a player MUST trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and place them in their respective columns.  As a result, no more than four coins of any one color should be a player’s game sheet.The first player to get two blue coins is the winner.BLUEREDYELLOW}%
+\hypertarget{p-337162111040}{}%
+Coin Trading Game%
+\par
+\hypertarget{p-337162110656}{}%
+Materials:  Quintopia coins (yellow, red and blue), one die (number cube)%
+\par
+\hypertarget{p-337162110272}{}%
+Players:  2 or more%
+\par
+\hypertarget{p-337162109888}{}%
+Rules:  The youngest player starts, and players alternate turns afterwards.%
+\par
+\hypertarget{p-337162109424}{}%
+On each turn, a player rolls the die and places that many yellow coins on his or her game sheet (see below).%
+\par
+\hypertarget{p-337162108928}{}%
+Whenever possible, a player MUST trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and place them in their respective columns.  As a result, no more than four coins of any one color should be a player’s game sheet.%
+\par
+\hypertarget{p-337162108272}{}%
+The first player to get two blue coins is the winner.%
+\begin{table}
+\centering
+\begin{tabular}{lll}
+BLUE&RED&YELLOW\tabularnewline[0pt]
+&&
+\end{tabular}
+\end{table}
+\end{divisionexercise}%
+\clearpage
+\begin{divisionexercise}{2}{}{0.1}{Coin Trading Game RevisitedA third passenger has been watching you play.  She suggests it is more challenging to start the game with TWO BLUE coins and to remove the number of yellow coins equal to the number rolled on each turn.  The first player to remove all of the coins from his or her playing board is the winner.  (Note: On the last turn, the number rolled may exceed the number of yellow chips remaining.)  Before you play this new version of the coin trading game, think about how you can remove yellow coins when you have none on your board (you only have two blue ones).  Note: Do not trade in coins until you absolutely need to.  For example, you should not immediately trade in your two blue coins all for red or yellow coins.BLUEREDYELLOWWhat do you notice?What do you wonder?What ideas do you have?}%
+\hypertarget{p-337162100224}{}%
+Coin Trading Game Revisited%
+\par
+\hypertarget{p-337162099792}{}%
+A third passenger has been watching you play.  She suggests it is more challenging to start the game with TWO BLUE coins and to remove the number of yellow coins equal to the number rolled on each turn.  The first player to remove all of the coins from his or her playing board is the winner.  (Note: On the last turn, the number rolled may exceed the number of yellow chips remaining.)  Before you play this new version of the coin trading game, think about how you can remove yellow coins when you have none on your board (you only have two blue ones).  Note: Do not trade in coins until you absolutely need to.  For example, you should not immediately trade in your two blue coins all for red or yellow coins.%
+\begin{table}
+\centering
+\begin{tabular}{lll}
+BLUE&RED&YELLOW\tabularnewline[0pt]
+&&
+\end{tabular}
+\end{table}
+\hypertarget{p-337162092720}{}%
+What do you notice?%
+\par
+\hypertarget{p-337162092288}{}%
+What do you wonder?%
+\par
+\hypertarget{p-337162091856}{}%
+What ideas do you have?%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Shopping in Quintopia}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Shopping in Quintopia}{}{Shopping in Quintopia}{}{}{worksheet-337162090896}
+\begin{introduction}{}%
+\hypertarget{p-337162154240}{}%
+You got bored on the ship deck and decided to visit Quintopia to do some shopping. You know you can only use Quintopian currency while shopping, so you exchange some of your US dollars before your shopping and you have 312\textunderscore{}5 (in Quintopian currency), which means 3 blue, 1 red, and 2 yellows. While you’re shopping, recall that whenever possible, you must trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and so on.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{0.1}{Before you left the ship, you won a gift card worth 24_5 (in Quintopian currency). How much total money do you have now for shopping? Show your process at least in two different ways
+      }%
+\hypertarget{p-337162144656}{}%
+Before you left the ship, you won a gift card worth 24\textunderscore{}5 (in Quintopian currency). How much total money do you have now for shopping? Show your process at least in two different ways%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{You spent 43_5 at Appletopia store. How much Quintopian money do you have left?  Explain your process.}%
+\hypertarget{p-337162143168}{}%
+You spent 43\textunderscore{}5 at Appletopia store. How much Quintopian money do you have left?  Explain your process.%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.1}{You saw a pair of shoes you like and it only costs 32_5. Since it is very cheap, you want to buy three pairs. How much will it cost to buy three pairs of shoes (in Quintopia currency)? Solve this question in two different ways.}%
+\hypertarget{p-337162140944}{}%
+You saw a pair of shoes you like and it only costs 32\textunderscore{}5. Since it is very cheap, you want to buy three pairs. How much will it cost to buy three pairs of shoes (in Quintopia currency)? Solve this question in two different ways.%
+\end{divisionexercise}%
+\clearpage
+\begin{divisionexercise}{4}{}{0.1}{After buying all three pairs of shoes, how much money do you have left? }%
+\hypertarget{p-337162138960}{}%
+After buying all three pairs of shoes, how much money do you have left?%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.1}{After all your shopping you had some dinner which cost 102_5. Do you have enough Quintopian money to pay? If not, how much Quintopian money do you need?  If you have an extra $6 US currency, will that be enough to pay the rest?}%
+\hypertarget{p-337162137408}{}%
+After all your shopping you had some dinner which cost 102\textunderscore{}5. Do you have enough Quintopian money to pay? If not, how much Quintopian money do you need?  If you have an extra \textdollar{}6 US currency, will that be enough to pay the rest?%
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{}{0.1}{Discuss Base 5 and Base 10; and meaning of addition, subtraction and multiplication operations. Discuss expanded form.}%
+\hypertarget{p-337162089840}{}%
+Discuss Base 5 and Base 10; and meaning of addition, subtraction and multiplication operations. Discuss expanded form.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
 \restoregeometry

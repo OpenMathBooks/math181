@@ -6,17 +6,18 @@
   <book xml:id="workbook">
     <title>Mathematics for Elementary Teachers</title>
     <subtitle>A Workbook</subtitle>
-    
+
     <xi:include href="./frontmatter.ptx"/>
     <chapter>
       <title>Worksheets</title>
 
     <xi:include href="./worksheets/ws-pizza-splitting-problem.ptx"/>
-    
-    
+    <xi:include href="./worksheets/ws-quintopia.ptx"/>
+    <xi:include href="./worksheets/ws-quintopia-shopping.ptx"/>
+
+
     </chapter>
-    
+
     <!-- <xi:include href="./backmatter.ptx"/> -->
   </book>
 </pretext>
-
