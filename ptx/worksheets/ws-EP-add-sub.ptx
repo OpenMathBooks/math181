@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-EP-add-sub">
+
+  <title>Extra Practice: Addition and Subtraction in Other Bases</title>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>Carry out the steps of the usual addition algorithm in the problem below in the designated base.  Carefully EXPLAIN what each of the “carried” (regrouped/traded in) numbers mean.  You may want to refer to the appropriate base blocks in your explanation.</p>
+      <p><m>33_4+12_4</m> and <m>263_7+324_7</m></p>
+    </statement>
+  </exercise>
+
+
+  <exercise workspace="10%">
+    <statement>
+      <p>Carry out the steps of the usual subtraction algorithm in the problem below in the designated base.  Carefully EXPLAIN what each of the “borrowed” (regrouped/traded in) numbers means.  You may want to refer to the appropriate base blocks in your explanation.</p>
+      <p><m>341_8 - 154_8 </m> and <m>301_4 -213_4</m></p>      
+    </statement>
+  </exercise>
+
+</worksheet>

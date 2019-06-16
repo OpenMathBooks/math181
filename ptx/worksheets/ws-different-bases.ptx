@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-different-bases">
+
+  <title>Different Bases</title>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>In the base-7 number system, the amount: 1 flat, 6 longs, and 5 small cubes is recorded as <m>165_{seven}</m> or <m>165_7</m>. In general, we record the base as a subscript except for base 10, since that is the assumed standard base.  Note that in base-7, 1 long is worth 7 small cubes, and 1 flat is worth 7 longs (which is 49 small cubes).</p>
+      <p>For each number below, determine how many small cubes that number would consist of if we traded in all the base blocks for their corresponding number of small cubes.  In other words, what amount of small cubes is represented by each number in its corresponding base?</p>
+      <ol type="a">
+      <li><m>1202_{three}   = </m></li>
+      <li><m>53_{seven}       = </m> </li>
+      <li><m>203_{four}       = </m> </li>
+      <li><m>10111_{two}       = </m> </li>
+    </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>What are the place values after the decimal point in base 10? For example, write the expanded form of 1.29 to show the place values. What about the place values in base 5 after the decimal point (e.g., 12.345) ?</p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>Write the following numbers in expanded form:</p>
+      <ol type="a">
+      <li><m>3,189.208 = </m></li>
+      <li><m>34.21_5      = </m> </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>What are the place values in base six?  What digits are needed?</p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>How do you immediately know there is an error in each statement?  How would we correctly represent these amounts in the given bases?</p>
+      <ol type="a">
+      <li>eleven <m>= 32_{three}</m></li>
+      <li>fifty-seven <m>= 108_{seven}</m> </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>In base 6, a particular number can be made with 10 large cubes, 9 flats, 7 longs, and 5 small cubes.  What is this number in base 6? (Hint: the answer is NOT <m>10975_6 </m>. Try to solve this without converting to base 10)?</p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>My last digit is a 0 when I am represented in base-5 and a 1 when represented in base-2.  What is my last digit when represented base-10? Explain.</p>
+    </statement>
+  </exercise>
+</worksheet>

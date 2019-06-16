@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-add-sub-algorithms">
+
+  <title>Algorithms for Addition and Subtraction</title>
+
+
+  <exercise workspace="10%">
+    <statement>
+      <p>Carry out the steps of the usual addition algorithm in the problems below in base 5.  Carefully EXPLAIN what each of the “carried” (regrouped/traded in) numbers mean.  You may want to refer to base 5 blocks in your explanation.</p>
+      <p> <m>43_{5}+12_{5}</m> and <m>243_{5}+324_{5}</m> </p>
+    </statement>
+  </exercise>
+
+<pagebreak />
+
+  <exercise workspace="10%">
+    <statement>
+      <p>Carry out the steps of the usual subtraction algorithm in the problem below using base 5.  Carefully EXPLAIN what each of the “borrowed” (regrouped/traded in) numbers means.  You may want to refer to base 5 blocks in your explanation.</p>
+      <p> <m>321_{5}-124_5 </m> and <m>301_5-213_5 </m> </p>
+    </statement>
+  </exercise>
+
+</worksheet>

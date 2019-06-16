@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-quintopia-2-shopping">
+
+  <title>Shopping in Quintopia</title>
+
+  <introduction>
+    <p>You got bored on the ship deck and decided to visit Quintopia to do some shopping. You know you can only use Quintopian currency while shopping, so you exchange some of your US dollars before your shopping and you have <m>312_{5}</m> (in Quintopian currency), which means 3 blue, 1 red, and 2 yellow coins. While you’re shopping, recall that whenever possible, you must trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and so on.</p>
+  </introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>Before you left the ship, you won a gift card worth <m>24_{5}</m> (in Quintopian currency). How much total money do you have now for shopping? Show your process at least in two different ways
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>You spent <m>43_{5}</m> at the Appletopia store. How much Quintopian money do you have left?  Explain your process.</p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>You saw a pair of shoes you like and it only costs <m>32_{5}</m>. Since it is very cheap, you want to buy three pairs. How much will it cost to buy three pairs of shoes (in Quintopia currency)? Solve this question in two different ways.</p>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise workspace="10%">
+    <statement>
+      <p>After buying all three pairs of shoes, how much money do you have left? </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>After all your shopping you had some dinner which cost <m>102_{5}</m> . Do you have enough Quintopian money to pay? If not, how much Quintopian money do you need?  If you have an extra $6 US currency, will that be enough to pay the rest?</p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>Discuss Base 5 and Base 10; and meaning of addition, subtraction and multiplication operations. Discuss expanded form.    </p>
+    </statement>
+  </exercise>
+
+</worksheet>
