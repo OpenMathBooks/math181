@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2019-06-14T18:45:28-06:00    *%
+%*    on 2019-06-17T07:02:44-07:00    *%
 %*                                    *%
 %*      https://pretextbook.org       *%
 %*                                    *%
@@ -197,7 +197,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \label{#6}%
 }{}%
 %%
-%% Styles for six traditional LaTeX divisions
+%% Styles for the traditional LaTeX divisions
 \titleformat{\chapter}[display]
 {\normalfont\huge\bfseries}{\divisionnameptx\space\thechapter}{20pt}{\Huge#1}
 [{\Large\authorsptx}]
@@ -226,19 +226,12 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 {\normalfont\normalsize\bfseries}{}{0pt}{#1}
 [{\normalsize\authorsptx}]
 \titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\titleformat{\paragraph}[hang]
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{#1}
-[{\small\authorsptx}]
-\titleformat{name=\paragraph,numberless}[block]
-{\normalfont\normalsize\bfseries}{}{0pt}{#1}
-[{\normalsize\authorsptx}]
-\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5em}
 %%
 %% Semantic Macros
 %% To preserve meaning in a LaTeX file
 %% Only defined here if required in this document
-%% Division Numbering: Chapters, Sections, Subsections, etc
-%% Division numbers may be turned off at some level ("depth")
+%% Subdivision Numbering, Chapters, Sections, Subsections, etc
+%% Subdivision numbers may be turned off at some level ("depth")
 %% A section *always* has depth 1, contrary to us counting from the document root
 %% The latex default is 3.  If a larger number is present here, then
 %% removing this command may make some cross-references ambiguous
@@ -287,6 +280,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \setlength{\extrarowheight}{0.2ex}
 %% Define variable thickness horizontal rules, full and partial
 %% Thicknesses are 0.03, 0.05, 0.08 in the  booktabs  package
+\makeatletter
 \newcommand{\hrulethin}  {\noalign{\hrule height 0.04em}}
 \newcommand{\hrulemedium}{\noalign{\hrule height 0.07em}}
 \newcommand{\hrulethick} {\noalign{\hrule height 0.11em}}
@@ -310,6 +304,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \newcolumntype{A}{!{\vrule width 0.04em}}
 \newcolumntype{B}{!{\vrule width 0.07em}}
 \newcolumntype{C}{!{\vrule width 0.11em}}
+\makeatother
 %% Figures, Tables, Listings, Named Lists, Floats
 %% The [H]ere option of the float package fixes floats in-place,
 %% in deference to web usage, where floats are totally irrelevant
@@ -434,17 +429,17 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 {\centering
 \vspace*{0.14\textheight}
 %% Target for xref to top-level element is ToC
-\addtocontents{toc}{\protect\hypertarget{book-108972384704}{}}
+\addtocontents{toc}{\protect\hypertarget{workbook}{}}
 {\Huge Mathematics for Elementary Teachers}\\[\baselineskip]
 {\LARGE A Workbook}\\[3\baselineskip]
 {\Large \textbraceleft{}author\textbraceright{}}\\[0.5\baselineskip]
 {\Large \textbraceleft{}institution\textbraceright{}}\\[3\baselineskip]
-{\Large June 14, 2019}\\}
+{\Large June 17, 2019}\\}
 \clearpage
 %% end:   title page
 %% begin: copyright-page
 \thispagestyle{empty}
-\hypertarget{colophon-108972146512}{}\vspace*{\stretch{2}}
+\hypertarget{colophon-1}{}\vspace*{\stretch{2}}
 \noindent{\bfseries Website}: \href{[website]}{\mono{[website]}}\par\medskip
 \noindent\textcopyright{}[copyright-year]\quad{}[copyright-holder]\\[0.5\baselineskip]
  This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/4.0/}{http:\slash{}\slash{}creativecommons.org\slash{}licenses\slash{}by-sa\slash{}4.0\slash{}}\par\medskip
@@ -464,7 +459,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \typeout{Chapter 0 Worksheets}
 \typeout{************************************************}
 %
-\begin{chapterptx}{Worksheets}{}{Worksheets}{}{}{chapter-108972349024}
+\begin{chapterptx}{Worksheets}{}{Worksheets}{}{}{chapter-1}
 %
 %
 \typeout{************************************************}
@@ -472,36 +467,28 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \typeout{************************************************}
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-section-numberless}{Pizza Splitting Problem}{}{Pizza Splitting Problem}{}{}{worksheet-108972566064}
+\begin{worksheet-section-numberless}{Pizza Splitting Problem}{}{Pizza Splitting Problem}{}{}{ws-pizza-splitting-problem}
 \begin{introduction}{}%
-\hypertarget{p-108972444400}{}%
+\hypertarget{p-1}{}%
 At a birthday party everyone is about to sit down for pizza.  All the pizzas in this problem are the same size, and the same toppings are distributed evenly on all pizzas.%
 \end{introduction}%
-\hypertarget{p-108972493168}{}%
+\hypertarget{p-2}{}%
 (Quick Warm UP Problem) At one table there are 4 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Carlos knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, so he wants to sit at the table at which he will end up with the most pizza.  Which table should he choose?  Assume that the pizzas are uncut until all chairs at the table are occupied.%
-\begin{divisionexercise}{1}{}{0.1}{
-        What if, at one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly.  He still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.
-      }%
-\hypertarget{p-108972639280}{}%
+\begin{divisionexercise}{1}{}{0.1}{exercise-1}%
+\hypertarget{p-3}{}%
 What if, at one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly.  He still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{
-        Now, assume that each pizza is already cut into 12 equal pieces. At one table there are 3 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Which table should he choose?
-      }%
-\hypertarget{p-108972773520}{}%
+\begin{divisionexercise}{2}{}{0.1}{exercise-2}%
+\hypertarget{p-4}{}%
 Now, assume that each pizza is already cut into 12 equal pieces. At one table there are 3 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Which table should he choose?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{
-        Suppose now that, instead of dividing up the pizza separately at each table, the hosts decide to give all 18 people equal amounts from the 7 pizzas.  Carlos realizes that this means that the amount everyone ends up with is in between the amounts they would have ended up with if each pizza had only been shared among those at the same table.  How can we state this observation in terms of fractions?  How can we state this observation in terms of straight-line graphs?  Is there a general relationship about fractions that this is illustrating?  Is there a general graphical relationship that this is illustrating?
-      }%
-\hypertarget{p-108972872928}{}%
+\begin{divisionexercise}{3}{}{0.1}{exercise-3}%
+\hypertarget{p-5}{}%
 Suppose now that, instead of dividing up the pizza separately at each table, the hosts decide to give all 18 people equal amounts from the 7 pizzas.  Carlos realizes that this means that the amount everyone ends up with is in between the amounts they would have ended up with if each pizza had only been shared among those at the same table.  How can we state this observation in terms of fractions?  How can we state this observation in terms of straight-line graphs?  Is there a general relationship about fractions that this is illustrating?  Is there a general graphical relationship that this is illustrating?%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{4}{}{0.1}{
-        Maria solved problem 2 on handout 1 by using graph paper and drawing two straight lines.  She is wondering what the lines represent, what their equations are and what other problems could be solved with them, now that the lines are drawn.  She is also wondering what the slope of each line represents.  What can we tell Maria on these questions?
-      }%
-\hypertarget{p-108972906080}{}%
+\begin{divisionexercise}{4}{}{0.1}{exercise-4}%
+\hypertarget{p-6}{}%
 Maria solved problem 2 on handout 1 by using graph paper and drawing two straight lines.  She is wondering what the lines represent, what their equations are and what other problems could be solved with them, now that the lines are drawn.  She is also wondering what the slope of each line represents.  What can we tell Maria on these questions?%
 \begin{sidebyside}{1}{0.05}{0.05}{0}%
 \begin{sbspanel}{0.9}%
@@ -509,22 +496,16 @@ Maria solved problem 2 on handout 1 by using graph paper and drawing two straigh
 \end{sbspanel}%
 \end{sidebyside}%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{}{
-        (Problem 2 on Handout 1) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.
-      }%
-\hypertarget{p-108972970720}{}%
+\begin{divisionexercise}{5}{}{}{exercise-5}%
+\hypertarget{p-7}{}%
 (Problem 2 on Handout 1) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{}{
-        Create and interpret a double number line way to solve this problem.
-      }%
-\hypertarget{p-108973064128}{}%
+\begin{divisionexercise}{6}{}{}{exercise-6}%
+\hypertarget{p-8}{}%
 Create and interpret a double number line way to solve this problem.%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{}{}{
-        Create and interpret a People vs Pizza graph to solve this problem, and relate it to the previous double number line.
-      }%
-\hypertarget{p-108973218032}{}%
+\begin{divisionexercise}{7}{}{}{exercise-7}%
+\hypertarget{p-9}{}%
 Create and interpret a People vs Pizza graph to solve this problem, and relate it to the previous double number line.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -536,34 +517,34 @@ Create and interpret a People vs Pizza graph to solve this problem, and relate i
 \typeout{************************************************}
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-section-numberless}{A Trip to Quintopia!}{}{A Trip to Quintopia!}{}{}{worksheet-108973403696}
+\begin{worksheet-section-numberless}{A Trip to Quintopia!}{}{A Trip to Quintopia!}{}{}{ws-quintopia-1-intro}
 \begin{introduction}{}%
-\hypertarget{p-108973398080}{}%
+\hypertarget{p-10}{}%
 While on an Intergalactic Numismatics Tour, you encounter a meteor shower and are forced to make an unscheduled stop on the planet Quintopia.  The monetary system used in Quintopia consists of three coins:  a yellow coin (worth \textdollar{}1US), a red coin (worth five yellow coins), and a blue coin (worth five red coins).%
 \par
-\hypertarget{p-108973399488}{}%
+\hypertarget{p-11}{}%
 Quintopia turns out to be a rather dull place to visit.  To help pass the time at the shuttle docking area, you and a fellow passenger play a game with the Quintopia currency.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{Coin Trading GameMaterials:  Quintopia coins (yellow, red and blue), one die (number cube)Players:  2 or moreRules:  The youngest player starts, and players alternate turns afterwards.On each turn, a player rolls the die and places that many yellow coins on his or her game sheet (see below).Whenever possible, a player MUST trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and place them in their respective columns.  As a result, no more than four coins of any one color should be a player’s game sheet.The first player to get two blue coins is the winner.BLUEREDYELLOW}%
-\hypertarget{p-108973403184}{}%
+\begin{divisionexercise}{1}{}{0.1}{exercise-8}%
+\hypertarget{p-12}{}%
 Coin Trading Game%
 \par
-\hypertarget{p-108973469776}{}%
+\hypertarget{p-13}{}%
 Materials:  Quintopia coins (yellow, red and blue), one die (number cube)%
 \par
-\hypertarget{p-108973478016}{}%
+\hypertarget{p-14}{}%
 Players:  2 or more%
 \par
-\hypertarget{p-108973481312}{}%
+\hypertarget{p-15}{}%
 Rules:  The youngest player starts, and players alternate turns afterwards.%
 \par
-\hypertarget{p-108973480784}{}%
+\hypertarget{p-16}{}%
 On each turn, a player rolls the die and places that many yellow coins on his or her game sheet (see below).%
 \par
-\hypertarget{p-108973482976}{}%
+\hypertarget{p-17}{}%
 Whenever possible, a player MUST trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and place them in their respective columns.  As a result, no more than four coins of any one color should be a player’s game sheet.%
 \par
-\hypertarget{p-108972271424}{}%
+\hypertarget{p-18}{}%
 The first player to get two blue coins is the winner.%
 \begin{table}
 \centering
@@ -574,11 +555,11 @@ BLUE&RED&YELLOW\tabularnewline[0pt]
 \end{table}
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{2}{}{0.1}{Coin Trading Game RevisitedA third passenger has been watching you play.  She suggests it is more challenging to start the game with TWO BLUE coins and to remove the number of yellow coins equal to the number rolled on each turn.  The first player to remove all of the coins from his or her playing board is the winner.  (Note: On the last turn, the number rolled may exceed the number of yellow chips remaining.)  Before you play this new version of the coin trading game, think about how you can remove yellow coins when you have none on your board (you only have two blue ones).  Note: Do not trade in coins until you absolutely need to.  For example, you should not immediately trade in your two blue coins all for red or yellow coins.BLUEREDYELLOWWhat do you notice?What do you wonder?What ideas do you have?}%
-\hypertarget{p-108973028960}{}%
+\begin{divisionexercise}{2}{}{0.1}{exercise-9}%
+\hypertarget{p-19}{}%
 Coin Trading Game Revisited%
 \par
-\hypertarget{p-108973137968}{}%
+\hypertarget{p-20}{}%
 A third passenger has been watching you play.  She suggests it is more challenging to start the game with TWO BLUE coins and to remove the number of yellow coins equal to the number rolled on each turn.  The first player to remove all of the coins from his or her playing board is the winner.  (Note: On the last turn, the number rolled may exceed the number of yellow chips remaining.)  Before you play this new version of the coin trading game, think about how you can remove yellow coins when you have none on your board (you only have two blue ones).  Note: Do not trade in coins until you absolutely need to.  For example, you should not immediately trade in your two blue coins all for red or yellow coins.%
 \begin{table}
 \centering
@@ -587,13 +568,13 @@ BLUE&RED&YELLOW\tabularnewline[0pt]
 &&
 \end{tabular}
 \end{table}
-\hypertarget{p-108973607984}{}%
+\hypertarget{p-21}{}%
 What do you notice?%
 \par
-\hypertarget{p-108973090128}{}%
+\hypertarget{p-22}{}%
 What do you wonder?%
 \par
-\hypertarget{p-108972926640}{}%
+\hypertarget{p-23}{}%
 What ideas do you have?%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -605,35 +586,34 @@ What ideas do you have?%
 \typeout{************************************************}
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-section-numberless}{Shopping in Quintopia}{}{Shopping in Quintopia}{}{}{worksheet-108973110128}
+\begin{worksheet-section-numberless}{Shopping in Quintopia}{}{Shopping in Quintopia}{}{}{ws-quintopia-2-shopping}
 \begin{introduction}{}%
-\hypertarget{p-108972711168}{}%
+\hypertarget{p-24}{}%
 You got bored on the ship deck and decided to visit Quintopia to do some shopping. You know you can only use Quintopian currency while shopping, so you exchange some of your US dollars before your shopping and you have \(312_{5}\) (in Quintopian currency), which means 3 blue, 1 red, and 2 yellow coins. While you’re shopping, recall that whenever possible, you must trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and so on.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{Before you left the ship, you won a gift card worth 24_{5} (in Quintopian currency). How much total money do you have now for shopping? Show your process at least in two different ways
-      }%
-\hypertarget{p-108973559760}{}%
+\begin{divisionexercise}{1}{}{0.1}{exercise-10}%
+\hypertarget{p-25}{}%
 Before you left the ship, you won a gift card worth \(24_{5}\) (in Quintopian currency). How much total money do you have now for shopping? Show your process at least in two different ways%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{You spent 43_{5} at the Appletopia store. How much Quintopian money do you have left?  Explain your process.}%
-\hypertarget{p-108972755680}{}%
+\begin{divisionexercise}{2}{}{0.1}{exercise-11}%
+\hypertarget{p-26}{}%
 You spent \(43_{5}\) at the Appletopia store. How much Quintopian money do you have left?  Explain your process.%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{You saw a pair of shoes you like and it only costs 32_{5}. Since it is very cheap, you want to buy three pairs. How much will it cost to buy three pairs of shoes (in Quintopia currency)? Solve this question in two different ways.}%
-\hypertarget{p-108973164672}{}%
+\begin{divisionexercise}{3}{}{0.1}{exercise-12}%
+\hypertarget{p-27}{}%
 You saw a pair of shoes you like and it only costs \(32_{5}\). Since it is very cheap, you want to buy three pairs. How much will it cost to buy three pairs of shoes (in Quintopia currency)? Solve this question in two different ways.%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{4}{}{0.1}{After buying all three pairs of shoes, how much money do you have left? }%
-\hypertarget{p-108973015840}{}%
+\begin{divisionexercise}{4}{}{0.1}{exercise-13}%
+\hypertarget{p-28}{}%
 After buying all three pairs of shoes, how much money do you have left?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{After all your shopping you had some dinner which cost 102_{5} . Do you have enough Quintopian money to pay? If not, how much Quintopian money do you need?  If you have an extra $6 US currency, will that be enough to pay the rest?}%
-\hypertarget{p-108973384608}{}%
+\begin{divisionexercise}{5}{}{0.1}{exercise-14}%
+\hypertarget{p-29}{}%
 After all your shopping you had some dinner which cost \(102_{5}\) . Do you have enough Quintopian money to pay? If not, how much Quintopian money do you need?  If you have an extra \textdollar{}6 US currency, will that be enough to pay the rest?%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.1}{Discuss Base 5 and Base 10; and meaning of addition, subtraction and multiplication operations. Discuss expanded form.    }%
-\hypertarget{p-108972534528}{}%
+\begin{divisionexercise}{6}{}{0.1}{exercise-15}%
+\hypertarget{p-30}{}%
 Discuss Base 5 and Base 10; and meaning of addition, subtraction and multiplication operations. Discuss expanded form.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -645,37 +625,37 @@ Discuss Base 5 and Base 10; and meaning of addition, subtraction and multiplicat
 \typeout{************************************************}
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-section-numberless}{Connections to Base Blocks}{}{Connections to Base Blocks}{}{}{worksheet-108973209840}
-\begin{divisionexercise}{1}{}{0.1}{Using base-5 blocks, discuss how Quintopian currency would be represented. For example, represent  314_{5} and  43_{5}. If you have $58 dollars how would you represent it using base-5 blocks?}%
-\hypertarget{p-108973025952}{}%
+\begin{worksheet-section-numberless}{Connections to Base Blocks}{}{Connections to Base Blocks}{}{}{ws-quintopia-3-base-connections}
+\begin{divisionexercise}{1}{}{0.1}{exercise-16}%
+\hypertarget{p-31}{}%
 Using base-5 blocks, discuss how Quintopian currency would be represented. For example, represent \(314_{5}\) and \(43_{5}\). If you have \textdollar{}58 dollars how would you represent it using base-5 blocks?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{	If you have 412_{5} in base-5 blocks and you trade in all the blocks for their corresponding number of small cubes, how many small cubes would you have?}%
-\hypertarget{p-108973122752}{}%
+\begin{divisionexercise}{2}{}{0.1}{exercise-17}%
+\hypertarget{p-32}{}%
 If you have \(412_{5}\) in base-5 blocks and you trade in all the blocks for their corresponding number of small cubes, how many small cubes would you have?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{How do base-5 blocks compare to base-10 blocks? What are the place values worth in base-5 vs. base-10?What are the minimum and maximum number of blocks of each place value that you need in base-5? What about base-10?How does this relate to the digits you need to represent numbers in base-5 vs. base-10?}%
-\hypertarget{p-108972932992}{}%
+\begin{divisionexercise}{3}{}{0.1}{exercise-18}%
+\hypertarget{p-33}{}%
 How do base-5 blocks compare to base-10 blocks?%
 \par
-\hypertarget{p-108972688912}{}%
+\hypertarget{p-34}{}%
 What are the place values worth in base-5 vs. base-10?%
 \par
-\hypertarget{p-108972294000}{}%
+\hypertarget{p-35}{}%
 What are the minimum and maximum number of blocks of each place value that you need in base-5?%
 \par
-\hypertarget{p-108973124992}{}%
+\hypertarget{p-36}{}%
 What about base-10?%
 \par
-\hypertarget{p-108972848128}{}%
+\hypertarget{p-37}{}%
 How does this relate to the digits you need to represent numbers in base-5 vs. base-10?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{Using base-10 blocks find the sum and the difference of 208 and 93.}%
-\hypertarget{p-108973214832}{}%
+\begin{divisionexercise}{4}{}{0.1}{exercise-19}%
+\hypertarget{p-38}{}%
 Using base-10 blocks find the sum and the difference of 208 and 93.%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{List multiple things that you observe that are similar and different between addition and subtraction in base 5 (Quintopia) compared to base 10. }%
-\hypertarget{p-108972485440}{}%
+\begin{divisionexercise}{5}{}{0.1}{exercise-20}%
+\hypertarget{p-39}{}%
 List multiple things that you observe that are similar and different between addition and subtraction in base 5 (Quintopia) compared to base 10.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -687,21 +667,22 @@ List multiple things that you observe that are similar and different between add
 \typeout{************************************************}
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-section-numberless}{Algorithms for Addition and Subtraction}{}{Algorithms for Addition and Subtraction}{}{}{worksheet-108972476864}
-\begin{divisionexercise}{1}{}{0.1}{Carry out the steps of the usual addition algorithm in the problems below in base 5.  Carefully EXPLAIN what each of the “carried” (regrouped/traded in) numbers mean.  You may want to refer to base 5 blocks in your explanation. 43_{5}+12_{5} and 243_{5}+324_{5} }%
-\hypertarget{p-108972694272}{}%
-Carry out the steps of the usual addition algorithm in the problems below in base 5.  Carefully EXPLAIN what each of the “carried” (regrouped\slash{}traded in) numbers mean.  You may want to refer to base 5 blocks in your explanation.%
+\begin{worksheet-section-numberless}{Algorithms for Addition and Subtraction}{}{Algorithms for Addition and Subtraction}{}{}{ws-add-sub-algorithms}
+\begin{divisionexercise}{1}{}{0.1}{exercise-21}%
+\hypertarget{p-40}{}%
+Carry out the steps of the usual addition algorithm in the problems below in base 5.  Carefully EXPLAIN what each of the ``carried'' (regrouped\slash{}traded in) numbers mean.  You may want to refer to base 5 blocks in your explanation.%
 \par
-\hypertarget{p-108973191568}{}%
+\hypertarget{p-41}{}%
 \(43_{5}+12_{5}\) and \(243_{5}+324_{5}\)%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{2}{}{0.1}{Carry out the steps of the usual subtraction algorithm in the problem below using base 5.  Carefully EXPLAIN what each of the “borrowed” (regrouped/traded in) numbers means.  You may want to refer to base 5 blocks in your explanation. 321_{5}-124_5  and 301_5-213_5  }%
-\hypertarget{p-108973014416}{}%
-Carry out the steps of the usual subtraction algorithm in the problem below using base 5.  Carefully EXPLAIN what each of the “borrowed” (regrouped\slash{}traded in) numbers means.  You may want to refer to base 5 blocks in your explanation.%
-\par
-\hypertarget{p-108972878112}{}%
-\(321_{5}-124_5 \) and \(301_5-213_5 \)%
+\begin{divisionexercise}{2}{}{0.1}{exercise-22}%
+\hypertarget{p-42}{}%
+Carry out the steps of the usual subtraction algorithm in the problem below using base 5.  Carefully EXPLAIN what each of the ``borrowed'' (regrouped\slash{}traded in) numbers means.  You may want to refer to base 5 blocks in your explanation.%
+\begin{equation*}
+321_{5}-124_5 \text{ and } 301_5-213_5 \text{.}
+\end{equation*}
+%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
 \restoregeometry
@@ -712,53 +693,53 @@ Carry out the steps of the usual subtraction algorithm in the problem below usin
 \typeout{************************************************}
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-section-numberless}{Different Bases}{}{Different Bases}{}{}{worksheet-108973292304}
-\begin{divisionexercise}{1}{}{0.1}{In the base-7 number system, the amount: 1 flat, 6 longs, and 5 small cubes is recorded as 165_{seven} or 165_7 . In general, we record the base as a subscript except for base 10, since that is the assumed standard base.  Note that in base-7, 1 long is worth 7 small cubes, and 1 flat is worth 7 longs (which is 49 small cubes).For each number below, determine how many small cubes that number would consist of if we traded in all the base blocks for their corresponding number of small cubes.  In other words, what amount of small cubes is represented by each number in its corresponding base?1202_{three}   = 53_{seven}       =  203_{four}       =  10111_{two}       =  }%
-\hypertarget{p-108973368720}{}%
-In the base-7 number system, the amount: 1 flat, 6 longs, and 5 small cubes is recorded as \(165_{seven}\) or \(165_7\) . In general, we record the base as a subscript except for base 10, since that is the assumed standard base.  Note that in base-7, 1 long is worth 7 small cubes, and 1 flat is worth 7 longs (which is 49 small cubes).%
+\begin{worksheet-section-numberless}{Different Bases}{}{Different Bases}{}{}{ws-different-bases}
+\begin{divisionexercise}{1}{}{0.1}{exercise-23}%
+\hypertarget{p-43}{}%
+In the base-7 number system, the amount: 1 flat, 6 longs, and 5 small cubes is recorded as \(165_{seven}\) or \(165_7\). In general, we record the base as a subscript except for base 10, since that is the assumed standard base.  Note that in base-7, 1 long is worth 7 small cubes, and 1 flat is worth 7 longs (which is 49 small cubes).%
 \par
-\hypertarget{p-108973213136}{}%
+\hypertarget{p-44}{}%
 For each number below, determine how many small cubes that number would consist of if we traded in all the base blocks for their corresponding number of small cubes.  In other words, what amount of small cubes is represented by each number in its corresponding base?%
 \leavevmode%
 \begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-108972159360}{}\(1202_{three}   = \)%
-\item\hypertarget{li-108972339360}{}\(53_{seven}       = \)%
-\item\hypertarget{li-108972344304}{}\(203_{four}       = \)%
-\item\hypertarget{li-108972365536}{}\(10111_{two}       = \)%
+\item\hypertarget{li-1}{}\(1202_{three}   = \)%
+\item\hypertarget{li-2}{}\(53_{seven}       = \)%
+\item\hypertarget{li-3}{}\(203_{four}       = \)%
+\item\hypertarget{li-4}{}\(10111_{two}       = \)%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{What are the place values after the decimal point in base 10? For example, write the expanded form of 1.29 to show the place values. What about the place values in base 5 after the decimal point (e.g., 12.345) ?}%
-\hypertarget{p-108972883472}{}%
+\begin{divisionexercise}{2}{}{0.1}{exercise-24}%
+\hypertarget{p-45}{}%
 What are the place values after the decimal point in base 10? For example, write the expanded form of 1.29 to show the place values. What about the place values in base 5 after the decimal point (e.g., 12.345) ?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{Write the following numbers in expanded form:3,189.208 = 34.21_5      =  }%
-\hypertarget{p-108973311616}{}%
+\begin{divisionexercise}{3}{}{0.1}{exercise-25}%
+\hypertarget{p-46}{}%
 Write the following numbers in expanded form:%
 \leavevmode%
 \begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-108973425264}{}\(3,189.208 = \)%
-\item\hypertarget{li-108972162144}{}\(34.21_5      = \)%
+\item\hypertarget{li-5}{}\(3,189.208 = \)%
+\item\hypertarget{li-6}{}\(34.21_5      = \)%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{What are the place values in base six?  What digits are needed?}%
-\hypertarget{p-108973252480}{}%
+\begin{divisionexercise}{4}{}{0.1}{exercise-26}%
+\hypertarget{p-47}{}%
 What are the place values in base six?  What digits are needed?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{How do you immediately know there is an error in each statement?  How would we correctly represent these amounts in the given bases?eleven = 32_{three}fifty-seven = 108_{seven} }%
-\hypertarget{p-108973552528}{}%
+\begin{divisionexercise}{5}{}{0.1}{exercise-27}%
+\hypertarget{p-48}{}%
 How do you immediately know there is an error in each statement?  How would we correctly represent these amounts in the given bases?%
 \leavevmode%
 \begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-108972171568}{}eleven \(= 32_{three}\)%
-\item\hypertarget{li-108973049408}{}fifty-seven \(= 108_{seven}\)%
+\item\hypertarget{li-7}{}eleven \(= 32_{three}\)%
+\item\hypertarget{li-8}{}fifty-seven \(= 108_{seven}\)%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.1}{In base 6, a particular number can be made with 10 large cubes, 9 flats, 7 longs, and 5 small cubes.  What is this number in base 6? (Hint: the answer is NOT 10975_6 . Try to solve this without converting to base 10)?}%
-\hypertarget{p-108972442528}{}%
+\begin{divisionexercise}{6}{}{0.1}{exercise-28}%
+\hypertarget{p-49}{}%
 In base 6, a particular number can be made with 10 large cubes, 9 flats, 7 longs, and 5 small cubes.  What is this number in base 6? (Hint: the answer is NOT \(10975_6 \). Try to solve this without converting to base 10)?%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{}{0.1}{My last digit is a 0 when I am represented in base-5 and a 1 when represented in base-2.  What is my last digit when represented base-10? Explain.}%
-\hypertarget{p-108973307136}{}%
+\begin{divisionexercise}{7}{}{0.1}{exercise-29}%
+\hypertarget{p-50}{}%
 My last digit is a 0 when I am represented in base-5 and a 1 when represented in base-2.  What is my last digit when represented base-10? Explain.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -770,19 +751,19 @@ My last digit is a 0 when I am represented in base-5 and a 1 when represented in
 \typeout{************************************************}
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-section-numberless}{Extra Practice: Addition and Subtraction in Other Bases}{}{Extra Practice: Addition and Subtraction in Other Bases}{}{}{worksheet-108973615520}
-\begin{divisionexercise}{1}{}{0.1}{Carry out the steps of the usual addition algorithm in the problem below in the designated base.  Carefully EXPLAIN what each of the “carried” (regrouped/traded in) numbers mean.  You may want to refer to the appropriate base blocks in your explanation.33_4+12_4 and 263_7+324_7}%
-\hypertarget{p-108973332624}{}%
+\begin{worksheet-section-numberless}{Extra Practice: Addition and Subtraction in Other Bases}{}{Extra Practice: Addition and Subtraction in Other Bases}{}{}{ws-EP-add-sub}
+\begin{divisionexercise}{1}{}{0.1}{exercise-30}%
+\hypertarget{p-51}{}%
 Carry out the steps of the usual addition algorithm in the problem below in the designated base.  Carefully EXPLAIN what each of the “carried” (regrouped\slash{}traded in) numbers mean.  You may want to refer to the appropriate base blocks in your explanation.%
 \par
-\hypertarget{p-108972162688}{}%
+\hypertarget{p-52}{}%
 \(33_4+12_4\) and \(263_7+324_7\)%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{Carry out the steps of the usual subtraction algorithm in the problem below in the designated base.  Carefully EXPLAIN what each of the “borrowed” (regrouped/traded in) numbers means.  You may want to refer to the appropriate base blocks in your explanation.341_8 - 154_8  and 301_4 -213_4}%
-\hypertarget{p-108999316288}{}%
+\begin{divisionexercise}{2}{}{0.1}{exercise-31}%
+\hypertarget{p-53}{}%
 Carry out the steps of the usual subtraction algorithm in the problem below in the designated base.  Carefully EXPLAIN what each of the “borrowed” (regrouped\slash{}traded in) numbers means.  You may want to refer to the appropriate base blocks in your explanation.%
 \par
-\hypertarget{p-108972291216}{}%
+\hypertarget{p-54}{}%
 \(341_8 - 154_8 \) and \(301_4 -213_4\)%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}

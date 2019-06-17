@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-quintopia-3-base-connections
-  ">
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-quintopia-3-base-connections">
 
   <title>Connections to Base Blocks</title>
 
@@ -9,13 +8,17 @@
 
   <exercise workspace="10%">
     <statement>
-      <p>Using base-5 blocks, discuss how Quintopian currency would be represented. For example, represent <m> 314_{5}</m> and <m> 43_{5}</m>. If you have $58 dollars how would you represent it using base-5 blocks?</p>
+      <p>
+        Using base-5 blocks, discuss how Quintopian currency would be represented. For example, represent <m> 314_{5}</m> and <m> 43_{5}</m>. If you have $58 dollars how would you represent it using base-5 blocks?
+      </p>
     </statement>
   </exercise>
 
   <exercise workspace="10%">
     <statement>
-      <p>	If you have <m>412_{5}</m> in base-5 blocks and you trade in all the blocks for their corresponding number of small cubes, how many small cubes would you have?</p>
+      <p>
+        If you have <m>412_{5}</m> in base-5 blocks and you trade in all the blocks for their corresponding number of small cubes, how many small cubes would you have?
+      </p>
     </statement>
   </exercise>
 
@@ -23,23 +26,37 @@
 
   <exercise workspace="10%">
     <statement>
-      <p>How do base-5 blocks compare to base-10 blocks? </p>
-      <p>What are the place values worth in base-5 vs. base-10?</p>
-      <p>What are the minimum and maximum number of blocks of each place value that you need in base-5? </p>
-      <p>What about base-10?</p>
-      <p>How does this relate to the digits you need to represent numbers in base-5 vs. base-10?</p>
+      <p>
+        How do base-5 blocks compare to base-10 blocks? 
+      </p>
+      <p>
+        What are the place values worth in base-5 vs. base-10?
+      </p>
+      <p>
+        What are the minimum and maximum number of blocks of each place value that you need in base-5?
+      </p>
+      <p>
+        What about base-10?
+      </p>
+      <p>
+        How does this relate to the digits you need to represent numbers in base-5 vs. base-10?
+      </p>
     </statement>
   </exercise>
 
   <exercise workspace="10%">
     <statement>
-      <p>Using base-10 blocks find the sum and the difference of 208 and 93.</p>
+      <p>
+        Using base-10 blocks find the sum and the difference of 208 and 93.
+      </p>
     </statement>
   </exercise>
 
   <exercise workspace="10%">
     <statement>
-      <p>List multiple things that you observe that are similar and different between addition and subtraction in base 5 (Quintopia) compared to base 10. </p>
+      <p>
+        List multiple things that you observe that are similar and different between addition and subtraction in base 5 (Quintopia) compared to base 10.
+      </p>
     </statement>
   </exercise>
 
