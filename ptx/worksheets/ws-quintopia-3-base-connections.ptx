@@ -24,10 +24,10 @@
 
 
 
-  <exercise workspace="10%">
+  <!-- <exercise workspace="10%">
     <statement>
       <p>
-        How do base-5 blocks compare to base-10 blocks? 
+        How do base-5 blocks compare to base-10 blocks?
       </p>
       <p>
         What are the place values worth in base-5 vs. base-10?
@@ -42,7 +42,30 @@
         How does this relate to the digits you need to represent numbers in base-5 vs. base-10?
       </p>
     </statement>
+  </exercise> -->
+
+  <exercise workspace="10%">
+    <statement>
+    <ol type="i">
+      <li>
+        How do base-5 blocks compare to base-10?
+      </li>
+      <li>
+        What are the place values worth in base-5 vs. base-10?
+      </li>
+      <li>
+        What are the minimum and maximum number of blocks of each place value that you can have in base-5?
+      </li>
+      <li>
+        What about base-10?
+      </li>
+      <li>
+        How does this relate to the digits you can use to represent numbers in base-5 vs. base-10?
+      </li>
+    </ol>
+    </statement>
   </exercise>
+
 
   <exercise workspace="10%">
     <statement>

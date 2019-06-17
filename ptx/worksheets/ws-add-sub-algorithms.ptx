@@ -8,10 +8,10 @@
   <exercise workspace="10%">
     <statement>
       <p>
-        Carry out the steps of the usual addition algorithm in the problems below in base 5.  Carefully EXPLAIN what each of the <q>carried</q> (regrouped/traded in) numbers mean.  You may want to refer to base 5 blocks in your explanation.
+        Carry out the steps of the usual addition algorithm in the problems below in base 5.  Carefully EXPLAIN what each of the <q>carried</q> (regrouped or traded in) numbers mean.  You may want to refer to base 5 blocks in your explanation.
       </p>
       <p>
-        <m>43_{5}+12_{5}</m> and <m>243_{5}+324_{5}</m> 
+        <me>43_{5}+12_{5} \text{ and } 243_{5}+324_{5}</me>
       </p>
     </statement>
   </exercise>
@@ -21,11 +21,11 @@
   <exercise workspace="10%">
     <statement>
       <p>
-        Carry out the steps of the usual subtraction algorithm in the problem below using base 5.  Carefully EXPLAIN what each of the <q>borrowed</q> (regrouped/traded in) numbers means.  You may want to refer to base 5 blocks in your explanation.
+        Carry out the steps of the usual subtraction algorithm in the problem below using base 5.  Carefully EXPLAIN what each of the <q>borrowed</q> (regrouped or traded in) numbers means.  You may want to refer to base 5 blocks in your explanation.
         <me>321_{5}-124_5 \text{ and } 301_5-213_5 </me>.
       </p>
-      
-      
+
+
     </statement>
   </exercise>
 
