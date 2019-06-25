@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-numberline-add-sub">
+
+  <title>Addition and Subtraction on Number Lines and Different Strategies</title>
+
+  <introduction>
+    <p>
+      Each exercise below uses a different strategy for solving an addition or subtraction.
+    </p>
+  </introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Starting in 2nd grade, students are expected to use open (unlabeled) number lines to help them add and subtract two-digit numbers using methods beyond the standard addition and subtraction algorithms.   Explain the following students’ strategies for subtraction.
+      </p>
+      <ol type="a">
+        <li>
+          <!-- <sidebyside width="90%"> -->
+            <image source="images/numberline-add-sub-1a.png"/>
+          <!-- </sidebyside> -->
+        </li>
+        <li>
+          <!-- <sidebyside width="90%"> -->
+            <image source="images/numberline-add-sub-1b.png"/>
+          <!-- </sidebyside> -->
+          <!-- Would not compile with 'sidebyside' commands, but works fine without -->
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        For each of the following, find the missing number by using an open number line (similar to those above).  Show at least two different methods for calculating the missing number on two different number lines.
+      </p>
+      <ol type="a">
+        <li>
+          <me> 42+?=91 </me>
+        </li>
+        <li>
+          <me> 57+?=83 </me>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        For the subtraction question <me>53-8</me>, Delia, a second grade student has done the following work: <me>53- 3=50-5=45</me>
+      </p>
+      <ol type="a">
+        <li>
+          Explain how Delia came up with the numbers 3 and 5.
+        </li>
+        <li>
+          Discuss Delia's method and answer to provide feedback.
+        </li>
+        <li>
+          Use her method to answer the subtraction problem: <me>317-28</me>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+</worksheet>

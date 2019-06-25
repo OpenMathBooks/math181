@@ -18,6 +18,8 @@
     <xi:include href="./worksheets/ws-add-sub-algorithms.ptx"/>
     <xi:include href="./worksheets/ws-different-bases.ptx"/>
     <xi:include href="./worksheets/ws-EP-add-sub.ptx"/>
+    <xi:include href="./worksheets/ws-mental-add-properties.ptx"/>
+    <xi:include href="./worksheets/ws-numberline-add-sub.ptx"/>
 
 
     </chapter>
