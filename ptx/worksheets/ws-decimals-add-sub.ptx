@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-decimals-add-sub">
+
+  <title>Decimal Addition and Subtraction with Manipulatives</title>
+
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Show how to represent 73.2 using base blocks.  What block is worth 1 here?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Show how to represent 34.16 using base blocks.  What block is worth 1 here?
+      </p>
+    </statement>
+  </exercise>
+
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        	Show how to use base blocks to model <me>23.25+2.9</me>.  Be sure to connect this to the way that we add in the standard algorithm.  What is the importance of lining up the decimal points when we add with the standard algorithm?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        	Ellie solves the subtraction problem <me>2.5-0.13</me> with toothpicks.  She represents 2.5 with 2 bundles of 10 toothpicks and 5 individual toothpicks.  She represents 0.13 with 1 bundle of 10 toothpicks and 3 individual toothpicks.  Ellie gets the answer 1.2.  Is she correct?  Explain.
+      </p>
+    </statement>
+  </exercise>
+</worksheet>

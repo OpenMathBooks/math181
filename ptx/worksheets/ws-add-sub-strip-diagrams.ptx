@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-add-sub-strip-diagrams">
+
+  <title>Addition and Subtraction Problems with Strip (Tape) Diagrams</title>
+
+  <introduction>
+    <p>
+      Directions: For each problem create strip (tape) diagram(s) to model the situation.  Also write an equation that models the situation.  Be sure that your equation matches the actual actions in the story problem, not just how you’d solve it.
+    </p>
+  </introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Rachel had 17 CDs.  After she got some more CDs, she had 43 CDs.  How many CDs did Rachel get?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Rachel had 43 CDs.  After she gave some away, she had 17 CDs left.  How many did she give away?
+      </p>
+    </statement>
+  </exercise>
+
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Rachel had some CDs.  After she gave 26 away, she had 17 left.  How many CDs did Rachel have at the start?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Rachel has 43 CDs.  If 26 are hip hop and the rest are rap, how many rap CDs does she have?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Rachel has 43 CDs.  Benny has 26 CDs.  How many more CDs does Rachel have than Benny?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Benny has 26 CDs. Benny has 17 fewer CDs than Rachel.  How many CDs does Rachel have?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Rachel has 43 CDs. Rachel has 17 more CDs than Benny.  How many CDs does Benny have?
+      </p>
+    </statement>
+  </exercise>
+
+  
+</worksheet>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-add-sub-reasoning">
+
+  <title>Reasoning with Addition and Subtraction Scenarios</title>
+
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        1.	John and Anne want to calculate $37-$19 by first calculating <me>\$37-\$20=\$17 </me>
+        John says they must now subtract the $1 remaining from $17, while Anne says they must add it.  Who is correct?  Use two different models (e.g., number line and strip diagram) to represent this scenario to make it clear who is correct.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        John and Anne want to calculate $3.94 -$1.97 by first calculating <me> \$3.97-\$1.97 = \$2 </me>
+        John says in this case they also need to subtract the $0.03 remaining from $2, while Anne says they must add it.  Who is correct?  Use two different models (e.g., number line and strip diagram) to represent this scenario to make it clear who is correct.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        	Jamirez says he can calculate $3.74 -$1.97 by first adding $0.03 to each number and calculating $3.77-$2 instead.  How could we use a model/diagram to show that Jamirez’s method is also valid?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Jon’s time for running a lap in gym class is 1.4 minutes.  Jacky’s time is 1.32 minutes.  Jon thinks that he’s faster than Jacky since 4 is less than 32 so 1.4 must be less than 1.32.  Is Jon correct?  How we could convince the students whose time is faster and by how much?
+      </p>
+    </statement>
+  </exercise>
+
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        A local park’s program committee is raising money by holding mountain bike races on a course through the local park.  During each race, a computer tracks the competitors’ locations on the course using GPS tracking.  The table below shows how far each competitor is from a checkpoint.
+      </p>
+      <image source="images/reasoning-table-checkpoint.png"/>
+      <ol type ="a">
+        <li>
+          The checkpoint is represented by 0 on the number line below.  Locate and label points on the number line for the positions of each listed participant.
+          <image source="images/blank-number-line.png"/>
+        </li>
+        <li>
+          Which competitor is closest to the checkpoint?
+        </li>
+        <li>
+          Two competitors are the same distance from the checkpoint.  Are they in the same location?  Explain.
+        </li>
+        <li>
+          Who is closer to finishing the race – Bethany or Candace?
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Andrea and Marta are testing three different coolers to see which keeps the temperature the coolest.  They placed a bag of ice in each cooler, and then measured the air temperature inside each cooler after 90 minutes.  The temperatures are recorded below:
+      </p>
+        <image source="images/reasoning-table-cooler.png"/>
+      <p>Marta wrote the following inequality: -4.3 = -2.91 = 5.7
+        Andrea said Marta made a mistake, and that the inequality should be:
+        -2.91 = -4.3 = 5.7</p>
+      <p>
+        Is either student correct?  Explain.  Use a number line to help justify your answer.  What misconceptions might the student(s) have had that caused the incorrect inequality?
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>
