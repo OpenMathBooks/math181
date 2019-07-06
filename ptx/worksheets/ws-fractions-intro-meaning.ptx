@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-fractions-intro-meaning">
+
+  <title>Exploring Fractions</title>
+
+  <introduction>
+    <p>
+For each of the following explorations, keep in mind how you might explain your process.
+    </p>
+  </introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Area Model Representations
+      </p>
+      <ol type="a">
+        <li>
+          If the following rectangle is one whole, show two-thirds.
+          <sidebyside width="40%">
+            <image source="images/generic-rectangle.png"/>
+          </sidebyside>
+        </li>
+        <li>
+          If the following rectangle is one whole, show five-thirds.
+          <sidebyside width="40%">
+            <image source="images/generic-rectangle.png"/>
+          </sidebyside>
+        </li>
+        <li>
+          If the following rectangle is three-fourths, draw one whole.
+          <sidebyside width="30%">
+            <image source="images/generic-square.png"/>
+          </sidebyside>
+        </li>
+        <li>
+          If this rectangle is four-thirds, show what rectangle could be the whole.
+          <sidebyside width="40%">
+            <image source="images/generic-rectangle.png"/>
+          </sidebyside>
+        </li>
+        <li>Maria says that the shaded region below represents the fraction <m> \frac{9}{12} </m>. Carmina says the shaded region represents the fraction <m> \frac{9}{4} </m>. Explain why each of the two student’s answers can be considered correct.
+          <sidebyside width="50%">
+            <image source="images/nine-fourths-vs-twelfths.png"/>
+          </sidebyside>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Set Model Representations
+      </p>
+      <ol type="a">
+        <li>
+          If 14 counters are one whole, shade the counters that make three-sevenths.
+          <sidebyside width="30%">
+            <image source="images/fourteen-counters.png"/>
+          </sidebyside>
+        </li>
+        <li>
+          Draw 12 counters like part a. If 12 counters are one whole, how many are in five-thirds of a set?
+        </li>
+        <li>
+          Draw 21 coutners. If 21 counters are three-fifths of a set, how many counters are in the full set (1 whole)?
+        </li>
+        <li>
+          Draw 12 counters. If 12 counters are three-halves of a set, how many counters are in one set (1 whole)?
+        </li>
+        <li>
+          What fraction of this set is shaded in?
+          <sidebyside width="30%">
+            <image source="images/counters-one-third.png"/>
+          </sidebyside>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Cuisenaire Rods (For online Cuisenaire Rods: http://nrich.maths.org/4348)
+      </p>
+      <ol type="a">
+        <li>
+          Select a brown Cuisenaire Rod.  If brown is the whole, which rod is one-fourth?
+        </li>
+        <li>
+          If dark green is the whole, what rod represents two-thirds? What rod represents three-halves?
+        </li>
+        <li>
+          Select a dark green Cuisenaire Rod.  If dark green is two-thirds, what rod is the whole?
+        </li>
+        <li>
+          Select a yellow Cuisenaire Rod.  If yellow is five-fourths, what rod is one whole? What rod is 2?
+        </li>
+        <li>
+          Select a dark green Cuisenaire Rod.  If dark green is the whole, what fraction is the yellow rod?
+        </li>
+        <li>
+          If the brown rod is one whole, what fraction is the orange rod?
+        </li>
+        <li>
+          If the blue rod is 3, what rod represents <m> \frac{2}{3} </m>?
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <introduction>
+    <p>
+      Pattern Blocks Representation (yellow hexagon, blue parallelogram, red trapezoid, and green triangle)
+      (Online: http://www.mathplayground.com/patternblocks.html )
+    </p>
+  </introduction>
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If the yellow hexagon represents one whole:
+      </p>
+      <ol type="a">
+          <li>
+              What shape would represent <m> \frac{1}{2} </m> ?
+          </li>
+          <li>
+              What shape would represent <m> \frac{1}{3} </m> ?
+          </li>
+          <li>
+              What shape would represent <m> \frac{1}{6} </m> ?
+          </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If the blue parallelogram represents one whole:
+      </p>
+      <ol type="a">
+        <li>
+          What fraction would the red trapezoid represent?
+        </li>
+        <li>
+          What fraction would the green triangle represent?
+        </li>
+        <li>
+          What fraction would the yellow hexagon represent?
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If the double hexagon represents one whole:
+      </p>
+      <ol type="a">
+        <li>
+          What fraction would the red trapezoid represent?
+        </li>
+        <li>
+          What fraction would the green triangle represent?
+        </li>
+        <li>
+          What fraction would the yellow hexagon represent?
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If the red trapezoid equals <m> \frac{3}{5} </m>, what shape or shapes, when combined, could represent 1?  How many different shape combinations are there?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If the red trapezoid equals <m> \frac{3}{5} </m>, what shape or shapes, when combined, could represent 1?  How many different shape combinations are there?
+      </p>
+    </statement>
+  </exercise>
+
+  <introduction>
+    <p>
+      Number Line Representation
+    </p>
+  </introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        On the number line below, <m> a= 0 </m> and <m> b=1 </m>.  Use the meaning of fractions to plot three-fifths.
+      </p>
+      <sidebyside width="100%">
+        <image source="images/fractions-number-line.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        On the number line below, <m> a= 0 </m> and <m> b=\frac{6}{5} </m>.  Use the meaning of fractions to plot one-whole (1).
+      </p>
+      <sidebyside width="100%">
+        <image source="images/fractions-number-line.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+
+</worksheet>

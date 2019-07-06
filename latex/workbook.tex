@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2019-06-25T21:10:36-06:00    *%
+%*    on 2019-07-05T21:52:07-06:00    *%
 %*                                    *%
 %*      https://pretextbook.org       *%
 %*                                    *%
@@ -293,6 +293,36 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% \linewidth, and are guaranteed to be positive and sum to 1.0
 \tcbset{ imagestyle/.style={bwminimalstyle} }
 \NewTColorBox{image}{mmm}{imagestyle,left skip=#1\linewidth,width=#2\linewidth}
+%% For improved tables
+\usepackage{array}
+%% Some extra height on each row is desirable, especially with horizontal rules
+%% Increment determined experimentally
+\setlength{\extrarowheight}{0.2ex}
+%% Define variable thickness horizontal rules, full and partial
+%% Thicknesses are 0.03, 0.05, 0.08 in the  booktabs  package
+\newcommand{\hrulethin}  {\noalign{\hrule height 0.04em}}
+\newcommand{\hrulemedium}{\noalign{\hrule height 0.07em}}
+\newcommand{\hrulethick} {\noalign{\hrule height 0.11em}}
+%% We preserve a copy of the \setlength package before other
+%% packages (extpfeil) get a chance to load packages that redefine it
+\let\oldsetlength\setlength
+\newlength{\Oldarrayrulewidth}
+\newcommand{\crulethin}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.04em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}%
+\newcommand{\crulemedium}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.07em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+\newcommand{\crulethick}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.11em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%% Single letter column specifiers defined via array package
+\newcolumntype{A}{!{\vrule width 0.04em}}
+\newcolumntype{B}{!{\vrule width 0.07em}}
+\newcolumntype{C}{!{\vrule width 0.11em}}
 %% Figures, Tables, Listings, Named Lists, Floats
 %% The [H]ere option of the float package fixes floats in-place,
 %% in deference to web usage, where floats are totally irrelevant
@@ -306,10 +336,17 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \usepackage{newfloat}
 \usepackage{caption}%% Adjust stock figure environment so that it no longer floats
 \SetupFloatingEnvironment{figure}{fileext=lof,placement={H},within=section,name=Figure}
-\captionsetup[figure]{labelfont=bf}
+\captionsetup[figure]{labelfont=bf,justification=raggedright}
 %% http://tex.stackexchange.com/questions/16195
 \makeatletter
 \let\c@figure\c@cthm
+\makeatother
+%% Adjust stock table environment so that it no longer floats
+\SetupFloatingEnvironment{table}{fileext=lot,placement={H},within=section,name=Table}
+\captionsetup[table]{labelfont=bf}
+%% http://tex.stackexchange.com/questions/16195
+\makeatletter
+\let\c@table\c@cthm
 \makeatother
 %% More flexible list management, esp. for references
 %% But also for specifying labels (i.e. custom order) on nested lists
@@ -332,6 +369,36 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
 \usetikzlibrary{decorations.markings}
 %% If tikz has been loaded, replace ampersand with \amp macro
+%% tcolorbox styles for sidebyside layout
+\tcbset{ sbsstyle/.style={raster equal height=rows,raster force size=false} }
+\tcbset{ sbsheadingstyle/.style={bwminimalstyle, halign=center, fontupper=\bfseries} }
+\tcbset{ sbspanelstyle/.style={bwminimalstyle} }
+\tcbset{ sbscaptionstyle/.style={bwminimalstyle, halign=center} }
+%% Enviroments for side-by-side and components
+%% Necessary to use \NewTColorBox for boxes of the panels
+%% "newfloat" environment to squash page-breaks within a single sidebyside
+%% \leavevmode necessary when a side-by-side comes first, right after a heading
+%% "xparse" environment for entire sidebyside
+\NewDocumentEnvironment{sidebyside}{mmmm}
+  {\begin{tcbraster}
+    [sbsstyle,raster columns=#1,
+    raster left skip=#2\linewidth,raster right skip=#3\linewidth,raster column skip=#4\linewidth]}
+  {\end{tcbraster}}
+%% "tcolorbox" environments for three components of a panel
+\NewTColorBox{sbsheading}{m}{sbsheadingstyle,width=#1\linewidth}
+\NewTColorBox{sbspanel}{mO{top}}{sbspanelstyle,width=#1\linewidth,valign=#2}
+\NewTColorBox{sbscaption}{m}{sbscaptionstyle,width=#1\linewidth}
+%% extpfeil package for certain extensible arrows,
+%% as also provided by MathJax extension of the same name
+%% NB: this package loads mtools, which loads calc, which redefines
+%%     \setlength, so it can be removed if it seems to be in the 
+%%     way and your math does not use:
+%%     
+%%     \xtwoheadrightarrow, \xtwoheadleftarrow, \xmapsto, \xlongequal, \xtofrom
+%%     
+%%     we have had to be extra careful with variable thickness
+%%     lines in tables, and so also load this package late
+\usepackage{extpfeil}
 %% Custom Preamble Entries, late (use latex.preamble.late)
 %% Begin: Author-provided packages
 %% (From  docinfo/latex-preamble/package  elements)
@@ -380,17 +447,17 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 {\centering
 \vspace*{0.14\textheight}
 %% Target for xref to top-level element is ToC
-\addtocontents{toc}{\protect\hypertarget{book-376575413712}{}}
+\addtocontents{toc}{\protect\hypertarget{x:book:workbook}{}}
 {\Huge Mathematics for Elementary Teachers}\\[\baselineskip]
 {\LARGE A Workbook}\\[3\baselineskip]
 {\Large \textbraceleft{}author\textbraceright{}}\\[0.5\baselineskip]
 {\Large \textbraceleft{}institution\textbraceright{}}\\[3\baselineskip]
-{\Large June 25, 2019}\\}
+{\Large July 5, 2019}\\}
 \clearpage
 %% end:   title page
 %% begin: copyright-page
 \thispagestyle{empty}
-\hypertarget{colophon-376568827296}{}\vspace*{\stretch{2}}
+\hypertarget{g:colophon:idm438877703264}{}\vspace*{\stretch{2}}
 \noindent{\bfseries Website}: \href{[website]}{\mono{[website]}}\par\medskip
 \noindent\textcopyright{}[copyright-year]\quad{}[copyright-holder]\\[0.5\baselineskip]
  This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/4.0/}{http:\slash{}\slash{}creativecommons.org\slash{}licenses\slash{}by-sa\slash{}4.0\slash{}}\par\medskip
@@ -410,7 +477,412 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \typeout{Chapter 0 Worksheets}
 \typeout{************************************************}
 %
-\begin{chapterptx}{Worksheets}{}{Worksheets}{}{}{chapter-376568651552}
+\begin{chapterptx}{Worksheets}{}{Worksheets}{}{}{g:chapter:idm438877359216}
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Pizza Splitting Problem}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Pizza Splitting Problem}{}{Pizza Splitting Problem}{}{}{x:worksheet:ws-pizza-splitting-problem}
+\begin{introduction}{}%
+At a birthday party everyone is about to sit down for pizza.  All the pizzas in this problem are the same size, and the same toppings are distributed evenly on all pizzas.%
+\end{introduction}%
+(Quick Warm UP Problem) At one table there are 4 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Carlos knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, so he wants to sit at the table at which he will end up with the most pizza.  Which table should he choose?  Assume that the pizzas are uncut until all chairs at the table are occupied.%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438877813136}%
+What if, at one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly.  He still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438877843936}%
+Now, assume that each pizza is already cut into 12 equal pieces. At one table there are 3 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Which table should he choose?%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm438877865280}%
+Suppose now that, instead of dividing up the pizza separately at each table, the hosts decide to give all 18 people equal amounts from the 7 pizzas.  Carlos realizes that this means that the amount everyone ends up with is in between the amounts they would have ended up with if each pizza had only been shared among those at the same table.  How can we state this observation in terms of fractions?  How can we state this observation in terms of straight-line graphs?  Is there a general relationship about fractions that this is illustrating?  Is there a general graphical relationship that this is illustrating?%
+\end{divisionexercise}%
+\clearpage
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm438877878176}%
+Maria solved problem 2 on handout 1 by using graph paper and drawing two straight lines.  She is wondering what the lines represent, what their equations are and what other problems could be solved with them, now that the lines are drawn.  She is also wondering what the slope of each line represents.  What can we tell Maria on these questions?%
+\begin{sidebyside}{1}{0.05}{0.05}{0}%
+\begin{sbspanel}{0.9}%
+\includegraphics[width=1\linewidth]{images/pizza-splitting-problem.png}
+\end{sbspanel}%
+\end{sidebyside}%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{}{g:exercise:idm438877914464}%
+(Problem 2 on Handout 1) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.%
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{}{}{g:exercise:idm438877925008}%
+Create and interpret a double number line way to solve this problem.%
+\end{divisionexercise}%
+\begin{divisionexercise}{7}{}{}{g:exercise:idm438877935104}%
+Create and interpret a People vs Pizza graph to solve this problem, and relate it to the previous double number line.%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 A Trip to Quintopia!}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{A Trip to Quintopia!}{}{A Trip to Quintopia!}{}{}{x:worksheet:ws-quintopia-1-intro}
+\begin{introduction}{}%
+While on an Intergalactic Numismatics Tour, you encounter a meteor shower and are forced to make an unscheduled stop on the planet Quintopia.  The monetary system used in Quintopia consists of three coins:  a yellow coin (worth \textdollar{}1US), a red coin (worth five yellow coins), and a blue coin (worth five red coins).%
+\par
+Quintopia turns out to be a rather dull place to visit.  To help pass the time at the shuttle docking area, you and a fellow passenger play a game with the Quintopia currency.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438856078432}%
+Coin Trading Game%
+\par
+Materials:  Quintopia coins (yellow, red and blue), one die (number cube)%
+\par
+Players:  2 or more%
+\par
+Rules:  The youngest player starts, and players alternate turns afterwards.%
+\par
+On each turn, a player rolls the die and places that many yellow coins on his or her game sheet (see below).%
+\par
+Whenever possible, a player MUST trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and place them in their respective columns.  As a result, no more than four coins of any one color should be a player’s game sheet.%
+\par
+The first player to get two blue coins is the winner.%
+\begin{table}
+\centering
+\begin{tabular}{lll}
+BLUE&RED&YELLOW\tabularnewline[0pt]
+&&
+\end{tabular}
+\caption{\label{g:table:idm438856071056}}
+\end{table}
+\end{divisionexercise}%
+\clearpage
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438856064880}%
+Coin Trading Game Revisited%
+\par
+A third passenger has been watching you play.  She suggests it is more challenging to start the game with TWO BLUE coins and to remove the number of yellow coins equal to the number rolled on each turn.  The first player to remove all of the coins from his or her playing board is the winner.  (Note: On the last turn, the number rolled may exceed the number of yellow chips remaining.)  Before you play this new version of the coin trading game, think about how you can remove yellow coins when you have none on your board (you only have two blue ones).  Note: Do not trade in coins until you absolutely need to.  For example, you should not immediately trade in your two blue coins all for red or yellow coins.%
+\begin{table}
+\centering
+\begin{tabular}{lll}
+BLUE&RED&YELLOW\tabularnewline[0pt]
+&&
+\end{tabular}
+\caption{\label{g:table:idm438832977664}}
+\end{table}
+What do you notice?%
+\par
+What do you wonder?%
+\par
+What ideas do you have?%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Shopping in Quintopia}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Shopping in Quintopia}{}{Shopping in Quintopia}{}{}{x:worksheet:ws-quintopia-2-shopping}
+\begin{introduction}{}%
+You got bored on the ship deck and decided to visit Quintopia to do some shopping. You know you can only use Quintopian currency while shopping, so you exchange some of your US dollars before your shopping and you have \(312_{5}\) (in Quintopian currency), which means 3 blue, 1 red, and 2 yellow coins. While you’re shopping, recall that whenever possible, you must trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and so on.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438877649552}%
+Before you left the ship, you won a gift card worth \(24_{5}\) (in Quintopian currency). How much total money do you have now for shopping? Show your process at least in two different ways.%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438877743296}%
+You spent \(43_{5}\) at the Appletopia store. How much Quintopian money do you have left?  Explain your process.%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm438877771584}%
+You saw a pair of shoes you like and it only costs \(32_{5}\). Since it is very cheap, you want to buy three pairs. How much will it cost to buy three pairs of shoes (in Quintopia currency)? Solve this question in two different ways.%
+\end{divisionexercise}%
+\clearpage
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm438877782080}%
+After buying all three pairs of shoes, how much money do you have left?%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm438832969152}%
+After all your shopping you had some dinner which cost \(102_{5}\) . Do you have enough Quintopian money to pay? If not, how much Quintopian money do you need?  If you have an extra \textdollar{}6 US currency, will that be enough to pay the rest?%
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm438832967312}%
+Discuss Base 5 and Base 10; and meaning of addition, subtraction and multiplication operations. Discuss expanded form.%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Connections to Base Blocks}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Connections to Base Blocks}{}{Connections to Base Blocks}{}{}{x:worksheet:ws-quintopia-3-base-connections}
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438832970352}%
+Using base-5 blocks, discuss how Quintopian currency would be represented. For example, represent \(314_{5}\) and \(43_{5}\). If you have \textdollar{}58 dollars how would you represent it using base-5 blocks?%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438832963376}%
+If you have \(412_{5}\) in base-5 blocks and you trade in all the blocks for their corresponding number of small cubes, how many small cubes would you have?%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm438832961472}%
+Discuss with your group.%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}How do base-5 blocks compare to base-10?%
+\item{}What are the place values worth in base-5 vs. base-10?%
+\item{}What are the minimum and maximum number of blocks of each place value that you can have in base-5?%
+\item{}What about base-10?%
+\item{}How does this relate to the digits you can use to represent numbers in base-5 vs. base-10?%
+\end{enumerate}
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm438832957328}%
+Using base-10 blocks find the sum and the difference of 208 and 93.%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm438832955856}%
+List multiple things that you observe that are similar and different between addition and subtraction in base 5 (Quintopia) compared to base 10.%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Algorithms for Addition and Subtraction}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Algorithms for Addition and Subtraction}{}{Algorithms for Addition and Subtraction}{}{}{x:worksheet:ws-add-sub-algorithms}
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438877974256}%
+Carry out the steps of the usual addition algorithm in the problems below in base 5.  Carefully EXPLAIN what each of the ``carried'' (regrouped or traded in) numbers mean.  You may want to refer to base 5 blocks in your explanation.%
+\par
+%
+\begin{equation*}
+43_{5}+12_{5} \text{ and } 243_{5}+324_{5}
+\end{equation*}
+%
+\end{divisionexercise}%
+\clearpage
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438877678144}%
+Carry out the steps of the usual subtraction algorithm in the problem below using base 5.  Carefully EXPLAIN what each of the ``borrowed'' (regrouped or traded in) numbers means.  You may want to refer to base 5 blocks in your explanation.%
+\begin{equation*}
+321_{5}-124_5 \text{ and } 301_5-213_5 \text{.}
+\end{equation*}
+%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Different Bases}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Different Bases}{}{Different Bases}{}{}{x:worksheet:ws-different-bases}
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438832952160}%
+In the base-7 number system, the amount: 1 flat, 6 longs, and 5 small cubes is recorded as \(165_{seven}\) or \(165_7\). In general, we record the base as a subscript except for base 10, since that is the assumed standard base.  Note that in base-7, 1 long is worth 7 small cubes, and 1 flat is worth 7 longs (which is 49 small cubes).%
+\par
+For each number below, determine how many small cubes that number would consist of if we traded in all the base blocks for their corresponding number of small cubes.  In other words, what amount of small cubes is represented by each number in its corresponding base?%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}\(1202_{three}   = \)%
+\item{}\(53_{seven}       = \)%
+\item{}\(203_{four}       = \)%
+\item{}\(10111_{two}       = \)%
+\end{enumerate}
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438832932416}%
+What are the place values after the decimal point in base 10? For example, write the expanded form of 1.29 to show the place values. What about the place values in base 5 after the decimal point (e.g., 12.345) ?%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm438832930816}%
+Write the following numbers in expanded form:%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}\(3,189.208 = \)%
+\item{}\(34.21_5      = \)%
+\end{enumerate}
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm438832927680}%
+What are the place values in base six?  What digits are needed?%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm438832926304}%
+How do you immediately know there is an error in each statement?  How would we correctly represent these amounts in the given bases?%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}eleven \(= 32_{three}\)%
+\item{}fifty-seven \(= 108_{seven}\)%
+\end{enumerate}
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm438832922768}%
+In base 6, a particular number can be made with 10 large cubes, 9 flats, 7 longs, and 5 small cubes.  What is this number in base 6? (Hint: the answer is NOT \(10975_6 \). Try to solve this without converting to base 10)?%
+\end{divisionexercise}%
+\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm438832920848}%
+My last digit is a 0 when I am represented in base-5 and a 1 when represented in base-2.  What is my last digit when represented base-10? Explain.%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Extra Practice: Addition and Subtraction in Other Bases}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Extra Practice: Addition and Subtraction in Other Bases}{}{Extra Practice: Addition and Subtraction in Other Bases}{}{}{x:worksheet:ws-EP-add-sub}
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438832951344}%
+Carry out the steps of the usual addition algorithm in the problem below in the designated base.  Carefully EXPLAIN what each of the “carried” (regrouped\slash{}traded in) numbers mean.  You may want to refer to the appropriate base blocks in your explanation.%
+\par
+\(33_4+12_4\) and \(263_7+324_7\)%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438832947824}%
+Carry out the steps of the usual subtraction algorithm in the problem below in the designated base.  Carefully EXPLAIN what each of the “borrowed” (regrouped\slash{}traded in) numbers means.  You may want to refer to the appropriate base blocks in your explanation.%
+\par
+\(341_8 - 154_8 \) and \(301_4 -213_4\)%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Mental Math and Properties of Addition}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Mental Math and Properties of Addition}{}{Mental Math and Properties of Addition}{}{}{x:worksheet:ws-mental-add-properties}
+\begin{introduction}{}%
+Try to find ways that make the following problems easy to do mentally.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{0.08}{g:exercise:idm438832918480}%
+%
+\begin{equation*}
+7999+857+1
+\end{equation*}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.08}{g:exercise:idm438832916816}%
+%
+\begin{equation*}
+367+98+2
+\end{equation*}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.08}{g:exercise:idm438832915056}%
+%
+\begin{equation*}
+153+19+7
+\end{equation*}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{0.08}{g:exercise:idm438832913296}%
+%
+\begin{equation*}
+7.89+6.93+0.07
+\end{equation*}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.08}{g:exercise:idm438832911536}%
+%
+\begin{equation*}
+37-14-7
+\end{equation*}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{}{0.08}{g:exercise:idm438832909776}%
+%
+\begin{equation*}
+91-23-3
+\end{equation*}
+%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Addition and Subtraction on Number Lines and Different Strategies}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Addition and Subtraction on Number Lines and Different Strategies}{}{Addition and Subtraction on Number Lines and Different Strategies}{}{}{x:worksheet:ws-numberline-add-sub}
+\begin{introduction}{}%
+Each exercise below uses a different strategy for solving an addition or subtraction.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438832943248}%
+Starting in 2nd grade, students are expected to use open (unlabeled) number lines to help them add and subtract two-digit numbers using methods beyond the standard addition and subtraction algorithms.   Explain the following students’ strategies for subtraction.%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{} \begin{image}{0}{1}{0}%
+\includegraphics[width=1\linewidth]{images/numberline-add-sub-1a.png}
+\end{image}%
+ %
+\item{} \begin{image}{0}{1}{0}%
+\includegraphics[width=1\linewidth]{images/numberline-add-sub-1b.png}
+\end{image}%
+  %
+\end{enumerate}
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438832896912}%
+For each of the following, find the missing number by using an open number line (similar to those above).  Show at least two different methods for calculating the missing number on two different number lines.%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}%
+\begin{equation*}
+42+?=91 
+\end{equation*}
+%
+\item{}%
+\begin{equation*}
+57+?=83 
+\end{equation*}
+%
+\end{enumerate}
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm438832893152}%
+For the subtraction question \(53-8\), Delia, a second grade student, has done the following work:%
+\begin{equation*}
+53- 3=50-5=45
+\end{equation*}
+%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}Explain how Delia came up with the numbers 3 and 5.%
+\item{}Discuss Delia's method and answer to provide feedback.%
+\item{}Use her method to answer the subtraction problem:%
+\begin{equation*}
+317-28
+\end{equation*}
+%
+\end{enumerate}
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Decimal Addition and Subtraction with Manipulatives}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Decimal Addition and Subtraction with Manipulatives}{}{Decimal Addition and Subtraction with Manipulatives}{}{}{x:worksheet:ws-decimals-add-sub}
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438832907184}%
+Show how to represent 73.2 using base blocks.  What block is worth 1 here?%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438832942944}%
+Show how to represent 34.16 using base blocks.  What block is worth 1 here?%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm438832941664}%
+Show how to use base blocks to model%
+\begin{equation*}
+23.25+2.9\text{.}
+\end{equation*}
+Be sure to connect this to the way that we add in the standard algorithm.  What is the importance of lining up the decimal points when we add with the standard algorithm?%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm438832939664}%
+Ellie solves the subtraction problem%
+\begin{equation*}
+2.5-0.13
+\end{equation*}
+with toothpicks.  She represents 2.5 with 2 bundles of 10 toothpicks and 5 individual toothpicks.  She represents 0.13 with 1 bundle of 10 toothpicks and 3 individual toothpicks.  Ellie gets the answer 1.2.  Is she correct?  Explain.%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
 %
 %
 \typeout{************************************************}
@@ -418,37 +890,29 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \typeout{************************************************}
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-section-numberless}{Addition and Subtraction Problems with Strip (Tape) Diagrams}{}{Addition and Subtraction Problems with Strip (Tape) Diagrams}{}{}{worksheet-376575402448}
+\begin{worksheet-section-numberless}{Addition and Subtraction Problems with Strip (Tape) Diagrams}{}{Addition and Subtraction Problems with Strip (Tape) Diagrams}{}{}{x:worksheet:ws-add-sub-strip-diagrams}
 \begin{introduction}{}%
-\hypertarget{p-376568959280}{}%
 Directions: For each problem create strip (tape) diagram(s) to model the situation.  Also write an equation that models the situation.  Be sure that your equation matches the actual actions in the story problem, not just how you’d solve it.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{exercise-376568905264}%
-\hypertarget{p-376568904528}{}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438832880368}%
 Rachel had 17 CDs.  After she got some more CDs, she had 43 CDs.  How many CDs did Rachel get?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{exercise-376568967376}%
-\hypertarget{p-376568966640}{}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438832879088}%
 Rachel had 43 CDs.  After she gave some away, she had 17 CDs left.  How many did she give away?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{exercise-376568970656}%
-\hypertarget{p-376568970016}{}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm438832877696}%
 Rachel had some CDs.  After she gave 26 away, she had 17 left.  How many CDs did Rachel have at the start?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{exercise-376568969248}%
-\hypertarget{p-376568973808}{}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm438832876288}%
 Rachel has 43 CDs.  If 26 are hip hop and the rest are rap, how many rap CDs does she have?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{exercise-376568973056}%
-\hypertarget{p-376568972320}{}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm438832874800}%
 Rachel has 43 CDs.  Benny has 26 CDs.  How many more CDs does Rachel have than Benny?%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.1}{exercise-376541741248}%
-\hypertarget{p-376541740608}{}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm438832873312}%
 Benny has 26 CDs. Benny has 17 fewer CDs than Rachel.  How many CDs does Rachel have?%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{}{0.1}{exercise-376541739856}%
-\hypertarget{p-376541739120}{}%
+\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm438832871824}%
 Rachel has 43 CDs. Rachel has 17 more CDs than Benny.  How many CDs does Benny have?%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -460,59 +924,201 @@ Rachel has 43 CDs. Rachel has 17 more CDs than Benny.  How many CDs does Benny h
 \typeout{************************************************}
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-section-numberless}{Reasoning with Addition and Subtraction Scenarios}{}{Reasoning with Addition and Subtraction Scenarios}{}{}{worksheet-376568941824}
-\begin{divisionexercise}{1}{}{0.1}{exercise-376568960288}%
-\hypertarget{p-376541731568}{}%
+\begin{worksheet-section-numberless}{Reasoning with Addition and Subtraction Scenarios}{}{Reasoning with Addition and Subtraction Scenarios}{}{}{x:worksheet:ws-add-sub-reasoning}
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438832887184}%
 1.	John and Anne want to calculate \textdollar{}37-\textdollar{}19 by first calculating%
 \begin{equation*}
 \$37-\$20=\$17 
 \end{equation*}
 John says they must now subtract the \textdollar{}1 remaining from \textdollar{}17, while Anne says they must add it.  Who is correct?  Use two different models (e.g., number line and strip diagram) to represent this scenario to make it clear who is correct.%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{exercise-376541730288}%
-\hypertarget{p-376541729648}{}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438832859376}%
 John and Anne want to calculate \textdollar{}3.94 -\textdollar{}1.97 by first calculating%
 \begin{equation*}
 \$3.97-\$1.97 = \$2 
 \end{equation*}
 John says in this case they also need to subtract the \textdollar{}0.03 remaining from \textdollar{}2, while Anne says they must add it.  Who is correct?  Use two different models (e.g., number line and strip diagram) to represent this scenario to make it clear who is correct.%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{exercise-376541728352}%
-\hypertarget{p-376541727616}{}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm438832857344}%
 Jamirez says he can calculate \textdollar{}3.74 -\textdollar{}1.97 by first adding \textdollar{}0.03 to each number and calculating \textdollar{}3.77-\textdollar{}2 instead.  How could we use a model\slash{}diagram to show that Jamirez’s method is also valid?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{exercise-376541726752}%
-\hypertarget{p-376541726016}{}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm438832855744}%
 Jon’s time for running a lap in gym class is 1.4 minutes.  Jacky’s time is 1.32 minutes.  Jon thinks that he’s faster than Jacky since 4 is less than 32 so 1.4 must be less than 1.32.  Is Jon correct?  How we could convince the students whose time is faster and by how much?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{exercise-376541725072}%
-\hypertarget{p-376541724336}{}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm438832854064}%
 A local park’s program committee is raising money by holding mountain bike races on a course through the local park.  During each race, a computer tracks the competitors’ locations on the course using GPS tracking.  The table below shows how far each competitor is from a checkpoint.%
-\begin{image}{0}{1}{0}%
+\begin{sidebyside}{1}{0.05}{0.05}{0}%
+\begin{sbspanel}{0.9}%
 \includegraphics[width=1\linewidth]{images/reasoning-table-checkpoint.png}
-\end{image}%
+\end{sbspanel}%
+\end{sidebyside}%
 \leavevmode%
 \begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-376541722688}{}The checkpoint is represented by 0 on the number line below.  Locate and label points on the number line for the positions of each listed participant. \begin{image}{0}{1}{0}%
+\item{}The checkpoint is represented by 0 on the number line below.  Locate and label points on the number line for the positions of each listed participant. \leavevmode%
+\begin{sidebyside}{1}{0.05}{0.05}{0}%
+\begin{sbspanel}{0.9}%
 \includegraphics[width=1\linewidth]{images/blank-number-line.png}
-\end{image}%
+\end{sbspanel}%
+\end{sidebyside}%
 %
-\item\hypertarget{li-376541721648}{}Which competitor is closest to the checkpoint?%
-\item\hypertarget{li-376541721264}{}Two competitors are the same distance from the checkpoint.  Are they in the same location?  Explain.%
-\item\hypertarget{li-376541720752}{}Who is closer to finishing the race – Bethany or Candace?%
+\item{}Which competitor is closest to the checkpoint?%
+\item{}Two competitors are the same distance from the checkpoint.  Are they in the same location?  Explain.%
+\item{}Who is closer to finishing the race – Bethany or Candace?%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.1}{exercise-376541719984}%
-\hypertarget{p-376541719248}{}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm438832847552}%
 Andrea and Marta are testing three different coolers to see which keeps the temperature the coolest.  They placed a bag of ice in each cooler, and then measured the air temperature inside each cooler after 90 minutes.  The temperatures are recorded below:%
 \begin{image}{0}{1}{0}%
 \includegraphics[width=1\linewidth]{images/reasoning-table-cooler.png}
 \end{image}%
-\hypertarget{p-376541718112}{}%
-Marta wrote the following inequality: -4.3 = -2.91 = 5.7 Andrea said Marta made a mistake, and that the inequality should be: -2.91 = -4.3 = 5.7%
+Marta wrote the following inequality: -4.3 \textless{}  -2.91 \textless{} 5.7 Andrea said Marta made a mistake, and that the inequality should be: -2.91 \textless{} -4.3 \textless{} 5.7%
 \par
-\hypertarget{p-376541717552}{}%
 Is either student correct?  Explain.  Use a number line to help justify your answer.  What misconceptions might the student(s) have had that caused the incorrect inequality?%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Exploring Fractions}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Exploring Fractions}{}{Exploring Fractions}{}{}{x:worksheet:ws-fractions-intro-meaning}
+\begin{introduction}{}%
+For each of the following explorations, keep in mind how you might explain your process.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm438832868656}%
+Area Model Representations%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}If the following rectangle is one whole, show two-thirds. \leavevmode%
+\begin{sidebyside}{1}{0.3}{0.3}{0}%
+\begin{sbspanel}{0.4}%
+\includegraphics[width=1\linewidth]{images/generic-rectangle.png}
+\end{sbspanel}%
+\end{sidebyside}%
+%
+\item{}If the following rectangle is one whole, show five-thirds. \leavevmode%
+\begin{sidebyside}{1}{0.3}{0.3}{0}%
+\begin{sbspanel}{0.4}%
+\includegraphics[width=1\linewidth]{images/generic-rectangle.png}
+\end{sbspanel}%
+\end{sidebyside}%
+%
+\item{}If the following rectangle is three-fourths, draw one whole. \leavevmode%
+\begin{sidebyside}{1}{0.35}{0.35}{0}%
+\begin{sbspanel}{0.3}%
+\includegraphics[width=1\linewidth]{images/generic-square.png}
+\end{sbspanel}%
+\end{sidebyside}%
+%
+\item{}If this rectangle is four-thirds, show what rectangle could be the whole. \leavevmode%
+\begin{sidebyside}{1}{0.3}{0.3}{0}%
+\begin{sbspanel}{0.4}%
+\includegraphics[width=1\linewidth]{images/generic-rectangle.png}
+\end{sbspanel}%
+\end{sidebyside}%
+%
+\item{}Maria says that the shaded region below represents the fraction \(\frac{9}{12} \). Carmina says the shaded region represents the fraction \(\frac{9}{4} \). Explain why each of the two student’s answers can be considered correct. \begin{sidebyside}{1}{0.25}{0.25}{0}%
+\begin{sbspanel}{0.5}%
+\includegraphics[width=1\linewidth]{images/nine-fourths-vs-twelfths.png}
+\end{sbspanel}%
+\end{sidebyside}%
+%
+\end{enumerate}
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm438832799968}%
+Set Model Representations%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}If 14 counters are one whole, shade the counters that make three-sevenths. \leavevmode%
+\begin{sidebyside}{1}{0.35}{0.35}{0}%
+\begin{sbspanel}{0.3}%
+\includegraphics[width=1\linewidth]{images/fourteen-counters.png}
+\end{sbspanel}%
+\end{sidebyside}%
+%
+\item{}Draw 12 counters like part a. If 12 counters are one whole, how many are in five-thirds of a set?%
+\item{}Draw 21 coutners. If 21 counters are three-fifths of a set, how many counters are in the full set (1 whole)?%
+\item{}Draw 12 counters. If 12 counters are three-halves of a set, how many counters are in one set (1 whole)?%
+\item{}What fraction of this set is shaded in? \leavevmode%
+\begin{sidebyside}{1}{0.35}{0.35}{0}%
+\begin{sbspanel}{0.3}%
+\includegraphics[width=1\linewidth]{images/counters-one-third.png}
+\end{sbspanel}%
+\end{sidebyside}%
+%
+\end{enumerate}
+\end{divisionexercise}%
+\clearpage
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm438832792576}%
+Cuisenaire Rods (For online Cuisenaire Rods: http:\slash{}\slash{}nrich.maths.org\slash{}4348)%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}Select a brown Cuisenaire Rod.  If brown is the whole, which rod is one-fourth?%
+\item{}If dark green is the whole, what rod represents two-thirds? What rod represents three-halves?%
+\item{}Select a dark green Cuisenaire Rod.  If dark green is two-thirds, what rod is the whole?%
+\item{}Select a yellow Cuisenaire Rod.  If yellow is five-fourths, what rod is one whole? What rod is 2?%
+\item{}Select a dark green Cuisenaire Rod.  If dark green is the whole, what fraction is the yellow rod?%
+\item{}If the brown rod is one whole, what fraction is the orange rod?%
+\item{}If the blue rod is 3, what rod represents \(\frac{2}{3} \)?%
+\end{enumerate}
+\end{divisionexercise}%
+\begin{introduction}{}%
+Pattern Blocks Representation (yellow hexagon, blue parallelogram, red trapezoid, and green triangle) (Online: http:\slash{}\slash{}www.mathplayground.com\slash{}patternblocks.html )%
+\end{introduction}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm438832785360}%
+If the yellow hexagon represents one whole:%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}What shape would represent \(\frac{1}{2} \) ?%
+\item{}What shape would represent \(\frac{1}{3} \) ?%
+\item{}What shape would represent \(\frac{1}{6} \) ?%
+\end{enumerate}
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm438832780576}%
+If the blue parallelogram represents one whole:%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}What fraction would the red trapezoid represent?%
+\item{}What fraction would the green triangle represent?%
+\item{}What fraction would the yellow hexagon represent?%
+\end{enumerate}
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm438832776944}%
+If the double hexagon represents one whole:%
+\leavevmode%
+\begin{enumerate}[label=(\alph*)]
+\item{}What fraction would the red trapezoid represent?%
+\item{}What fraction would the green triangle represent?%
+\item{}What fraction would the yellow hexagon represent?%
+\end{enumerate}
+\end{divisionexercise}%
+\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm438832773312}%
+If the red trapezoid equals \(\frac{3}{5} \), what shape or shapes, when combined, could represent 1?  How many different shape combinations are there?%
+\end{divisionexercise}%
+\begin{divisionexercise}{8}{}{0.1}{g:exercise:idm438832771264}%
+If the red trapezoid equals \(\frac{3}{5} \), what shape or shapes, when combined, could represent 1?  How many different shape combinations are there?%
+\end{divisionexercise}%
+\begin{introduction}{}%
+Number Lines Representation%
+\end{introduction}%
+\begin{divisionexercise}{9}{}{0.1}{g:exercise:idm438832768352}%
+On the number line below, \(a= 0 \) and \(b=1 \).  Use the meaning of fractions to plot three-fifths.%
+\begin{sidebyside}{1}{0}{0}{0}%
+\begin{sbspanel}{1}%
+\includegraphics[width=1\linewidth]{images/fractions-number-line.png}
+\end{sbspanel}%
+\end{sidebyside}%
+\end{divisionexercise}%
+\begin{divisionexercise}{10}{}{0.1}{g:exercise:idm438832764752}%
+On the number line below, \(a= 0 \) and \(b=\frac{6}{5} \).  Use the meaning of fractions to plot one-whole (1).%
+\begin{sidebyside}{1}{0}{0}{0}%
+\begin{sbspanel}{1}%
+\includegraphics[width=1\linewidth]{images/fractions-number-line.png}
+\end{sbspanel}%
+\end{sidebyside}%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
 \restoregeometry

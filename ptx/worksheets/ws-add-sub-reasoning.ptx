@@ -45,11 +45,15 @@
       <p>
         A local park’s program committee is raising money by holding mountain bike races on a course through the local park.  During each race, a computer tracks the competitors’ locations on the course using GPS tracking.  The table below shows how far each competitor is from a checkpoint.
       </p>
-      <image source="images/reasoning-table-checkpoint.png"/>
+      <sidebyside width="90%">
+        <image source="images/reasoning-table-checkpoint.png"/>
+      </sidebyside>
       <ol type ="a">
         <li>
           The checkpoint is represented by 0 on the number line below.  Locate and label points on the number line for the positions of each listed participant.
-          <image source="images/blank-number-line.png"/>
+          <sidebyside width="90%">
+            <image source="images/blank-number-line.png"/>
+          </sidebyside>
         </li>
         <li>
           Which competitor is closest to the checkpoint?
@@ -70,9 +74,10 @@
         Andrea and Marta are testing three different coolers to see which keeps the temperature the coolest.  They placed a bag of ice in each cooler, and then measured the air temperature inside each cooler after 90 minutes.  The temperatures are recorded below:
       </p>
         <image source="images/reasoning-table-cooler.png"/>
-      <p>Marta wrote the following inequality: -4.3 = -2.91 = 5.7
+      <p>Marta wrote the following inequality: -4.3 <less />  -2.91 <less /> 5.7
         Andrea said Marta made a mistake, and that the inequality should be:
-        -2.91 = -4.3 = 5.7</p>
+        -2.91 <less /> -4.3 <less /> 5.7
+        </p>
       <p>
         Is either student correct?  Explain.  Use a number line to help justify your answer.  What misconceptions might the student(s) have had that caused the incorrect inequality?
       </p>

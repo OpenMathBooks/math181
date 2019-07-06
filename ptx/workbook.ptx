@@ -11,7 +11,7 @@
     <chapter>
       <title>Worksheets</title>
 
-    <!-- <xi:include href="./worksheets/ws-pizza-splitting-problem.ptx"/>
+    <xi:include href="./worksheets/ws-pizza-splitting-problem.ptx"/>
     <xi:include href="./worksheets/ws-quintopia-1-intro.ptx"/>
     <xi:include href="./worksheets/ws-quintopia-2-shopping.ptx"/>
     <xi:include href="./worksheets/ws-quintopia-3-base-connections.ptx"/>
@@ -20,9 +20,10 @@
     <xi:include href="./worksheets/ws-EP-add-sub.ptx"/>
     <xi:include href="./worksheets/ws-mental-add-properties.ptx"/>
     <xi:include href="./worksheets/ws-numberline-add-sub.ptx"/>
-    <xi:include href="./worksheets/ws-decimals-add-sub.ptx"/> -->
+    <xi:include href="./worksheets/ws-decimals-add-sub.ptx"/>
     <xi:include href="./worksheets/ws-add-sub-strip-diagrams.ptx"/>
     <xi:include href="./worksheets/ws-add-sub-reasoning.ptx"/>
+    <xi:include href="./worksheets/ws-fractions-intro-meaning.ptx"/>
 
     </chapter>
 
