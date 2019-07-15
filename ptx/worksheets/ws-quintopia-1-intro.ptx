@@ -22,24 +22,10 @@
       <p>On each turn, a player rolls the die and places that many yellow coins on his or her game sheet (see below).</p>
       <p>Whenever possible, a player MUST trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and place them in their respective columns.  As a result, no more than four coins of any one color should be a player’s game sheet.</p>
       <p>The first player to get two blue coins is the winner.</p>
-
-    <table>
-      <!-- <caption></caption> -->
-      <tabular>
-      <row class="odd">
-        <cell halign="left">BLUE</cell>
-        <cell halign="left">RED</cell>
-        <cell halign="left">YELLOW</cell>
-      </row>
-      <row class="even">
-        <cell halign="left"></cell>
-        <cell halign="left"></cell>
-        <cell halign="left"></cell>
-      </row>
-      </tabular>
-    </table>
-
-    </statement>
+      <sidebyside width="90%">
+        <image source="images/quintopia-table.png"/>
+      </sidebyside>
+  </statement>
   </exercise>
   <pagebreak />
 <!-- <pagebreak /> -->
@@ -47,8 +33,13 @@
     <statement>
       <p>Coin Trading Game Revisited</p>
       <p>A third passenger has been watching you play.  She suggests it is more challenging to start the game with TWO BLUE coins and to remove the number of yellow coins equal to the number rolled on each turn.  The first player to remove all of the coins from his or her playing board is the winner.  (Note: On the last turn, the number rolled may exceed the number of yellow chips remaining.)  Before you play this new version of the coin trading game, think about how you can remove yellow coins when you have none on your board (you only have two blue ones).  Note: Do not trade in coins until you absolutely need to.  For example, you should not immediately trade in your two blue coins all for red or yellow coins.</p>
-      <table>
-        <!-- <caption></caption> -->
+      <sidebyside width="90%">
+        <image source="images/quintopia-table.png"/>
+      </sidebyside>
+
+
+      <!-- <table>
+        <caption></caption>
         <tabular>
         <row class="odd">
           <cell halign="left">BLUE</cell>
@@ -61,7 +52,8 @@
           <cell halign="left"></cell>
         </row>
         </tabular>
-      </table>
+      </table> -->
+
 <p>What do you notice?</p>
 <p>What do you wonder?</p>
 <p>What ideas do you have?</p>

@@ -2,26 +2,7 @@
 
 <worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-pizza-splitting-problem">
 
-  <title>Pizza Splitting Problem</title>
-
-  <introduction>
-    <p>
-      At a birthday party everyone is about to sit down for pizza.  All the pizzas in this problem are the same size, and the same toppings are distributed evenly on all pizzas.
-    </p>
-
-
-  </introduction>
-
-  <p>
-    (Quick Warm UP Problem) At one table there are 4 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Carlos knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, so he wants to sit at the table at which he will end up with the most pizza.  Which table should he choose?  Assume that the pizzas are uncut until all chairs at the table are occupied.
-  </p>
-  <exercise workspace="10%">
-    <statement>
-      <p>
-        What if, at one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly.  He still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.
-      </p>
-    </statement>
-  </exercise>
+  <title>Pizza Splitting Problem, Part 2</title>
 
   <exercise workspace="10%">
     <statement>
@@ -55,7 +36,7 @@
   <exercise>
     <statement>
       <p>
-        (Problem 2 on Handout 1) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.
+        (Problem 2 on Comparing Fractions Worksheet) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.
       </p>
     </statement>
   </exercise>

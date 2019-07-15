@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-add-sub-fractions-extension">
+
+  <title>Egyptian Fractions</title>
+
+  <introduction>
+    <p>
+      The ancient Egyptians wrote any fraction as a sum of fractions with numerators of 1 and all different denominators.  For example they would have expressed <m> \frac{2}{3} </m> as <m> \frac{1}{2} + \frac{1}{6} </m> (their notation was different than this).  Fractions expressed as a sum of fractions with numerators of 1 and denominators that are all different are often called “Egyptian Fractions” for this reason.
+    </p>
+    <p>
+      Find an Egyptian Fraction Representation for each of the fractions below:
+    </p>
+  </introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+      <m> \frac{3}{4} </m>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+      <m> \frac{5}{6} </m>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+      <m> \frac{4}{5} </m>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Explain how your answer for <m> \frac{5}{6} </m> might be used to help you split five loaves of bread among six people.
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-integer-arithmetic-situations">
+
+  <title>Integer Arithmetic Situations</title>
+
+  <introduction>
+    <p>The set of numbers called the <i>integers</i> is a subset of the <i>real numbers</i> (any number that can be found on the number line).  The set is comprised of <i>positive integers</i> (1, 2, 3, 4, etc.), <i>negative integers</i> (-1, -2, -3, -4, etc.), and 0, which is neither positive nor negative.  Use your knowledge of integers and their opposites to complete this activity.
+    </p>
+  </introduction>
+
+  <exercise workspace="30%">
+    <statement>
+      <p>
+        Investigate what happens when you calculate <q>6-3</q>;  <q>6-2</q>;  <q>6-1</q> ;<q>6-0</q>; <q>6-(-1)</q>;     <q>6-(-2)</q>; <q>6-(-3)</q>.  Explain why it <i> makes sense </i> that 6- (-3) = 6+3 = 9.   Refer to a pattern you notice in your calculation.
+      </p>
+    </statement>
+  </exercise>
+
+<introduction>
+      <p>
+        Solve the following temperature model problems using a picture.
+      </p>
+</introduction>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        It was -3 degrees C at dawn. In the meantime, the temperature went up 5 degrees C. Now what is the temperature?
+      </p>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        The temperature was 5 degrees C in Greeley. At the same time it was -3 degrees C in Denver. How much warmer was it in Greeley than in Denver?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+      The temperature during the day was -3 degrees C in Greeley and it dropped 2 degrees C more by midnight. What was the temperature at midnight?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        The top of Mount Everest is at an elevation of 29029 feet above sea level, and the deepest part of the ocean in the Mariana Trench is 36070 feet below sea level.  How much higher is the top of Mount Everest compared to the lowest point in the ocean?
+      </p>
+    </statement>
+  </exercise>
+
+<pagebreak />
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        Write integer addition and subtraction equations that are naturally suggested by problems 4 and 5 and briefly discuss how these examples can help students understand addition and subtraction of positive and negative numbers.
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>

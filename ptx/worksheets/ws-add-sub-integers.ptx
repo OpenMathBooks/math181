@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-add-sub-integers">
+
+  <title>Integer Addition and Subtraction</title>
+
+  <introduction>
+    <p>
+      Exploration 1: Integer Addition
+    </p>
+    <p>
+      Use the <q>Union of two Disjoint Sets </q> Model for Addition to solve each of the following problems:
+      <sidebyside width="100%">
+        <image source="images/integer-add-model.png"/>
+      </sidebyside>
+    </p>
+  </introduction>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        4+3
+      </p>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        <m> (-3)+(-6) </m>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        <m> 3+(-7) </m>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        <m> (-8)+ 5 </m>
+      </p>
+    </statement>
+  </exercise>
+
+<pagebreak />
+
+  <introduction>
+    <p>
+      Exploration 2: Integer Subtraction
+    </p>
+    <p>
+      Use the <q>Take-Away Set</q> Model for Subtraction to solve each of the following problems:
+      <sidebyside width="100%">
+        <image source="images/integer-sub-model.png"/>
+      </sidebyside>
+    </p>
+  </introduction>
+
+  <exercise workspace="30%">
+    <statement>
+      <p>
+        5-9
+      </p>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        <m> (-6)-(-5) </m>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        <m> 3-(-4) </m>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        <m> (-4)-(-8) </m>
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-comparing-fractions">
+
+  <title>Comparing Fractions</title>
+
+  <introduction>
+    <p>
+      At a birthday party everyone is about to sit down for pizza.  All the pizzas in this problem are the same size, and the same toppings are distributed evenly on all pizzas.
+    </p>
+  </introduction>
+
+  <exercise workspace="10%">
+      <statement>
+        <p>
+          At one table there are 4 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Carlos knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, so he wants to sit at the table at which he will end up with the most pizza.  Which table should he choose?  Assume that the pizzas are uncut until all chairs at the table are occupied.
+        </p>
+      </statement>
+  </exercise>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+          What if, at one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly.  He still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.
+        </p>
+      </statement>
+    </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Which fraction in each pair is greater?  Give one or more reasons.  Do NOT use drawings, models, common denominators, or cross-multiplication.  Rely on your existing knowledge about the size of various fractions and/or the size of the pieces in different fractions, e.g., compare to benchmark numbers like 0, <m> \frac{1}{2} </m> and 1, or make comparisons based on the size of the pieces.
+      </p>
+      <ol type="a" >
+        <li>
+          <m> \frac{4}{5} </m> or <m> \frac{4}{9} </m>
+        </li>
+        <li>
+          <m> \frac{5}{3} </m> or <m> \frac{5}{8} </m>
+        </li>
+        <li>
+          <m> \frac{5}{8} </m> or <m> \frac{7}{12} </m>
+        </li>
+        <li>
+          <m> \frac{3}{4} </m> or <m> \frac{9}{10} </m>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+<pagebreak />
+  <exercise workspace="30%">
+    <statement>
+      <p>
+        Find two fractions between each pair of fractions given below. Plot all four fractions on a number line.
+      </p>
+      <ol type="a">
+        <li>
+          <m> \frac{2}{5} </m> and <m> \frac{3}{5} </m>
+        </li>
+        <li>
+          <m> \frac{2}{3} </m> and <m> \frac{3}{5} </m>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        Without using a calculator, mark where each of the following fractions belongs on the following number line. Describe how you determined where to place each fraction.
+      </p>
+      <p>
+        <me> \frac{5}{12} , \frac{4}{7} , \frac{3}{7} , \frac{3}{8} , \frac{2}{3} , \frac{6}{7} </me>
+      </p>
+      <sidebyside width="90%">
+        <image source="images/number-line-half-one.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+</worksheet>

@@ -11,7 +11,6 @@
     <chapter>
       <title>Worksheets</title>
 
-    <xi:include href="./worksheets/ws-pizza-splitting-problem.ptx"/>
     <xi:include href="./worksheets/ws-quintopia-1-intro.ptx"/>
     <xi:include href="./worksheets/ws-quintopia-2-shopping.ptx"/>
     <xi:include href="./worksheets/ws-quintopia-3-base-connections.ptx"/>
@@ -24,6 +23,14 @@
     <xi:include href="./worksheets/ws-add-sub-strip-diagrams.ptx"/>
     <xi:include href="./worksheets/ws-add-sub-reasoning.ptx"/>
     <xi:include href="./worksheets/ws-fractions-intro-meaning.ptx"/>
+    <xi:include href="./worksheets/ws-equiv-fractions.ptx"/>
+    <xi:include href="./worksheets/ws-comparing-fractions.ptx"/>
+    <xi:include href="./worksheets/ws-pizza-splitting-problem.ptx"/>
+    <xi:include href="./worksheets/ws-add-sub-fractions.ptx"/>
+    <xi:include href="./worksheets/ws-add-sub-fractions-extension.ptx"/>
+    <xi:include href="./worksheets/ws-add-sub-integers.ptx"/>
+    <xi:include href="./worksheets/ws-integer-arithmetic-situations.ptx"/>
+
 
     </chapter>
 

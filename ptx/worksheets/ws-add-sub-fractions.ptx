@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-add-sub-fractions">
+
+  <title>Addition and Subtraction of Fractions</title>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Use one of the concrete models (fraction bars or circles or pattern blocks or chip model) to solve the following problems. Discuss the importance of the whole and the meaning of finding common denominators.
+      </p>
+      <ol type="a">
+      <li>
+        <m> \frac{1}{3} + \frac{1}{2} </m>
+      </li>
+      <li>
+        <m> \frac{5}{6} - \frac{1}{4} </m>
+      </li>
+      <li>
+        <m> \frac{2}{3} + \frac{3}{4} </m>
+      </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Use a rectangle model (area model) to find the sum and the difference of <m> \frac{1}{3} </m> and <m> \frac{1}{4} </m>.  Discuss why we need to find common denominators, how a common denominator is reflected in the area model and “equal parts” are represented in the picture.
+      </p>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Practice using the rectangle model with the following questions.
+      </p>
+      <ol type="a">
+      <li>
+        <m> \frac{2}{5} + \frac{1}{3} </m>
+      </li>
+      <li>
+        <m> \frac{3}{4} + \frac{5}{6} </m>
+      </li>
+      <li>
+        <m> \frac{3}{5} - \frac{1}{4} </m>
+      </li>
+      <li>
+        <m> \frac{5}{6} - \frac{1}{4} </m>
+      </li>
+      </ol>
+    </statement>
+  </exercise>
+
+</worksheet>

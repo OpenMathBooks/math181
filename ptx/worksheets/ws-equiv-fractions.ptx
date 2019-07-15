@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-equiv-fractions">
+
+  <title>Equivalent Fractions </title>
+
+  <exercise workspace="40%">
+    <statement>
+      <p>
+        Discrete Models: Choose 18 counters as the whole. In the space below, describe how you might convince a student that two-thirds, four-sixths, and six-ninths are equivalent fractions.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="40%">
+    <statement>
+      <p>
+        Now, represent <m> \frac{2}{3} </m> using a fraction bar (tape diagram). Then, show  <m> \frac{2 \times 2}{3 \times 2} </m> on the model. What is the answer? In your picture, where do we see multiplying the numerator and denominator by 2? Be very specific!!!
+      </p>
+    </statement>
+  </exercise>
+
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        Now, represent represent <m> \frac{4}{10} </m> using a fraction bar (tape diagram). Then, show  <m> \frac{4 \div 2}{10 \div 2} </m> on the model. What is the answer? In your picture, where do we see dividing the numerator and denominator by 2? Be very specific!!!!
+      </p>
+    </statement>
+  </exercise>
+
+  <introduction>
+    <p>
+      For each of the following problems use one of the models (area model, set model (chips), rods, pattern blocks, fraction bars, fraction circles) to represent your solution process.
+    </p>
+  </introduction>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        	Jean has a casserole recipe that calls for <m> \frac{1}{2} </m> cup of butter. Jean only has <m> \frac{1}{3} </m> cup of butter. Assuming that Jean has enough of the other ingredients what fractions of the casserole recipe can Jean make? Make math drawings or use manipulatives to help you solve this problem. Explain why your answer is correct. In your explanation, attend carefully to the whole (unit amount) that each fraction is of.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="0%">
+    <statement>
+      <p>
+      	One serving of SnackOs is <m> \frac{2}{3} </m> of a cup. Jane wants to eat <m> \frac{1}{3} </m> of a serving of SnackOs. What fraction of a cup of SnackOs should Jane eat? Make math drawings to help you solve this problem. Explain why your answer is correct. In your explanation, attend carefully to the whole (unit amount) that each fraction is of.
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>
