@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-multiplication-models">
+
+  <title>Multiplication Models</title>
+
+  <introduction>
+    <p>
+      <b>Exploration #1</b>: Recall A <m> \times </m> B refers to the number of objects in A groups of B objects.  The product A <m> \times </m> B gives the total number of objects.  For the following story problems, write the corresponding multiplication statement and explicitly identify what are the groups, what are the objects in each group, and what does the product represent.
+    </p>
+  </introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If apples cost $2 per pound, how much will 5 pounds of apples cost?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        How many hours are in a week?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        A carpet is 4 feet long and 3 feet wide. What is its area?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Rémi has 4 different pairs of pants and 3 different shirts. How many different outfits consisting of a pair of pants and a shirt can Rémi make from these clothes?
+      </p>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <introduction>
+    <p>
+      <b>Exploration #2</b>: Each of the three models below can be used to represent the process of multiplying 4 by 3.  Discuss the following questions using these figures.
+    </p>
+    <dl>
+      <li>
+        <b>Figure 1</b>: This could be viewed as a 2-dimensional array model or a rectangular area model.
+        <sidebyside width="10%">
+          <image source="images/mult-array.png"/>
+        </sidebyside>
+      </li>
+      <li>
+        <b>Figure 2</b>: A tree diagram
+        <sidebyside width="10%">
+          <image source="images/mult-tree.png"/>
+        </sidebyside>
+      </li>
+      <li>
+        <b>Figure 3</b>: This could be viewed as an array model with one row only.
+        <sidebyside width="40%">
+          <image source="images/mult-one-row.png"/>
+        </sidebyside>
+      </li>
+    </dl>
+  </introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Which figure can be easily associated with the <q>repeated addition</q> idea? Why?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Which picture makes it easiest to see that <m> 4 \times 3 = 3 \times 4 </m> (<b>commutative property of multiplication</b>)?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Which picture might be most helpful if you wanted to illustrate another round of multiplication, for example 4 times 3 times 2 (and also the <b>associative property of multiplication</b>)?
+      </p>
+    </statement>
+  </exercise>
+
+<pagebreak />
+
+<introduction>
+  <p>
+    <b>Exploration #3</b>: Associative and Commutative Properties of Multiplication
+  </p>
+  <p>
+    How can we use properties of multiplication to do the following mental math problems in our heads?
+  </p>
+</introduction>
+
+<exercise workspace="15%">
+  <statement>
+    <p>
+       <m> 16 \times 25  </m>
+    </p>
+  </statement>
+</exercise>
+
+<exercise workspace="15%">
+  <statement>
+    <p>
+       <m> 5 \times 32  </m>
+    </p>
+  </statement>
+</exercise>
+
+<exercise workspace="15%">
+  <statement>
+    <p>
+       <m> 4 \times 10 \times 7  </m>
+    </p>
+  </statement>
+</exercise>
+
+<introduction>
+  <b>Exploration #4</b>: Story Problems with Multiplication
+</introduction>
+
+<exercise workspace="10%">
+  <statement>
+    <p>
+      Dave and Roberto want to know how many one-inch-by-one-inch squares it would take to cover the floor of a room that is 10 feet by 8 feet.  They multiply 10 by 8 by 12 and decide that they would need 960 one-inch squares.  Their calculation is incorrect, explain why it is incorrect and why Dave and Roberto might be thinking this way.
+    </p>
+  </statement>
+</exercise>
+
+<pagebreak />
+
+<exercise workspace="20%">
+  <statement>
+    <p>
+      In a school project students make short, pretend license plates for their model cars.  The license plates can only use the letters A, B, and C and the numbers 1 and 2.  There must be two letters followed by two numbers, and letters and numbers can be used over again.  For example, one possible license plate is AA11. Another is CA21. How many total license plates of this type can be made?
+    </p>
+  </statement>
+</exercise>
+
+<exercise workspace="20%">
+  <statement>
+    <p>
+      How many total license plates can be made using three of any letter (26 choices) followed by four digits (10 choices, 0 through 9)?  Explain by analogy using ideas from the previous two questions
+    </p>
+  </statement>
+</exercise>
+
+<exercise workspace="20%">
+  <statement>
+    <p>
+      Suppose a school club had 6 members. In how many ways can they choose the club President and Vice President? Use one of the models for multiplication discussed in Exploration #1 to illustrate your process.
+    </p>
+  </statement>
+</exercise>
+
+<pagebreak />
+
+<exercise workspace="20%">
+  <statement>
+    <p>
+      Revisit the last question: Suppose a school club had 6 members. In how many ways can they choose the co-president pair? Is your answer different than for the other question?  Explain.
+    </p>
+  </statement>
+</exercise>
+
+<introduction>
+  <b>Exploration #5</b>: Special Case – Multiplying by 10.
+</introduction>
+
+<exercise workspace="20%">
+  <statement>
+    <p>
+      Using the example <m> 10 \times 32 </m>, explain a strategy to find the product. Using base-ten blocks show why your strategy works.
+    </p>
+  </statement>
+</exercise>
+
+<exercise workspace="20%">
+  <statement>
+    <p>
+      Does your strategy work with <m> 10 \times 3.2 </m>? Explain and show using base 10 blocks and/or decimal squares.
+    </p>
+  </statement>
+</exercise>
+
+<pagebreak />
+
+<exercise workspace="20%">
+  <statement>
+    <p>
+      Clark says <m> 10 \times 4.7=4.70 </m>. Why might Clark think this? Provide an explanation to Clark why his answer is not correct, provide the correct answer and explain how the correct answer is obtained.
+    </p>
+  </statement>
+
+</exercise>
+
+</worksheet>
