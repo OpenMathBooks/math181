@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-mult-fractions">
+
+  <title>Fraction Multiplication</title>
+
+  <introduction>
+    <p>
+      Draw pictures that help us find the following products.  Make sure that you can see the answer in your picture – this mean that we must also be able to identify the whole in each picture.
+    </p>
+  </introduction>
+
+  <exercise workspace="30%">
+    <statement>
+      <p>
+        <m> 2 \times \frac{1}{3} </m>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="30%">
+    <statement>
+      <p>
+        <m> \frac{1}{2} \times \frac{1}{3} </m>
+      </p>
+    </statement>
+  </exercise>
+
+<pagebreak />
+
+<exercise workspace="30%">
+  <statement>
+    <p>
+      <m> \frac{1}{3} \times 2  </m>  Explain why this is different from #1.
+    </p>
+  </statement>
+</exercise>
+
+<exercise workspace="30%">
+  <statement>
+    <p>
+      <m> 3 \times \frac{4}{5} </m>
+    </p>
+  </statement>
+</exercise>
+
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Use a drawing or manipulatives to solve this problem. Don’t forget to identify wholes.
+      </p>
+      <p>
+        Kate had to swim <m> \frac{1}{6} </m> of a mile during swim team practice.  After she swam <m> \frac{1}{2} </m> of that distance, she had to stop and rest. How far of a mile had she gone? What operation are you performing? Explain.
+      </p>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        Use a drawing or manipulatives to solve this problem. Don’t forget to identify wholes.
+      </p>
+      <p>
+        Akela had <m> \frac{2}{3} </m>of a quart of juice in the refrigerator.  He drank <m> \frac{1}{4} </m> of that amount. What fraction of a quart of juice did Akela drink?
+      </p>
+    </statement>
+  </exercise>
+
+  <introduction>
+    <p>
+      Use an area model of multiplication to solve each problem.
+    </p>
+  </introduction>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        <m> \frac{2}{3} \times \frac{3}{5} </m>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        <m> \frac{1}{2} \times \frac{2}{3} </m>
+      </p>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        <m> \frac{3}{4} \times \frac{1}{2} </m>
+      </p>
+    </statement>
+  </exercise>
+
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        How do your pictures above relate to the standard algorithm for multiplying fractions (multiplying the numerators and multiplying the denominators)? Be specific.
+      </p>
+    </statement>
+  </exercise>
+
+    <exercise workspace="20%">
+      <statement>
+        <p>
+          How would you help students understand that when 2 is multiplied by 6, the answer is greater than 2 and 6, but when <m> \frac{1}{2} </m> is multiplied by <m> \frac{1}{6} </m>, the answer is less than <m> \frac{1}{2} </m> and <m> \frac{1}{6} </m>?
+        </p>
+      </statement>
+    </exercise>
+
+<pagebreak />
+    <exercise workspace="20%">
+      <statement>
+        <p>
+          Originally, there were <m> \frac{3}{4} </m> of a pound of Skittles in the candy bowl. Then, <m> \frac{1}{3} </m> of the candies in the bowl was removed. What fraction of a pound of Skittles was removed from the candy bowl? And, how much (what fraction) of a pound of Skittles is left in the candy bowl? What mathematical operations are you doing for these two questions? Explain and provide pictures.
+        </p>
+      </statement>
+    </exercise>
+
+
+</worksheet>

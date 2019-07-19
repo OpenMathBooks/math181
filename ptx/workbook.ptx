@@ -31,6 +31,7 @@
     <xi:include href="./worksheets/ws-add-sub-integers.ptx"/>
     <xi:include href="./worksheets/ws-integer-arithmetic-situations.ptx"/>
     <xi:include href="./worksheets/ws-multiplication-models.ptx"/>
+    <xi:include href="./worksheets/ws-mult-fractions.ptx"/>
 
 
     </chapter>
