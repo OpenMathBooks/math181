@@ -6,7 +6,7 @@
 
 
 
-  <exercise workspace="10%">
+  <exercise workspace="20%">
     <statement>
       <p>
         Using base-5 blocks, discuss how Quintopian currency would be represented. For example, represent <m> 314_{5}</m> and <m> 43_{5}</m>. If you have $58 dollars how would you represent it using base-5 blocks?
@@ -14,7 +14,7 @@
     </statement>
   </exercise>
 
-  <exercise workspace="10%">
+  <exercise workspace="20%">
     <statement>
       <p>
         If you have <m>412_{5}</m> in base-5 blocks and you trade in all the blocks for their corresponding number of small cubes, how many small cubes would you have?
@@ -22,10 +22,10 @@
     </statement>
   </exercise>
 
-  <exercise>
+  <exercise workspace="15%">
     <statement>
       <p>
-        Discuss with your group.
+        Discuss with your group and note your conclusions.
       </p>
     <ol type="i">
       <li>
@@ -59,7 +59,7 @@
   <exercise workspace="10%">
     <statement>
       <p>
-        List multiple things that you observe that are similar and different between addition and subtraction in base 5 (Quintopia) compared to base 10.
+        List multiple things about addition and subtraction that you observe are similar and different in base 5 (Quintopia) compared to base 10.
       </p>
     </statement>
   </exercise>

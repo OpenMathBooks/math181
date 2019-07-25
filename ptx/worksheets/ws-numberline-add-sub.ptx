@@ -17,15 +17,14 @@
       </p>
       <ol type="a">
         <li>
-          <!-- <sidebyside width="90%"> -->
+          <sidebyside width="70%">
             <image source="images/numberline-add-sub-1a.png"/>
-          <!-- </sidebyside> -->
+          </sidebyside>
         </li>
         <li>
-          <!-- <sidebyside width="90%"> -->
+          <sidebyside width="70%">
             <image source="images/numberline-add-sub-1b.png"/>
-          <!-- </sidebyside> -->
-          <!-- Would not compile with 'sidebyside' commands, but works fine without -->
+          </sidebyside>
         </li>
       </ol>
     </statement>
@@ -38,10 +37,10 @@
       </p>
       <ol type="a">
         <li>
-          <me> 42+?=91 </me>
+          <m> 42+?=91 </m>
         </li>
         <li>
-          <me> 57+?=83 </me>
+          <m> 57+?=83 </m>
         </li>
       </ol>
     </statement>

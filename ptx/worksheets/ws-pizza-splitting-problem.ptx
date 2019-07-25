@@ -4,7 +4,7 @@
 
   <title>Pizza Splitting Problem, Part 2</title>
 
-  <exercise workspace="10%">
+  <exercise workspace="20%">
     <statement>
       <p>
         Now, assume that each pizza is already cut into 12 equal pieces. At one table there are 3 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Which table should he choose?
@@ -12,7 +12,7 @@
     </statement>
   </exercise>
 
-  <exercise workspace="10%">
+  <exercise workspace="20%">
     <statement>
       <p>
         Suppose now that, instead of dividing up the pizza separately at each table, the hosts decide to give all 18 people equal amounts from the 7 pizzas.  Carlos realizes that this means that the amount everyone ends up with is in between the amounts they would have ended up with if each pizza had only been shared among those at the same table.  How can we state this observation in terms of fractions?  How can we state this observation in terms of straight-line graphs?  Is there a general relationship about fractions that this is illustrating?  Is there a general graphical relationship that this is illustrating?
@@ -33,15 +33,15 @@
     </statement>
   </exercise>
 
-  <exercise>
+  <exercise workspace="10%">
     <statement>
       <p>
-        (Problem 2 on Comparing Fractions Worksheet) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.
+        (Refer to Problem 2 on Comparing Fractions Worksheet) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.
       </p>
     </statement>
   </exercise>
 
-  <exercise>
+  <exercise workspace="10%">
     <statement>
       <p>
         Create and interpret a double number line way to solve this problem.
@@ -52,7 +52,7 @@
   <exercise>
     <statement>
       <p>
-        Create and interpret a People vs Pizza graph to solve this problem, and relate it to the previous double number line.
+        On Graph paper, create and interpret a People vs Pizza graph to solve this problem, and relate it to the previous double number line.
       </p>
     </statement>
   </exercise>

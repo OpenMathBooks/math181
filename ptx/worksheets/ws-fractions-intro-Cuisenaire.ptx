@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-fractions-intro-Cuisenaire">
+
+  <title>Exploring Fractions--Cuisenaire Rods</title>
+
+<introduction>
+  <p>
+    For Online Cuisenaire Rods, go to: http:///nrich.maths.org/4348
+  </p>
+</introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Select a brown Cuisenaire Rod.  If brown is the whole, which rod is one-fourth?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If dark green is the whole, what rod represents two-thirds? What rod represents three-halves?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Select a dark green Cuisenaire Rod.  If dark green is two-thirds, what rod is the whole?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Select a yellow Cuisenaire Rod.  If yellow is five-fourths, what rod is one whole? What rod is 2?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Select a dark green Cuisenaire Rod.  If dark green is the whole, what fraction is the yellow rod?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If the brown rod is one whole, what fraction is the orange rod?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If the blue rod is 3, what rod represents <m> \frac{2}{3} </m>?
+      </p>
+    </statement>
+  </exercise>
+        
+</worksheet>

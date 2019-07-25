@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-fractions-intro-patternblocks">
+
+  <title>Exploring Fractions--Pattern Blocks Representation</title>
+
+
+    <introduction>
+      <p>
+         Pattern blocks include the yellow hexagon, blue parallelogram, red trapezoid, and green triangle.
+         For Online Pattern Blocks, go to: http://www.mathplayground.com/patternblocks.html)
+      </p>
+    </introduction>
+
+    <introduction>
+      <p>
+        If the yellow hexagon represents one whole:
+      </p>
+    </introduction>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+            What shape would represent <m> \frac{1}{2} </m> ?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+            What shape would represent <m> \frac{1}{3} </m> ?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+            What shape would represent <m> \frac{1}{6} </m>?
+        </p>
+      </statement>
+    </exercise>
+
+<introduction>
+  <p>
+    If the blue parallelogram represents one whole:
+  </p>
+</introduction>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+          What fraction would the red trapezoid represent?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+          What fraction would the green triangle represent?
+        </p>
+      </statement>
+    </exercise>
+
+<pagebreak />
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+          What fraction would the yellow hexagon represent?
+        </p>
+      </statement>
+    </exercise>
+
+    <introduction>
+      <p>
+        If the double hexagon represents one whole:
+      </p>
+    </introduction>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+          What fraction would the red trapezoid represent?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+          What fraction would the green triangle represent?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+          What fraction would the yellow hexagon represent?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise workspace="10%">
+      <statement>
+        <p>
+          If the red trapezoid equals <m> \frac{3}{5} </m>, what shape or shapes, when combined, could represent 1?  How many different shape combinations are there?
+        </p>
+      </statement>
+    </exercise>
+
+</worksheet>

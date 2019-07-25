@@ -22,7 +22,11 @@
     <xi:include href="./worksheets/ws-decimals-add-sub.ptx"/>
     <xi:include href="./worksheets/ws-add-sub-strip-diagrams.ptx"/>
     <xi:include href="./worksheets/ws-add-sub-reasoning.ptx"/>
-    <xi:include href="./worksheets/ws-fractions-intro-meaning.ptx"/>
+    <xi:include href="./worksheets/ws-fractions-intro-rectangle.ptx"/>
+    <xi:include href="./worksheets/ws-fractions-intro-sets.ptx"/>
+    <xi:include href="./worksheets/ws-fractions-intro-Cuisenaire.ptx"/>
+    <xi:include href="./worksheets/ws-fractions-intro-patternblocks.ptx"/>
+    <xi:include href="./worksheets/ws-fractions-intro-numberline.ptx"/>
     <xi:include href="./worksheets/ws-equiv-fractions.ptx"/>
     <xi:include href="./worksheets/ws-comparing-fractions.ptx"/>
     <xi:include href="./worksheets/ws-pizza-splitting-problem.ptx"/>
@@ -32,7 +36,8 @@
     <xi:include href="./worksheets/ws-integer-arithmetic-situations.ptx"/>
     <xi:include href="./worksheets/ws-multiplication-models.ptx"/>
     <xi:include href="./worksheets/ws-mult-fractions.ptx"/>
-
+    <xi:include href="./worksheets/ws-mult-fractions-EP.ptx"/>
+    <xi:include href="./worksheets/ws-mult-decimals.ptx"/>
 
     </chapter>
 

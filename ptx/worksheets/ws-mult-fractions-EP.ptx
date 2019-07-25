@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-mult-fractions-EP">
+
+  <title>Fraction Multiplication-Extra Practice</title>
+
+  <introduction>
+    <p>
+      Exploration 1: Fraction Multiplication with Rectangles.
+	(NOTE: For the entire exploration, one rectangle is the whole.)
+    </p>
+      <sidebyside width="100%">
+        <image source="images/frac-mult-rect.png"/>
+      </sidebyside>
+    <p>
+      NOTE #1: Your final answer might not be in its most simplified form after Step 3. So simplify it! NOTE #2: You can perform all three steps within one whole.
+    </p>
+  </introduction>
+
+  <exercise >
+    <statement>
+      <p>
+        <m> \frac{2}{5} \times \frac{1}{3} </m>
+      </p>
+      <sidebyside width="60%">
+        <image source="images/generic-rectangle.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise >
+    <statement>
+      <p>
+        <m> \frac{3}{4} \times \frac{5}{6} </m>
+      </p>
+      <sidebyside width="60%">
+        <image source="images/generic-rectangle.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+<introduction>
+  <p>
+    Exploration 2: Fraction Multiplication with Pattern Blocks. (NOTE: For the entire exploration, two hexagons is the whole.)
+  </p>
+  <sidebyside width="100%">
+    <image source="images/frac-mult-pattern.png"/>
+  </sidebyside>
+<p>
+    NOTE #1: Your final answer might not be in its most simplified form after Step 3. So simplify it! NOTE #2: You can perform all three steps within one whole.
+  </p>
+</introduction>
+
+  <exercise >
+    <statement>
+      <p>
+        <m> \frac{2}{3} \times \frac{1}{4} </m>
+      </p>
+      <sidebyside width="80%">
+        <image source="images/3-double-hexagons.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise >
+    <statement>
+      <p>
+        <m> \frac{1}{3} \times \frac{3}{4} </m>
+      </p>
+      <sidebyside width="80%">
+        <image source="images/3-double-hexagons.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+  <exercise >
+    <statement>
+      <p>
+        <m> \frac{5}{6} \times \frac{1}{2} </m>
+      </p>
+      <sidebyside width="80%">
+        <image source="images/3-double-hexagons.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+  <exercise >
+    <statement>
+      <p>
+        <m> \frac{1}{3} \times \frac{1}{4} </m>
+      </p>
+      <sidebyside width="80%">
+        <image source="images/3-double-hexagons.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+</worksheet>

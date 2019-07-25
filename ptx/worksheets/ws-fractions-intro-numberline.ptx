@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-fractions-intro-numberline">
+
+  <title>Exploring Fractions--Number Line Representation</title>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        On the number line below, <m> a= 0 </m> and <m> b=1 </m>.  Use the meaning of fractions to plot three-fifths.
+      </p>
+      <sidebyside width="100%">
+        <image source="images/fractions-number-line.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        On the number line below, <m> a= 0 </m> and <m> b=\frac{6}{5} </m>.  Use the meaning of fractions to plot one-whole (1).
+      </p>
+      <sidebyside width="100%">
+        <image source="images/fractions-number-line.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+</worksheet>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-mult-decimals">
+
+  <title>Multiplying Decimals</title>
+
+  <exercise >
+    <statement>
+      <p>
+        Using decimal squares show 3 groups of 0.12 (i.e., 3×0.12).
+      </p>
+      <sidebyside width="50%">
+        <image source="images/decimal-square.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+  <exercise >
+    <statement>
+      <p>
+        Model the following multiplication expressions using decimal squares and find the answers. In each case explain how regrouping shows up both in the arithmetic operation and in the picture.
+      </p>
+      <ol type="a">
+        <li>
+          <p>
+          <m> 4 \times 0.9 </m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m> 3 \times 0.74 </m>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Explain how using decimal squares helps explain where to put the decimal point in the following problems:
+      </p>
+      <ol type="a">
+        <li>
+          <m> 10 \times 0.2 </m>
+        </li>
+        <li>
+            <m> 10 \times 0.12 </m>
+        </li>
+        <li>
+            <m> 100 \times 0.03 </m>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+        Model the following multiplication expressions using decimal squares and find the answers. (Recall the definition of multiplication)
+      </p>
+      <ol>
+        <li>
+          <p>
+            <m> \frac{1}{2} \times 0.8 </m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m> \frac{3}{4} \times 0.16 </m>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+<pagebreak />
+
+  <introduction>
+    <p>
+      Model the following multiplication expressions using an area model and find the answers.  Make sure that you can explain how you know where the decimal place goes.
+    </p>
+  </introduction>
+
+  <exercise>
+    <statement>
+      <p>
+        <m> 0.4 \times 0.16</m>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        <m> 1.2 \times 0.8</m>
+      </p>
+    </statement>
+  </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          <m> 2.3 \times 3.7 </m>
+        </p>
+      </statement>
+    </exercise>
+
+</worksheet>

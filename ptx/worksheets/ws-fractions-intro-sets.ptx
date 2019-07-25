@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-fractions-intro-sets">
+
+  <title>Exploring Fractions--Set Model Representation</title>
+
+
+
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If 14 counters are one whole, shade the counters that make three-sevenths.
+        <sidebyside width="30%">
+          <image source="images/fourteen-counters.png"/>
+        </sidebyside>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Draw 12 counters like #1. If 12 counters are one whole, how many are in five-thirds of a set?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Draw 21 coutners. If 21 counters are three-fifths of a set, how many counters are in the full set (1 whole)?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Draw 12 counters. If 12 counters are three-halves of a set, how many counters are in one set (1 whole)?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise >
+    <statement>
+      <p>
+        What fraction of this set is shaded in?
+        <sidebyside width="30%">
+          <image source="images/counters-one-third.png"/>
+        </sidebyside>
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>

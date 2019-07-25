@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-fractions-intro-rectangle">
+
+  <title>Exploring Fractions--Rectangle (Area) Model Representation</title>
+
+  <introduction>
+    <p>
+      For each problem, keep in mind how you might explain your process.
+    </p>
+  </introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+         If the following rectangle is one whole, show two-thirds.
+         <sidebyside width="40%">
+           <image source="images/generic-rectangle.png"/>
+         </sidebyside>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If the following rectangle is one whole, show five-thirds.
+        <sidebyside width="40%">
+          <image source="images/generic-rectangle.png"/>
+        </sidebyside>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If the following rectangle is three-fourths, draw one whole.
+        <sidebyside width="30%">
+          <image source="images/generic-square.png"/>
+        </sidebyside>
+      </p>
+    </statement>
+  </exercise>
+
+<pagebreak />
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        If this rectangle is four-thirds, show what rectangle could be the whole.
+        <sidebyside width="40%">
+          <image source="images/generic-rectangle.png"/>
+        </sidebyside>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Maria says that the shaded region below represents the fraction <m> \frac{9}{12} </m>. Carmina says the shaded region represents the fraction <m> \frac{9}{4} </m>. Explain why each of the two student’s answers can be considered correct.
+          <sidebyside width="50%">
+            <image source="images/nine-fourths-vs-twelfths.png"/>
+          </sidebyside>
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>
