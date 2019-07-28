@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-div-frac-4">
+
+  <title>Dividing Fractions Part 4</title>
+
+  <introduction>
+    <p>
+      Exploration 4: Dividing Fractions with Rectangles.  Refer to the examples provided in class and Exploration #1 to illustrate the following problems.  In each problem, one rectangle is the whole.
+    </p>
+  </introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        <m> \frac{2}{3} \div \frac{1}{6} </m>
+      </p>
+      <sidebyside width="80%">
+        <image source="images/3-rectangles.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        <m> \frac{5}{6} \div \frac{2}{5} </m>
+      </p>
+      <sidebyside width="80%">
+        <image source="images/3-rectangles.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        <m> \frac{2}{5} \div \frac{3}{4} </m>
+      </p>
+      <sidebyside width="80%">
+        <image source="images/3-rectangles.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+</worksheet>

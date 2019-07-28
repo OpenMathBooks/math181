@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-div-meaning">
+
+  <title>Meaning of Division</title>
+
+  <introduction>
+    <p>
+      <sidebyside width="100%">
+        <image source="images/div-meaning.png"/>
+      </sidebyside>
+    </p>
+    <p>
+      Exploration 1: For the following story problems, write the corresponding numerical division expression (e.g.,  24÷6 ), decide what each number represents and which interpretation of division is involved. Find the quotient!
+    </p>
+  </introduction>
+
+
+  <exercise workspace="4%">
+    <statement>
+      <p>
+        The month of February in 2018 has 28 days. How many weeks are there in February 2018?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="4%">
+    <statement>
+      <p>
+        If you drive 324 miles at a constant speed for 6 hours, then how fast did you go?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="4%">
+    <statement>
+      <p>
+        The month of February in 2018 has 28 days. How many weeks are there in February 2018?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise >
+    <statement>
+      <p>
+        If 75 fluid ounces of mouthwash costs $5, then how much of this mouthwash will you get for $1?
+      </p>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+
+
+<introduction>
+  <p>
+    Exploration 2: Write an expression involving division that would correspond to the following problems and find the answer if possible.
+  </p>
+</introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        I have 0 candies.  I want to make goodie bags with 5 candies each.  How many goodie bags can I make?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        I have 20 candies.  I want to make goodie bags with 0 candies each.  How many goodie bags can I make?
+      </p>
+    </statement>
+  </exercise>
+
+<introduction>
+  <p>
+    Exploration 3: Solve each of the following problems. Explain how the context affects what form the answer might take.
+  </p>
+</introduction>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Nicole has 100 Halloween stickers that need to be distributed to her 32 students. How many stickers does each student receive?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Marci has 100 second graders who are going to the zoo. Each bus will hold 32 students. How many buses does she need?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        Olivia has 100 square yards to make ghost costumes for Halloween. She needs to make 32 ghost costumes. How much material does she have for each costume?
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>

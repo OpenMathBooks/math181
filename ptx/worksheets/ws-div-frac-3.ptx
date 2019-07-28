@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-div-frac-3">
+
+  <title>Dividing Fractions Part 3</title>
+
+  <introduction>
+    <p>
+      Dividing Fractions with Pattern Blocks.
+(Use TWO yellow hexagons as the whole for the entire exploration.)
+    </p>
+    <sidebyside width="100%">
+      <image source="images/frac-div-hex-1.png"/>
+    </sidebyside>
+  </introduction>
+
+  <exercise >
+    <statement>
+      <p>
+        <m> \frac{3}{4} \div \frac{1}{12} </m>
+      </p>
+      <sidebyside width="70%">
+        <image source="images/3-double-hexagons.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+<pagebreak />
+
+  <introduction>
+    <sidebyside width="100%">
+      <image source="images/frac-div-hex-2.png"/>
+    </sidebyside>
+  </introduction>
+
+  <exercise >
+    <statement>
+      <p>
+        <m> \frac{1}{2} \div \frac{3}{4} </m>
+      </p>
+      <sidebyside width="70%">
+        <image source="images/3-double-hexagons.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <introduction>
+    <sidebyside width="100%">
+      <image source="images/frac-div-hex-3.png"/>
+    </sidebyside>
+  </introduction>
+
+  <exercise >
+    <statement>
+      <p>
+        <m> \frac{3}{4} \div \frac{5}{12} </m>
+      </p>
+      <sidebyside width="70%">
+        <image source="images/3-double-hexagons.png"/>
+      </sidebyside>
+    </statement>
+  </exercise>
+
+
+</worksheet>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-div-frac-2">
+
+  <title>Dividing Fractions Part 2</title>
+
+  <introduction>
+    <p>
+      Exploration 2: Use one of the models (Cuisenaire rods, fraction bars, fraction models, rectangles, pattern blocks, double number lines, etc.) to answer the following questions. Discuss which interpretation of division is suitable for each problem.
+    </p>
+  </introduction>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        A carton containing <m> \frac{1}{2} </m>  a quart of cream is used to fill creamers that hold <m> \frac{1}{6} </m>  quart each.  How many creamers can be filled?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        A cookie recipe calls for <m> \frac{1}{3} </m> cup of sugar for one batch.  If you have <m> \frac{1}{2} </m> a cup of sugar, how many batches of cookies can you make?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        Katie wants to make a recipe that calls for <m> 2 \frac{1}{2} </m> cups of flour but finds that she only has <m> 1 \frac{3}{4} </m> cups of flour. Assuming she wants to keep all the ingredient ratios the same as in the recipe, what fraction of the recipe can she make?
+      </p>
+    </statement>
+  </exercise>
+
+<pagebreak />
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        You used 6 cans of paint for 3 walls, how many cans of paint do you need to paint one wall?  What if you used <m> \frac{3}{4} </m> of a can to paint <m> \frac{2}{3} </m> of a wall. How many cans of paint do you need to paint one wall?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        If <m> \frac{1}{4} </m>  cup of water fills <m> \frac{1}{3} </m>  of a plastic container, then how much water will the full container hold?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        If you have <m> \frac{3}{4} </m> pound of candy and you divide the candy in half, how much candy will you have in each portion? What if, you have <m> \frac{3}{4} </m> pound of candy and you divide the candy by half, how much candy will you have in each?
+      </p>
+    </statement>
+  </exercise>
+  
+  <pagebreak />
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        Explain why when is 4 divided by 8, the quotient is less than 4, but when <m> \frac{1}{4} </m>  is divided by <m> \frac{1}{8} </m> , the quotient is greater than <m> \frac{1}{4} </m>?
+      </p>
+    </statement>
+  </exercise>
+
+
+</worksheet>

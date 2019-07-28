@@ -38,6 +38,15 @@
     <xi:include href="./worksheets/ws-mult-fractions.ptx"/>
     <xi:include href="./worksheets/ws-mult-fractions-EP.ptx"/>
     <xi:include href="./worksheets/ws-mult-decimals.ptx"/>
+    <xi:include href="./worksheets/ws-div-meaning.ptx"/>
+    <xi:include href="./worksheets/ws-div-frac-1.ptx"/>
+    <xi:include href="./worksheets/ws-div-frac-2.ptx"/>
+    <xi:include href="./worksheets/ws-div-frac-3.ptx"/>
+    <xi:include href="./worksheets/ws-div-frac-4.ptx"/>
+
+
+
+
 
     </chapter>
 
