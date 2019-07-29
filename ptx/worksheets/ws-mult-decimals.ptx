@@ -83,7 +83,7 @@
     </p>
   </introduction>
 
-  <exercise>
+  <exercise workspace="20%">
     <statement>
       <p>
         <m> 0.4 \times 0.16</m>
@@ -91,7 +91,7 @@
     </statement>
   </exercise>
 
-  <exercise>
+  <exercise workspace="20%">
     <statement>
       <p>
         <m> 1.2 \times 0.8</m>
@@ -99,7 +99,7 @@
     </statement>
   </exercise>
 
-    <exercise>
+    <exercise workspace="20%">
       <statement>
         <p>
           <m> 2.3 \times 3.7 </m>

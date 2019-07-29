@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-div-decimals">
+
+  <title>Dividing Decimals</title>
+
+  <exercise >
+    <statement>
+      <p>
+        Use the <q>How many groups?</q> meaning of division to find the following quotients using decimal squares.
+      </p>
+      <ol type="a" >
+        <li>
+          <p>
+          <me> 0.64 \div 0.16 = </me>
+          <sidebyside width="40%">
+            <image source="images/decimal-square.png"/>
+          </sidebyside>
+          </p>
+        </li>
+        <li>
+          <p>
+          <me> 0.77 \div 0.3 = </me>
+          <sidebyside width="40%">
+            <image source="images/decimal-square.png"/>
+          </sidebyside>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <pagebreak />
+
+  <exercise >
+    <statement>
+      <p>
+        Use the <q>How many in each group?</q>  meaning of division to find the following quotients using decimal squares.
+      </p>
+      <ol type="a" >
+        <li>
+          <p>
+          <me> 0.42 \div 3 = </me>
+          <sidebyside width="40%">
+            <image source="images/decimal-square.png"/>
+          </sidebyside>
+          </p>
+        </li>
+        <li>
+          <p>
+          <me> 0.92 \div 4 = </me>
+          <sidebyside width="40%">
+            <image source="images/decimal-square.png"/>
+          </sidebyside>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        Show how to perform decimal long division using <m> 23.7 \div 0.16 </m> as an example.
+      </p>
+    </statement>
+  </exercise>
+
+<pagebreak />
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        On the previous problem, did you move the decimal points when you divided? If so, why does your method make sense?  Explain in at least two ways. You might consider using base ten blocks, converting to fractions, etc.
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>

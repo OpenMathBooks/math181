@@ -43,7 +43,8 @@
     <xi:include href="./worksheets/ws-div-frac-2.ptx"/>
     <xi:include href="./worksheets/ws-div-frac-3.ptx"/>
     <xi:include href="./worksheets/ws-div-frac-4.ptx"/>
-
+    <xi:include href="./worksheets/ws-div-frac-problems.ptx"/>
+    <xi:include href="./worksheets/ws-div-decimals.ptx"/>
 
 
 

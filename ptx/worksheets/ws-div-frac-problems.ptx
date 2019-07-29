@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-div-frac-problems">
+
+  <title>Fraction Division Problems</title>
+
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        One serving of rice is <m> \frac{2}{3} </m> of a cup.  Sarah ate <m> 2 \frac{1}{2} </m> cups of rice.  How many servings did Sarah eat?  Use a math drawing to illustrate your solution.  Write a division statement that represents the problem.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        Running at a steady pace, Johanna ran 5 miles in  <m> \frac{3}{4} </m>  of an hour.  How many miles will she run in one hour?  Use a model/diagram to solve this.  Write a division statement that represents the problem.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="20%">
+    <statement>
+      <p>
+        A crew is building a road.  So far the road is  <m> \frac{3}{4} </m> of a mile long.  This is  <m> \frac{2}{3} </m> the length of the road when it is finished.  How long will the road be when it’s finished? Use a model/diagram to solve this.  Write a division statement that represents the problem.
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>
