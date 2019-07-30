@@ -45,6 +45,9 @@
     <xi:include href="./worksheets/ws-div-frac-4.ptx"/>
     <xi:include href="./worksheets/ws-div-frac-problems.ptx"/>
     <xi:include href="./worksheets/ws-div-decimals.ptx"/>
+    <xi:include href="./worksheets/ws-exploring-numbers-tiles.ptx"/>
+    <xi:include href="./worksheets/ws-gcf-lcm.ptx"/>
+    <xi:include href="./worksheets/ws-even-odd.ptx"/>
 
 
 

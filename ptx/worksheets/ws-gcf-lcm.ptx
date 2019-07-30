@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-gcf-lcm">
+
+  <title>GCF and LCM</title>
+
+  <exercise workspace="3%">
+    <statement>
+      <p>
+        <ul>
+          <li>
+            <p>
+              List all of the factors of 18:
+            </p>
+          </li>
+          <li>
+            <p>
+              List all of the factors of 24:
+            </p>
+          </li>
+          <li>
+            <p>
+            Which factors are common?
+            </p>
+          </li>
+          <li>
+            <p>
+              What is the greatest common factor (GCF) between 18 and 24?
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="3%">
+    <statement>
+      <p>
+        <ul>
+          <li>
+            <p>
+              List the first ten multiples of 6:
+            </p>
+          </li>
+          <li>
+            <p>
+              List the first ten multiples of 9:
+            </p>
+          </li>
+          <li>
+            <p>
+            Which multiples are common?
+            </p>
+          </li>
+          <li>
+            <p>
+              What is the least common multiple (LCM) of 6 and 9?
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="8%">
+    <statement>
+      <p>
+        What is the greatest common factor of 20 and 30?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="8%">
+    <statement>
+      <p>
+        What is the least common multiple of 20 and 30?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="10%">
+    <statement>
+      <p>
+        How is the least common multiple related to the addition of fractions?  Use   <m> \frac{5}{6} + \frac{7}{9} </m> as an example.
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>

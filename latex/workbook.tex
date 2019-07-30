@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2019-07-28T20:03:01-06:00    *%
+%*    on 2019-07-29T23:08:39-06:00    *%
 %*                                    *%
 %*      https://pretextbook.org       *%
 %*                                    *%
@@ -293,6 +293,36 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% \linewidth, and are guaranteed to be positive and sum to 1.0
 \tcbset{ imagestyle/.style={bwminimalstyle} }
 \NewTColorBox{image}{mmm}{imagestyle,left skip=#1\linewidth,width=#2\linewidth}
+%% For improved tables
+\usepackage{array}
+%% Some extra height on each row is desirable, especially with horizontal rules
+%% Increment determined experimentally
+\setlength{\extrarowheight}{0.2ex}
+%% Define variable thickness horizontal rules, full and partial
+%% Thicknesses are 0.03, 0.05, 0.08 in the  booktabs  package
+\newcommand{\hrulethin}  {\noalign{\hrule height 0.04em}}
+\newcommand{\hrulemedium}{\noalign{\hrule height 0.07em}}
+\newcommand{\hrulethick} {\noalign{\hrule height 0.11em}}
+%% We preserve a copy of the \setlength package before other
+%% packages (extpfeil) get a chance to load packages that redefine it
+\let\oldsetlength\setlength
+\newlength{\Oldarrayrulewidth}
+\newcommand{\crulethin}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.04em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}%
+\newcommand{\crulemedium}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.07em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+\newcommand{\crulethick}[1]%
+{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{0.11em}}\cline{#1}%
+\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%% Single letter column specifiers defined via array package
+\newcolumntype{A}{!{\vrule width 0.04em}}
+\newcolumntype{B}{!{\vrule width 0.07em}}
+\newcolumntype{C}{!{\vrule width 0.11em}}
 %% Figures, Tables, Listings, Named Lists, Floats
 %% The [H]ere option of the float package fixes floats in-place,
 %% in deference to web usage, where floats are totally irrelevant
@@ -310,6 +340,13 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% http://tex.stackexchange.com/questions/16195
 \makeatletter
 \let\c@figure\c@cthm
+\makeatother
+%% Adjust stock table environment so that it no longer floats
+\SetupFloatingEnvironment{table}{fileext=lot,placement={H},within=section,name=Table}
+\captionsetup[table]{labelfont=bf}
+%% http://tex.stackexchange.com/questions/16195
+\makeatletter
+\let\c@table\c@cthm
 \makeatother
 %% More flexible list management, esp. for references
 %% But also for specifying labels (i.e. custom order) on nested lists
@@ -414,12 +451,12 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 {\LARGE A Workbook}\\[3\baselineskip]
 {\Large \textbraceleft{}author\textbraceright{}}\\[0.5\baselineskip]
 {\Large \textbraceleft{}institution\textbraceright{}}\\[3\baselineskip]
-{\Large July 28, 2019}\\}
+{\Large July 29, 2019}\\}
 \clearpage
 %% end:   title page
 %% begin: copyright-page
 \thispagestyle{empty}
-\hypertarget{g:colophon:idm211749335408}{}\vspace*{\stretch{2}}
+\hypertarget{g:colophon:idm533872380464}{}\vspace*{\stretch{2}}
 \noindent{\bfseries Website}: \href{[website]}{\mono{[website]}}\par\medskip
 \noindent\textcopyright{}[copyright-year]\quad{}[copyright-holder]\\[0.5\baselineskip]
  This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/4.0/}{http:\slash{}\slash{}creativecommons.org\slash{}licenses\slash{}by-sa\slash{}4.0\slash{}}\par\medskip
@@ -439,7 +476,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \typeout{Chapter 0 Worksheets}
 \typeout{************************************************}
 %
-\begin{chapterptx}{Worksheets}{}{Worksheets}{}{}{g:chapter:idm211749374192}
+\begin{chapterptx}{Worksheets}{}{Worksheets}{}{}{g:chapter:idm533871634416}
 %
 %
 \typeout{************************************************}
@@ -453,7 +490,7 @@ While on an Intergalactic Numismatics Tour, you encounter a meteor shower and ar
 \par
 Quintopia turns out to be a rather dull place to visit.  To help pass the time at the shuttle docking area, you and a fellow passenger play a game with the Quintopia currency.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749317264}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533825086240}%
 Coin Trading Game%
 %
 \begin{itemize}[label=\textbullet]
@@ -475,7 +512,7 @@ Coin Trading Game%
 \end{sidebyside}%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749308544}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533825078144}%
 Coin Trading Game Revisited%
 \par
 A third passenger has been watching you play.  She suggests it is more challenging to start the game with TWO BLUE coins and to remove the number of yellow coins equal to the number rolled on each turn.  The first player to remove all of the coins from his or her playing board is the winner.  (Note: On the last turn, the number rolled may exceed the number of yellow chips remaining.)  Before you play this new version of the coin trading game, think about how you can remove yellow coins when you have none on your board (you only have two blue ones).  Note: Do not trade in coins until you absolutely need to.  For example, you should not immediately trade in your two blue coins all for red or yellow coins.%
@@ -501,23 +538,23 @@ A third passenger has been watching you play.  She suggests it is more challengi
 \begin{introduction}{}%
 You got bored on the ship deck and decided to visit Quintopia to do some shopping. You know you can only use Quintopian currency while shopping, so you exchange some of your US dollars before your shopping and you have \(312_{5}\) (in Quintopian currency), which means 3 blue, 1 red, and 2 yellow coins. While you’re shopping, recall that whenever possible, you must trade in five yellow coins for a red coin, or trade in five red coins for a blue coin, and so on.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.15}{g:exercise:idm211749326752}%
+\begin{divisionexercise}{1}{}{0.15}{g:exercise:idm533825087696}%
 Before you left the ship, you won a gift card worth \(24_{5}\) (in Quintopian currency). How much total money do you have now for shopping? Show your process in at least two different ways.%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.15}{g:exercise:idm211749300528}%
+\begin{divisionexercise}{2}{}{0.15}{g:exercise:idm533825070544}%
 You spent \(43_{5}\) at the Appletopia store. How much Quintopian money do you have left?  Explain your process.%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.15}{g:exercise:idm211749298720}%
+\begin{divisionexercise}{3}{}{0.15}{g:exercise:idm533825068880}%
 You saw a pair of shoes you like and it only costs \(32_{5}\). Since it is very cheap, you want to buy three pairs. How much will it cost to buy three pairs of shoes (in Quintopia currency)? Solve this question in two different ways.%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{4}{}{0.15}{g:exercise:idm211749296336}%
+\begin{divisionexercise}{4}{}{0.15}{g:exercise:idm533825066720}%
 After buying all three pairs of shoes, how much money do you have left?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.15}{g:exercise:idm211749294784}%
+\begin{divisionexercise}{5}{}{0.15}{g:exercise:idm533825065264}%
 After all your shopping you had some dinner which cost \(102_{5}\) . Do you have enough Quintopian money to pay? If not, how much Quintopian money do you need?  If you have an extra \textdollar{}6 US currency, will that be enough to pay the rest?%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.15}{g:exercise:idm211749292672}%
+\begin{divisionexercise}{6}{}{0.15}{g:exercise:idm533825063264}%
 Discuss Base 5 and Base 10; and meaning of addition, subtraction and multiplication operations. Discuss expanded form.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -530,13 +567,13 @@ Discuss Base 5 and Base 10; and meaning of addition, subtraction and multiplicat
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Connections to Base Blocks}{}{Connections to Base Blocks}{}{}{x:worksheet:ws-quintopia-3-base-connections}
-\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm211749342064}%
+\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm533825061040}%
 Using base-5 blocks, discuss how Quintopian currency would be represented. For example, represent \(314_{5}\) and \(43_{5}\). If you have \textdollar{}58 dollars how would you represent it using base-5 blocks?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm211749288128}%
+\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm533825058560}%
 If you have \(412_{5}\) in base-5 blocks and you trade in all the blocks for their corresponding number of small cubes, how many small cubes would you have?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.15}{g:exercise:idm211749286192}%
+\begin{divisionexercise}{3}{}{0.15}{g:exercise:idm533825056752}%
 Discuss with your group and note your conclusions.%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -547,10 +584,10 @@ Discuss with your group and note your conclusions.%
 \item{}How does this relate to the digits you can use to represent numbers in base-5 vs. base-10?%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749281552}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533825052528}%
 Using base-10 blocks find the sum and the difference of 208 and 93.%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211749279984}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533825051056}%
 List multiple things about addition and subtraction that you observe are similar and different in base 5 (Quintopia) compared to base 10.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -563,7 +600,7 @@ List multiple things about addition and subtraction that you observe are similar
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Algorithms for Addition and Subtraction}{}{Algorithms for Addition and Subtraction}{}{}{x:worksheet:ws-add-sub-algorithms}
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749290592}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533872067424}%
 Carry out the steps of the usual addition algorithm in the problems below in base 5.  Carefully EXPLAIN what each of the ``carried'' (regrouped or traded in) numbers mean.  You may want to refer to base 5 blocks in your explanation.%
 \par
 %
@@ -573,7 +610,7 @@ Carry out the steps of the usual addition algorithm in the problems below in bas
 %
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749341872}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533872217376}%
 Carry out the steps of the usual subtraction algorithm in the problem below using base 5.  Carefully EXPLAIN what each of the ``borrowed'' (regrouped or traded in) numbers means.  You may want to refer to base 5 blocks in your explanation.%
 \begin{equation*}
 321_{5}-124_5 \text{ and } 301_5-213_5 \text{.}
@@ -590,7 +627,7 @@ Carry out the steps of the usual subtraction algorithm in the problem below usin
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Different Bases}{}{Different Bases}{}{}{x:worksheet:ws-different-bases}
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749324976}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533825047296}%
 In the base-7 number system, the amount: 1 flat, 6 longs, and 5 small cubes is recorded as \(165_{seven}\) or \(165_7\). In general, we record the base as a subscript except for base 10, since that is the assumed standard base.  Note that in base-7, 1 long is worth 7 small cubes, and 1 flat is worth 7 longs (which is 49 small cubes).%
 \par
 For each number below, determine how many small cubes that number would consist of if we traded in all the base blocks for their corresponding number of small cubes.  In other words, what amount of small cubes is represented by each number in its corresponding base?%
@@ -602,10 +639,10 @@ For each number below, determine how many small cubes that number would consist 
 \item{}\(10111_{two}       = \)%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749255136}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533825027056}%
 What are the place values after the decimal point in base 10? For example, write the expanded form of 1.29 to show the place values. What about the place values in base 5 after the decimal point (e.g., 12.345) ?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749253440}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533825025552}%
 Write the following numbers in expanded form:%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -613,10 +650,10 @@ Write the following numbers in expanded form:%
 \item{}\(34.21_5      = \)%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749250032}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533825022416}%
 What are the place values in base six?  What digits are needed?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211749248496}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533825021040}%
 How do you immediately know there is an error in each statement?  How would we correctly represent these amounts in the given bases?%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -624,10 +661,10 @@ How do you immediately know there is an error in each statement?  How would we c
 \item{}fifty-seven \(= 108_{seven}\)%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm211749244704}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm533825017504}%
 In base 6, a particular number can be made with 10 large cubes, 9 flats, 7 longs, and 5 small cubes.  What is this number in base 6? (Hint: the answer is NOT \(10975_6 \). Try to solve this without converting to base 10)?%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm211749242608}%
+\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm533825015584}%
 My last digit is a 0 when I am represented in base-5 and a 1 when represented in base-2.  What is my last digit when represented base-10? Explain.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -640,12 +677,12 @@ My last digit is a 0 when I am represented in base-5 and a 1 when represented in
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Extra Practice: Addition and Subtraction in Other Bases}{}{Extra Practice: Addition and Subtraction in Other Bases}{}{}{x:worksheet:ws-EP-add-sub}
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749276672}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533825046096}%
 Carry out the steps of the usual addition algorithm in the problem below in the designated base.  Carefully EXPLAIN what each of the “carried” (regrouped\slash{}traded in) numbers mean.  You may want to refer to the appropriate base blocks in your explanation.%
 \par
 \(33_4+12_4\) and \(263_7+324_7\)%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749266368}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533825042160}%
 Carry out the steps of the usual subtraction algorithm in the problem below in the designated base.  Carefully EXPLAIN what each of the “borrowed” (regrouped\slash{}traded in) numbers means.  You may want to refer to the appropriate base blocks in your explanation.%
 \par
 \(341_8 - 154_8 \) and \(301_4 -213_4\)%
@@ -663,22 +700,22 @@ Carry out the steps of the usual subtraction algorithm in the problem below in t
 \begin{introduction}{}%
 Try to find ways that make the following problems easy to do mentally.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.08}{g:exercise:idm211749273520}%
+\begin{divisionexercise}{1}{}{0.08}{g:exercise:idm533825044176}%
 \(7999+857+1\)%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.08}{g:exercise:idm211749238032}%
+\begin{divisionexercise}{2}{}{0.08}{g:exercise:idm533871426160}%
 \(367+98+2\)%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.08}{g:exercise:idm211749236128}%
+\begin{divisionexercise}{3}{}{0.08}{g:exercise:idm533846998320}%
 \(153+19+7\)%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.08}{g:exercise:idm211749234224}%
+\begin{divisionexercise}{4}{}{0.08}{g:exercise:idm533846216576}%
 \(7.89+6.93+0.07\)%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.08}{g:exercise:idm211749232320}%
+\begin{divisionexercise}{5}{}{0.08}{g:exercise:idm533849553456}%
 \(37-14-7\)%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.08}{g:exercise:idm211749230416}%
+\begin{divisionexercise}{6}{}{0.08}{g:exercise:idm533871299856}%
 \(91-23-3\)%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -694,7 +731,7 @@ Try to find ways that make the following problems easy to do mentally.%
 \begin{introduction}{}%
 Each exercise below uses a different strategy for solving an addition or subtraction.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749239776}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533871242400}%
 Starting in 2nd grade, students are expected to use open (unlabeled) number lines to help them add and subtract two-digit numbers using methods beyond the standard addition and subtraction algorithms.   Explain the following students’ strategies for subtraction.%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -712,7 +749,7 @@ Starting in 2nd grade, students are expected to use open (unlabeled) number line
 %
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749216992}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533870738752}%
 For each of the following, find the missing number by using an open number line (similar to those above).  Show at least two different methods for calculating the missing number on two different number lines.%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -720,7 +757,7 @@ For each of the following, find the missing number by using an open number line 
 \item{}\(57+?=83 \)%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749212960}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533870569904}%
 For the subtraction question \(53-8\), Delia, a second grade student, has done the following work:%
 \begin{equation*}
 53- 3=50-5=45
@@ -747,20 +784,20 @@ For the subtraction question \(53-8\), Delia, a second grade student, has done t
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Decimal Addition and Subtraction with Manipulatives}{}{Decimal Addition and Subtraction with Manipulatives}{}{}{x:worksheet:ws-decimals-add-sub}
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749228064}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533846355888}%
 Show how to represent 73.2 using base blocks.  What block is worth 1 here?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749322704}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533847310928}%
 Show how to represent 34.16 using base blocks.  What block is worth 1 here?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749321328}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533847343872}%
 Show how to use base blocks to model%
 \begin{equation*}
 23.25+2.9\text{.}
 \end{equation*}
 Be sure to connect this to the way that we add in the standard algorithm.  What is the importance of lining up the decimal points when we add with the standard algorithm?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749262016}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533847370032}%
 Ellie solves the subtraction problem%
 \begin{equation*}
 2.5-0.13
@@ -780,25 +817,25 @@ with toothpicks.  She represents 2.5 with 2 bundles of 10 toothpicks and 5 indiv
 \begin{introduction}{}%
 Directions: For each problem create strip (tape) diagram(s) to model the situation.  Also write an equation that models the situation.  Be sure that your equation matches the actual actions in the story problem, not just how you’d solve it.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749199472}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533849661728}%
 Rachel had 17 CDs.  After she got some more CDs, she had 43 CDs.  How many CDs did Rachel get?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749198192}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533849745520}%
 Rachel had 43 CDs.  After she gave some away, she had 17 CDs left.  How many did she give away?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749196688}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533849775616}%
 Rachel had some CDs.  After she gave 26 away, she had 17 left.  How many CDs did Rachel have at the start?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749195088}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533849845376}%
 Rachel has 43 CDs.  If 26 are hip hop and the rest are rap, how many rap CDs does she have?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211749193504}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533849874896}%
 Rachel has 43 CDs.  Benny has 26 CDs.  How many more CDs does Rachel have than Benny?%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm211749191920}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm533849933616}%
 Benny has 26 CDs. Benny has 17 fewer CDs than Rachel.  How many CDs does Rachel have?%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm211749190336}%
+\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm533849956448}%
 Rachel has 43 CDs. Rachel has 17 more CDs than Benny.  How many CDs does Benny have?%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -811,27 +848,27 @@ Rachel has 43 CDs. Rachel has 17 more CDs than Benny.  How many CDs does Benny h
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Reasoning with Addition and Subtraction Scenarios}{}{Reasoning with Addition and Subtraction Scenarios}{}{}{x:worksheet:ws-add-sub-reasoning}
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749204944}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533871069536}%
 1.	John and Anne want to calculate \textdollar{}37-\textdollar{}19 by first calculating%
 \begin{equation*}
 \$37-\$20=\$17 
 \end{equation*}
 John says they must now subtract the \textdollar{}1 remaining from \textdollar{}17, while Anne says they must add it.  Who is correct?  Use two different models (e.g., number line and strip diagram) to represent this scenario to make it clear who is correct.%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749177072}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533870131296}%
 John and Anne want to calculate \textdollar{}3.94 -\textdollar{}1.97 by first calculating%
 \begin{equation*}
 \$3.97-\$1.97 = \$2 
 \end{equation*}
 John says in this case they also need to subtract the \textdollar{}0.03 remaining from \textdollar{}2, while Anne says they must add it.  Who is correct?  Use two different models (e.g., number line and strip diagram) to represent this scenario to make it clear who is correct.%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749174992}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533850181872}%
 Jamirez says he can calculate \textdollar{}3.74 -\textdollar{}1.97 by first adding \textdollar{}0.03 to each number and calculating \textdollar{}3.77-\textdollar{}2 instead.  How could we use a model\slash{}diagram to show that Jamirez’s method is also valid?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749173296}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533870424928}%
 Jon’s time for running a lap in gym class is 1.4 minutes.  Jacky’s time is 1.32 minutes.  Jon thinks that he’s faster than Jacky since 4 is less than 32 so 1.4 must be less than 1.32.  Is Jon correct?  How we could convince the students whose time is faster and by how much?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211749171520}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533870476864}%
 A local park’s program committee is raising money by holding mountain bike races on a course through the local park.  During each race, a computer tracks the competitors’ locations on the course using GPS tracking.  The table below shows how far each competitor is from a checkpoint.%
 \begin{sidebyside}{1}{0.05}{0.05}{0}%
 \begin{sbspanel}{0.9}%
@@ -852,7 +889,7 @@ A local park’s program committee is raising money by holding mountain bike rac
 \end{enumerate}
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm211749164368}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm533845651008}%
 Andrea and Marta are testing three different coolers to see which keeps the temperature the coolest.  They placed a bag of ice in each cooler, and then measured the air temperature inside each cooler after 90 minutes.  The temperatures are recorded below:%
 \begin{image}{0}{1}{0}%
 \includegraphics[width=1\linewidth]{images/reasoning-table-cooler.png}
@@ -874,7 +911,7 @@ Is either student correct?  Explain.  Use a number line to help justify your ans
 \begin{introduction}{}%
 For each problem, keep in mind how you might explain your process.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749187280}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533849573152}%
 If the following rectangle is one whole, show two-thirds. \begin{sidebyside}{1}{0.3}{0.3}{0}%
 \begin{sbspanel}{0.4}%
 \includegraphics[width=1\linewidth]{images/generic-rectangle.png}
@@ -882,7 +919,7 @@ If the following rectangle is one whole, show two-thirds. \begin{sidebyside}{1}{
 \end{sidebyside}%
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749159280}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533846365680}%
 If the following rectangle is one whole, show five-thirds. \begin{sidebyside}{1}{0.3}{0.3}{0}%
 \begin{sbspanel}{0.4}%
 \includegraphics[width=1\linewidth]{images/generic-rectangle.png}
@@ -890,7 +927,7 @@ If the following rectangle is one whole, show five-thirds. \begin{sidebyside}{1}
 \end{sidebyside}%
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749156544}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533846855856}%
 If the following rectangle is three-fourths, draw one whole. \begin{sidebyside}{1}{0.35}{0.35}{0}%
 \begin{sbspanel}{0.3}%
 \includegraphics[width=1\linewidth]{images/generic-square.png}
@@ -899,7 +936,7 @@ If the following rectangle is three-fourths, draw one whole. \begin{sidebyside}{
 %
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749153536}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533847019952}%
 If this rectangle is four-thirds, show what rectangle could be the whole. \begin{sidebyside}{1}{0.3}{0.3}{0}%
 \begin{sbspanel}{0.4}%
 \includegraphics[width=1\linewidth]{images/generic-rectangle.png}
@@ -907,7 +944,7 @@ If this rectangle is four-thirds, show what rectangle could be the whole. \begin
 \end{sidebyside}%
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211749150784}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533847274336}%
 Maria says that the shaded region below represents the fraction \(\frac{9}{12} \). Carmina says the shaded region represents the fraction \(\frac{9}{4} \). Explain why each of the two student’s answers can be considered correct. \begin{sidebyside}{1}{0.25}{0.25}{0}%
 \begin{sbspanel}{0.5}%
 \includegraphics[width=1\linewidth]{images/nine-fourths-vs-twelfths.png}
@@ -925,7 +962,7 @@ Maria says that the shaded region below represents the fraction \(\frac{9}{12} \
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Exploring Fractions-{}-{}Set Model Representation}{}{Exploring Fractions-{}-{}Set Model Representation}{}{}{x:worksheet:ws-fractions-intro-sets}
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749202720}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533850161424}%
 If 14 counters are one whole, shade the counters that make three-sevenths. \begin{sidebyside}{1}{0.35}{0.35}{0}%
 \begin{sbspanel}{0.3}%
 \includegraphics[width=1\linewidth]{images/fourteen-counters.png}
@@ -933,16 +970,16 @@ If 14 counters are one whole, shade the counters that make three-sevenths. \begi
 \end{sidebyside}%
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749179856}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533850270720}%
 Draw 12 counters like \#1. If 12 counters are one whole, how many are in five-thirds of a set?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749178368}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533850267712}%
 Draw 21 coutners. If 21 counters are three-fifths of a set, how many counters are in the full set (1 whole)?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749145280}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533869955856}%
 Draw 12 counters. If 12 counters are three-halves of a set, how many counters are in one set (1 whole)?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{}{g:exercise:idm211749143680}%
+\begin{divisionexercise}{5}{}{}{g:exercise:idm533850407280}%
 What fraction of this set is shaded in? \begin{sidebyside}{1}{0.35}{0.35}{0}%
 \begin{sbspanel}{0.3}%
 \includegraphics[width=1\linewidth]{images/counters-one-third.png}
@@ -963,25 +1000,25 @@ What fraction of this set is shaded in? \begin{sidebyside}{1}{0.35}{0.35}{0}%
 \begin{introduction}{}%
 For Online Cuisenaire Rods, go to: http:\slash{}\slash{}\slash{}nrich.maths.org\slash{}4348%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749185392}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533846327520}%
 Select a brown Cuisenaire Rod.  If brown is the whole, which rod is one-fourth?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749135056}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533846670016}%
 If dark green is the whole, what rod represents two-thirds? What rod represents three-halves?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749133472}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533847060976}%
 Select a dark green Cuisenaire Rod.  If dark green is two-thirds, what rod is the whole?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749131888}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533847225488}%
 Select a yellow Cuisenaire Rod.  If yellow is five-fourths, what rod is one whole? What rod is 2?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211749130288}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533849688272}%
 Select a dark green Cuisenaire Rod.  If dark green is the whole, what fraction is the yellow rod?%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm211749128688}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm533850262528}%
 If the brown rod is one whole, what fraction is the orange rod?%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm211749127136}%
+\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm533870964176}%
 If the blue rod is 3, what rod represents \(\frac{2}{3} \)?%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1000,41 +1037,41 @@ Pattern blocks include the yellow hexagon, blue parallelogram, red trapezoid, an
 \begin{introduction}{}%
 If the yellow hexagon represents one whole:%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749113312}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533871328464}%
 What shape would represent \(\frac{1}{2} \) ?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749111504}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533871027536}%
 What shape would represent \(\frac{1}{3} \) ?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749109568}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533870930048}%
 What shape would represent \(\frac{1}{6} \)?%
 \end{divisionexercise}%
 \begin{introduction}{}%
 If the blue parallelogram represents one whole:%
 \end{introduction}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749106752}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533846267248}%
 What fraction would the red trapezoid represent?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211749105200}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533846230880}%
 What fraction would the green triangle represent?%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm211749103376}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm533846934848}%
 What fraction would the yellow hexagon represent?%
 \end{divisionexercise}%
 \begin{introduction}{}%
 If the double hexagon represents one whole:%
 \end{introduction}%
-\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm211749100944}%
+\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm533850189392}%
 What fraction would the red trapezoid represent?%
 \end{divisionexercise}%
-\begin{divisionexercise}{8}{}{0.1}{g:exercise:idm211749099392}%
+\begin{divisionexercise}{8}{}{0.1}{g:exercise:idm533849547984}%
 What fraction would the green triangle represent?%
 \end{divisionexercise}%
-\begin{divisionexercise}{9}{}{0.1}{g:exercise:idm211749097840}%
+\begin{divisionexercise}{9}{}{0.1}{g:exercise:idm533869682688}%
 What fraction would the yellow hexagon represent?%
 \end{divisionexercise}%
-\begin{divisionexercise}{10}{}{0.1}{g:exercise:idm211749096288}%
+\begin{divisionexercise}{10}{}{0.1}{g:exercise:idm533870314144}%
 If the red trapezoid equals \(\frac{3}{5} \), what shape or shapes, when combined, could represent 1?  How many different shape combinations are there?%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1047,7 +1084,7 @@ If the red trapezoid equals \(\frac{3}{5} \), what shape or shapes, when combine
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Exploring Fractions-{}-{}Number Line Representation}{}{Exploring Fractions-{}-{}Number Line Representation}{}{}{x:worksheet:ws-fractions-intro-numberline}
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749122512}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533845971296}%
 On the number line below, \(a= 0 \) and \(b=1 \).  Use the meaning of fractions to plot three-fifths.%
 \begin{sidebyside}{1}{0}{0}{0}%
 \begin{sbspanel}{1}%
@@ -1055,7 +1092,7 @@ On the number line below, \(a= 0 \) and \(b=1 \).  Use the meaning of fractions 
 \end{sbspanel}%
 \end{sidebyside}%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749181872}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533846211248}%
 On the number line below, \(a= 0 \) and \(b=\frac{6}{5} \).  Use the meaning of fractions to plot one-whole (1).%
 \begin{sidebyside}{1}{0}{0}{0}%
 \begin{sbspanel}{1}%
@@ -1073,22 +1110,22 @@ On the number line below, \(a= 0 \) and \(b=\frac{6}{5} \).  Use the meaning of 
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Equivalent Fractions}{}{Equivalent Fractions}{}{}{x:worksheet:ws-equiv-fractions}
-\begin{divisionexercise}{1}{}{0.4}{g:exercise:idm211749120208}%
+\begin{divisionexercise}{1}{}{0.4}{g:exercise:idm533850299840}%
 Discrete Models: Choose 18 counters as the whole. In the space below, describe how you might convince a student that two-thirds, four-sixths, and six-ninths are equivalent fractions.%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.4}{g:exercise:idm211749089808}%
+\begin{divisionexercise}{2}{}{0.4}{g:exercise:idm533871158176}%
 Now, represent \(\frac{2}{3} \) using a fraction bar (tape diagram). Then, show  \(\frac{2 \times 2}{3 \times 2} \) on the model. What is the answer? In your picture, where do we see multiplying the numerator and denominator by 2? Be very specific!!!%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm211749087360}%
+\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm533870866192}%
 Now, represent represent \(\frac{4}{10} \) using a fraction bar (tape diagram). Then, show  \(\frac{4 \div 2}{10 \div 2} \) on the model. What is the answer? In your picture, where do we see dividing the numerator and denominator by 2? Be very specific!!!!%
 \end{divisionexercise}%
 \begin{introduction}{}%
 For each of the following problems use one of the models (area model, set model (chips), rods, pattern blocks, fraction bars, fraction circles) to represent your solution process.%
 \end{introduction}%
-\begin{divisionexercise}{4}{}{0.2}{g:exercise:idm211749083808}%
+\begin{divisionexercise}{4}{}{0.2}{g:exercise:idm533845896592}%
 Jean has a casserole recipe that calls for \(\frac{1}{2} \) cup of butter. Jean only has \(\frac{1}{3} \) cup of butter. Assuming that Jean has enough of the other ingredients what fractions of the casserole recipe can Jean make? Make math drawings or use manipulatives to help you solve this problem. Explain why your answer is correct. In your explanation, attend carefully to the whole (unit amount) that each fraction is of.%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0}{g:exercise:idm211749081104}%
+\begin{divisionexercise}{5}{}{0}{g:exercise:idm533870374752}%
 One serving of SnackOs is \(\frac{2}{3} \) of a cup. Jane wants to eat \(\frac{1}{3} \) of a serving of SnackOs. What fraction of a cup of SnackOs should Jane eat? Make math drawings to help you solve this problem. Explain why your answer is correct. In your explanation, attend carefully to the whole (unit amount) that each fraction is of.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1104,13 +1141,13 @@ One serving of SnackOs is \(\frac{2}{3} \) of a cup. Jane wants to eat \(\frac{1
 \begin{introduction}{}%
 At a birthday party everyone is about to sit down for pizza.  All the pizzas in this problem are the same size, and the same toppings are distributed evenly on all pizzas.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749092528}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533845719456}%
 At one table there are 4 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Carlos knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, so he wants to sit at the table at which he will end up with the most pizza.  Which table should he choose?  Assume that the pizzas are uncut until all chairs at the table are occupied.%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749066368}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533845729968}%
 What if, at one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly.  He still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749064464}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533845748448}%
 Which fraction in each pair is greater?  Give one or more reasons.  Do NOT use drawings, models, common denominators, or cross-multiplication.  Rely on your existing knowledge about the size of various fractions and\slash{}or the size of the pieces in different fractions, e.g., compare to benchmark numbers like 0, \(\frac{1}{2} \) and 1, or make comparisons based on the size of the pieces.%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -1121,7 +1158,7 @@ Which fraction in each pair is greater?  Give one or more reasons.  Do NOT use d
 \end{enumerate}
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{4}{}{0.3}{g:exercise:idm211749056272}%
+\begin{divisionexercise}{4}{}{0.3}{g:exercise:idm533870277872}%
 Find two fractions between each pair of fractions given below. Plot all four fractions on a number line.%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -1129,7 +1166,7 @@ Find two fractions between each pair of fractions given below. Plot all four fra
 \item{}\(\frac{2}{3} \) and \(\frac{3}{5} \)%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{}{g:exercise:idm211749051520}%
+\begin{divisionexercise}{5}{}{}{g:exercise:idm533845577216}%
 Without using a calculator, mark where each of the following fractions belongs on the following number line. Describe how you determined where to place each fraction.%
 \par
 %
@@ -1153,14 +1190,14 @@ Without using a calculator, mark where each of the following fractions belongs o
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Pizza Splitting Problem, Part 2}{}{Pizza Splitting Problem, Part 2}{}{}{x:worksheet:ws-pizza-splitting-problem}
-\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm211749091296}%
+\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm533846926544}%
 Now, assume that each pizza is already cut into 12 equal pieces. At one table there are 3 pizzas and 8 chairs.  At the other table there are 4 pizzas and 10 chairs.  Which table should he choose?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm211749115984}%
+\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm533845680048}%
 Suppose now that, instead of dividing up the pizza separately at each table, the hosts decide to give all 18 people equal amounts from the 7 pizzas.  Carlos realizes that this means that the amount everyone ends up with is in between the amounts they would have ended up with if each pizza had only been shared among those at the same table.  How can we state this observation in terms of fractions?  How can we state this observation in terms of straight-line graphs?  Is there a general relationship about fractions that this is illustrating?  Is there a general graphical relationship that this is illustrating?%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749138064}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533870922736}%
 Maria solved problem 2 on handout 1 by using graph paper and drawing two straight lines.  She is wondering what the lines represent, what their equations are and what other problems could be solved with them, now that the lines are drawn.  She is also wondering what the slope of each line represents.  What can we tell Maria on these questions?%
 \begin{sidebyside}{1}{0.05}{0.05}{0}%
 \begin{sbspanel}{0.9}%
@@ -1168,13 +1205,13 @@ Maria solved problem 2 on handout 1 by using graph paper and drawing two straigh
 \end{sbspanel}%
 \end{sidebyside}%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749203552}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533870964960}%
 (Refer to Problem 2 on Comparing Fractions Worksheet) At one table there are 3 pizzas and 8 chairs, and at the other table there are 4 pizzas and 10 chairs.  Carlos, again, knows that everyone at the party is pretty hungry, and assumes that the pizzas at each table will be split evenly, he still wants to sit at the table at which he will end up with the most pizza.  Which table should he choose in this situation? Assume that the pizzas are uncut until all chairs at the table are occupied.%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211749046352}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533871285952}%
 Create and interpret a double number line way to solve this problem.%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{}{g:exercise:idm211749044784}%
+\begin{divisionexercise}{6}{}{}{g:exercise:idm533870922208}%
 On Graph paper, create and interpret a People vs Pizza graph to solve this problem, and relate it to the previous double number line.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1190,33 +1227,33 @@ On Graph paper, create and interpret a People vs Pizza graph to solve this probl
 \begin{introduction}{}%
 Use one of the concrete models (fraction bars or circles or pattern blocks or chip model) to solve the following problems. Discuss the importance of the whole and the meaning of finding common denominators.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm211749118768}%
+\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm533845769744}%
 \(\frac{1}{3} + \frac{1}{2} \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm211749032848}%
+\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm533845776192}%
 \(\frac{5}{6} - \frac{1}{4} \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm211749030928}%
+\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm533825563904}%
 \(\frac{2}{3} + \frac{3}{4} \)%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{4}{}{0.25}{g:exercise:idm211749028736}%
+\begin{divisionexercise}{4}{}{0.25}{g:exercise:idm533825561792}%
 Use a rectangle model (area model) to find the sum and the difference of \(\frac{1}{3} \) and \(\frac{1}{4} \).  Discuss why we need to find common denominators, how a common denominator is reflected in the area model and “equal parts” are represented in the picture.%
 \end{divisionexercise}%
 \begin{introduction}{}%
 Practice using the rectangle model with the following questions.%
 \end{introduction}%
-\begin{divisionexercise}{5}{}{0.2}{g:exercise:idm211749025280}%
+\begin{divisionexercise}{5}{}{0.2}{g:exercise:idm533825558608}%
 \(\frac{2}{5} + \frac{1}{3} \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm211749023360}%
+\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm533825556848}%
 \(\frac{3}{4} + \frac{5}{6} \)%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{7}{}{0.2}{g:exercise:idm211749021168}%
+\begin{divisionexercise}{7}{}{0.2}{g:exercise:idm533825554832}%
 \(\frac{3}{5} - \frac{1}{4}  \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{8}{}{0.2}{g:exercise:idm211749019248}%
+\begin{divisionexercise}{8}{}{0.2}{g:exercise:idm533825553072}%
 \(\frac{5}{6} - \frac{1}{4} \)%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1234,16 +1271,16 @@ The ancient Egyptians wrote any fraction as a sum of fractions with numerators o
 \par
 Find an Egyptian Fraction Representation for each of the fractions below:%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211749071856}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533870648400}%
 \(\frac{3}{4} \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211749070192}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533845622400}%
 \(\frac{5}{6} \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211749068288}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533870666016}%
 \(\frac{4}{5} \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211749015280}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533825549728}%
 Explain how your answer for \(\frac{5}{6} \) might be used to help you split five loaves of bread among six people.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1266,17 +1303,17 @@ Use the ``Union of two Disjoint Sets'' Model for Addition to solve each of the f
 \end{sidebyside}%
 %
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm211748998832}%
+\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm533825534672}%
 4+3%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm211748997056}%
+\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm533825533040}%
 \((-3)+(-6) \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm211748995152}%
+\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm533825531280}%
 \(3+(-7) \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.2}{g:exercise:idm211748993248}%
+\begin{divisionexercise}{4}{}{0.2}{g:exercise:idm533825529520}%
 \((-8)+ 5 \)%
 \end{divisionexercise}%
 \clearpage
@@ -1290,17 +1327,17 @@ Use the ``Take-Away Set'' Model for Subtraction to solve each of the following p
 \end{sidebyside}%
 %
 \end{introduction}%
-\begin{divisionexercise}{5}{}{0.3}{g:exercise:idm211748988128}%
+\begin{divisionexercise}{5}{}{0.3}{g:exercise:idm533825524880}%
 5-9%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm211748986352}%
+\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm533825523248}%
 \((-6)-(-5) \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{}{0.2}{g:exercise:idm211748984448}%
+\begin{divisionexercise}{7}{}{0.2}{g:exercise:idm533825521488}%
 \(3-(-4) \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{8}{}{0.2}{g:exercise:idm211748982544}%
+\begin{divisionexercise}{8}{}{0.2}{g:exercise:idm533825519728}%
 \((-4)-(-8) \)%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1316,27 +1353,27 @@ Use the ``Take-Away Set'' Model for Subtraction to solve each of the following p
 \begin{introduction}{}%
 The set of numbers called the integers is a subset of the real numbers (any number that can be found on the number line).  The set is comprised of positive integers (1, 2, 3, 4, etc.), negative integers (-1, -2, -3, -4, etc.), and 0, which is neither positive nor negative.  Use your knowledge of integers and their opposites to complete this activity.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.3}{g:exercise:idm211748979408}%
+\begin{divisionexercise}{1}{}{0.3}{g:exercise:idm533825517360}%
 Investigate what happens when you calculate ``6-3'';  ``6-2'';  ``6-1'' ;``6-0''; ``6-(-1)'';     ``6-(-2)''; ``6-(-3)''.  Explain why it makes sense that 6- (-3) = 6+3 = 9.   Refer to a pattern you notice in your calculation.%
 \end{divisionexercise}%
 \begin{introduction}{}%
 Solve the following temperature model problems using a picture.%
 \end{introduction}%
-\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm211748973680}%
+\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm533825512144}%
 It was -3 degrees C at dawn. In the meantime, the temperature went up 5 degrees C. Now what is the temperature?%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm211748971808}%
+\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm533825510384}%
 The temperature was 5 degrees C in Greeley. At the same time it was -3 degrees C in Denver. How much warmer was it in Greeley than in Denver?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.2}{g:exercise:idm211748970176}%
+\begin{divisionexercise}{4}{}{0.2}{g:exercise:idm533825508848}%
 The temperature during the day was -3 degrees C in Greeley and it dropped 2 degrees C more by midnight. What was the temperature at midnight?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.2}{g:exercise:idm211748968544}%
+\begin{divisionexercise}{5}{}{0.2}{g:exercise:idm533825507312}%
 The top of Mount Everest is at an elevation of 29029 feet above sea level, and the deepest part of the ocean in the Mariana Trench is 36070 feet below sea level.  How much higher is the top of Mount Everest compared to the lowest point in the ocean?%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm211748966528}%
+\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm533825505408}%
 Write integer addition and subtraction equations that are naturally suggested by problems 4 and 5 and briefly discuss how these examples can help students understand addition and subtraction of positive and negative numbers.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1352,16 +1389,16 @@ Write integer addition and subtraction equations that are naturally suggested by
 \begin{introduction}{}%
 Exploration \#1: Recall A \(\times \) B refers to the number of objects in A groups of B objects.  The product A \(\times \) B gives the total number of objects.  For the following story problems, write the corresponding multiplication statement and explicitly identify what are the groups, what are the objects in each group, and what does the product represent.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211748930736}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533825471056}%
 If apples cost \textdollar{}2 per pound, how much will 5 pounds of apples cost?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211748929440}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533825469680}%
 How many hours are in a week?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211748927920}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533825468304}%
 A carpet is 4 feet long and 3 feet wide. What is its area?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211748926368}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533825466928}%
 Rémi has 4 different pairs of pants and 3 different shirts. How many different outfits consisting of a pair of pants and a shirt can Rémi make from these clothes?%
 \end{divisionexercise}%
 \clearpage
@@ -1386,13 +1423,13 @@ Exploration \#2: Each of the three models below can be used to represent the pro
 \end{sidebyside}%
 \end{description}
 \end{introduction}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211748916416}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533825457744}%
 Which figure can be easily associated with the ``repeated addition'' idea? Why?%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm211748914432}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm533825455984}%
 Which picture makes it easiest to see that \(4 \times 3 = 3 \times 4 \) (commutative property of multiplication)?%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm211748912016}%
+\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm533825453840}%
 Which picture might be most helpful if you wanted to illustrate another round of multiplication, for example 4 times 3 times 2 (and also the associative property of multiplication)?%
 \end{divisionexercise}%
 \clearpage
@@ -1401,44 +1438,44 @@ Exploration \#3: Associative and Commutative Properties of Multiplication%
 \par
 How can we use properties of multiplication to do the following mental math problems in our heads?%
 \end{introduction}%
-\begin{divisionexercise}{8}{}{0.15}{g:exercise:idm211748907856}%
+\begin{divisionexercise}{8}{}{0.15}{g:exercise:idm533825450016}%
 \(16 \times 25  \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{9}{}{0.15}{g:exercise:idm211748905952}%
+\begin{divisionexercise}{9}{}{0.15}{g:exercise:idm533825448256}%
 \(5 \times 32  \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{10}{}{0.15}{g:exercise:idm211748904048}%
+\begin{divisionexercise}{10}{}{0.15}{g:exercise:idm533825446496}%
 \(4 \times 10 \times 7  \)%
 \end{divisionexercise}%
 \begin{introduction}{}%
 Exploration \#4: Story Problems with Multiplication\end{introduction}%
-\begin{divisionexercise}{11}{}{0.1}{g:exercise:idm211748901264}%
+\begin{divisionexercise}{11}{}{0.1}{g:exercise:idm533825443968}%
 Dave and Roberto want to know how many one-inch-by-one-inch squares it would take to cover the floor of a room that is 10 feet by 8 feet.  They multiply 10 by 8 by 12 and decide that they would need 960 one-inch squares.  Their calculation is incorrect, explain why it is incorrect and why Dave and Roberto might be thinking this way.%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{12}{}{0.2}{g:exercise:idm211748899168}%
+\begin{divisionexercise}{12}{}{0.2}{g:exercise:idm533825441984}%
 In a school project students make short, pretend license plates for their model cars.  The license plates can only use the letters A, B, and C and the numbers 1 and 2.  There must be two letters followed by two numbers, and letters and numbers can be used over again.  For example, one possible license plate is AA11. Another is CA21. How many total license plates of this type can be made?%
 \end{divisionexercise}%
-\begin{divisionexercise}{13}{}{0.2}{g:exercise:idm211748897280}%
+\begin{divisionexercise}{13}{}{0.2}{g:exercise:idm533825440192}%
 How many total license plates can be made using three of any letter (26 choices) followed by four digits (10 choices, 0 through 9)?  Explain by analogy using ideas from the previous two questions%
 \end{divisionexercise}%
-\begin{divisionexercise}{14}{}{0.2}{g:exercise:idm211748895600}%
+\begin{divisionexercise}{14}{}{0.2}{g:exercise:idm533825438608}%
 Suppose a school club had 6 members. In how many ways can they choose the club President and Vice President? Use one of the models for multiplication discussed in Exploration \#1 to illustrate your process.%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{15}{}{0.2}{g:exercise:idm211748893632}%
+\begin{divisionexercise}{15}{}{0.2}{g:exercise:idm533825436752}%
 Revisit the last question: Suppose a school club had 6 members. In how many ways can they choose the co-president pair? Is your answer different than for the other question?  Explain.%
 \end{divisionexercise}%
 \begin{introduction}{}%
 Exploration \#5: Special Case – Multiplying by 10.\end{introduction}%
-\begin{divisionexercise}{16}{}{0.2}{g:exercise:idm211748891088}%
+\begin{divisionexercise}{16}{}{0.2}{g:exercise:idm533825434400}%
 Using the example \(10 \times 32 \), explain a strategy to find the product. Using base-ten blocks show why your strategy works.%
 \end{divisionexercise}%
-\begin{divisionexercise}{17}{}{0.2}{g:exercise:idm211748889072}%
+\begin{divisionexercise}{17}{}{0.2}{g:exercise:idm533825432528}%
 Does your strategy work with \(10 \times 3.2 \)? Explain and show using base 10 blocks and\slash{}or decimal squares.%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{18}{}{0.2}{g:exercise:idm211748886800}%
+\begin{divisionexercise}{18}{}{0.2}{g:exercise:idm533825430512}%
 Clark says \(10 \times 4.7=4.70 \). Why might Clark think this? Provide an explanation to Clark why his answer is not correct, provide the correct answer and explain how the correct answer is obtained.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1454,26 +1491,26 @@ Clark says \(10 \times 4.7=4.70 \). Why might Clark think this? Provide an expla
 \begin{introduction}{}%
 Draw pictures that help us find the following products.  Make sure that you can see the answer in your picture – this mean that we must also be able to identify the whole in each picture.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.3}{g:exercise:idm211748952192}%
+\begin{divisionexercise}{1}{}{0.3}{g:exercise:idm533825481440}%
 \(2 \times \frac{1}{3} \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.3}{g:exercise:idm211749009568}%
+\begin{divisionexercise}{2}{}{0.3}{g:exercise:idm533825479776}%
 \(\frac{1}{2} \times \frac{1}{3} \)%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{3}{}{0.3}{g:exercise:idm211749007360}%
+\begin{divisionexercise}{3}{}{0.3}{g:exercise:idm533825477856}%
 \(\frac{1}{3} \times 2  \)  Explain why this is different from \#1.%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{0.3}{g:exercise:idm211749005376}%
+\begin{divisionexercise}{4}{}{0.3}{g:exercise:idm533825476096}%
 \(3 \times \frac{4}{5} \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211749003456}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533825474336}%
 Use a drawing or manipulatives to solve this problem. Don’t forget to identify wholes.%
 \par
 Kate had to swim \(\frac{1}{6} \) of a mile during swim team practice.  After she swam \(\frac{1}{2} \) of that distance, she had to stop and rest. How far of a mile had she gone? What operation are you performing? Explain.%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm211749039552}%
+\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm533825543088}%
 Use a drawing or manipulatives to solve this problem. Don’t forget to identify wholes.%
 \par
 Akela had \(\frac{2}{3} \)of a quart of juice in the refrigerator.  He drank \(\frac{1}{4} \) of that amount. What fraction of a quart of juice did Akela drink?%
@@ -1481,24 +1518,24 @@ Akela had \(\frac{2}{3} \)of a quart of juice in the refrigerator.  He drank \(\
 \begin{introduction}{}%
 Use an area model of multiplication to solve each problem.%
 \end{introduction}%
-\begin{divisionexercise}{7}{}{0.2}{g:exercise:idm211749035776}%
+\begin{divisionexercise}{7}{}{0.2}{g:exercise:idm533825539680}%
 \(\frac{2}{3} \times \frac{3}{5} \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{8}{}{0.2}{g:exercise:idm211748882880}%
+\begin{divisionexercise}{8}{}{0.2}{g:exercise:idm533825428256}%
 \(\frac{1}{2} \times \frac{2}{3} \)%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{9}{}{0.2}{g:exercise:idm211748880672}%
+\begin{divisionexercise}{9}{}{0.2}{g:exercise:idm533825426240}%
 \(\frac{3}{4} \times \frac{1}{2} \)%
 \end{divisionexercise}%
-\begin{divisionexercise}{10}{}{0.2}{g:exercise:idm211748878736}%
+\begin{divisionexercise}{10}{}{0.2}{g:exercise:idm533825424480}%
 How do your pictures above relate to the standard algorithm for multiplying fractions (multiplying the numerators and multiplying the denominators)? Be specific.%
 \end{divisionexercise}%
-\begin{divisionexercise}{11}{}{0.2}{g:exercise:idm211748877072}%
+\begin{divisionexercise}{11}{}{0.2}{g:exercise:idm533825422912}%
 How would you help students understand that when 2 is multiplied by 6, the answer is greater than 2 and 6, but when \(\frac{1}{2} \) is multiplied by \(\frac{1}{6} \), the answer is less than \(\frac{1}{2} \) and \(\frac{1}{6} \)?%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{12}{}{0.2}{g:exercise:idm211748873504}%
+\begin{divisionexercise}{12}{}{0.2}{g:exercise:idm533825419616}%
 Originally, there were \(\frac{3}{4} \) of a pound of Skittles in the candy bowl. Then, \(\frac{1}{3} \) of the candies in the bowl was removed. What fraction of a pound of Skittles was removed from the candy bowl? And, how much (what fraction) of a pound of Skittles is left in the candy bowl? What mathematical operations are you doing for these two questions? Explain and provide pictures.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1521,7 +1558,7 @@ Exploration 1: Fraction Multiplication with Rectangles. (NOTE: For the entire ex
 \par
 NOTE \#1: Your final answer might not be in its most simplified form after Step 3. So simplify it! NOTE \#2: You can perform all three steps within one whole.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{}{g:exercise:idm211748935120}%
+\begin{divisionexercise}{1}{}{}{g:exercise:idm533825484688}%
 \(\frac{2}{5} \times \frac{1}{3} \)%
 \begin{sidebyside}{1}{0.2}{0.2}{0}%
 \begin{sbspanel}{0.6}%
@@ -1530,7 +1567,7 @@ NOTE \#1: Your final answer might not be in its most simplified form after Step 
 \end{sidebyside}%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{2}{}{}{g:exercise:idm211748870256}%
+\begin{divisionexercise}{2}{}{}{g:exercise:idm533825416848}%
 \(\frac{3}{4} \times \frac{5}{6} \)%
 \begin{sidebyside}{1}{0.2}{0.2}{0}%
 \begin{sbspanel}{0.6}%
@@ -1549,7 +1586,7 @@ Exploration 2: Fraction Multiplication with Pattern Blocks. (NOTE: For the entir
 \par
 NOTE \#1: Your final answer might not be in its most simplified form after Step 3. So simplify it! NOTE \#2: You can perform all three steps within one whole.%
 \end{introduction}%
-\begin{divisionexercise}{3}{}{}{g:exercise:idm211748864464}%
+\begin{divisionexercise}{3}{}{}{g:exercise:idm533824346576}%
 \(\frac{2}{3} \times \frac{1}{4} \)%
 \begin{sidebyside}{1}{0.1}{0.1}{0}%
 \begin{sbspanel}{0.8}%
@@ -1558,7 +1595,7 @@ NOTE \#1: Your final answer might not be in its most simplified form after Step 
 \end{sidebyside}%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{4}{}{}{g:exercise:idm211748861312}%
+\begin{divisionexercise}{4}{}{}{g:exercise:idm533824343792}%
 \(\frac{1}{3} \times \frac{3}{4} \)%
 \begin{sidebyside}{1}{0.1}{0.1}{0}%
 \begin{sbspanel}{0.8}%
@@ -1566,7 +1603,7 @@ NOTE \#1: Your final answer might not be in its most simplified form after Step 
 \end{sbspanel}%
 \end{sidebyside}%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{}{g:exercise:idm211748858432}%
+\begin{divisionexercise}{5}{}{}{g:exercise:idm533824341168}%
 \(\frac{5}{6} \times \frac{1}{2} \)%
 \begin{sidebyside}{1}{0.1}{0.1}{0}%
 \begin{sbspanel}{0.8}%
@@ -1574,7 +1611,7 @@ NOTE \#1: Your final answer might not be in its most simplified form after Step 
 \end{sbspanel}%
 \end{sidebyside}%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{}{g:exercise:idm211748855552}%
+\begin{divisionexercise}{6}{}{}{g:exercise:idm533824338544}%
 \(\frac{1}{3} \times \frac{1}{4} \)%
 \begin{sidebyside}{1}{0.1}{0.1}{0}%
 \begin{sbspanel}{0.8}%
@@ -1592,7 +1629,7 @@ NOTE \#1: Your final answer might not be in its most simplified form after Step 
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Multiplying Decimals}{}{Multiplying Decimals}{}{}{x:worksheet:ws-mult-decimals}
-\begin{divisionexercise}{1}{}{}{g:exercise:idm211748950864}%
+\begin{divisionexercise}{1}{}{}{g:exercise:idm533825500800}%
 Using decimal squares show 3 groups of 0.12 (i.e., 3×0.12).%
 \begin{sidebyside}{1}{0.25}{0.25}{0}%
 \begin{sbspanel}{0.5}%
@@ -1600,7 +1637,7 @@ Using decimal squares show 3 groups of 0.12 (i.e., 3×0.12).%
 \end{sbspanel}%
 \end{sidebyside}%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{}{g:exercise:idm211748849136}%
+\begin{divisionexercise}{2}{}{}{g:exercise:idm533824332528}%
 Model the following multiplication expressions using decimal squares and find the answers. In each case explain how regrouping shows up both in the arithmetic operation and in the picture.%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -1608,7 +1645,7 @@ Model the following multiplication expressions using decimal squares and find th
 \item{}\(3 \times 0.74 \)%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211748844544}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533824328352}%
 Explain how using decimal squares helps explain where to put the decimal point in the following problems:%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -1617,7 +1654,7 @@ Explain how using decimal squares helps explain where to put the decimal point i
 \item{}\(100 \times 0.03 \)%
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{}{g:exercise:idm211748839760}%
+\begin{divisionexercise}{4}{}{}{g:exercise:idm533824323936}%
 Model the following multiplication expressions using decimal squares and find the answers. (Recall the definition of multiplication)%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -1629,13 +1666,13 @@ Model the following multiplication expressions using decimal squares and find th
 \begin{introduction}{}%
 Model the following multiplication expressions using an area model and find the answers.  Make sure that you can explain how you know where the decimal place goes.%
 \end{introduction}%
-\begin{divisionexercise}{5}{}{0.2}{g:exercise:idm211748834160}%
+\begin{divisionexercise}{5}{}{0.2}{g:exercise:idm533824318736}%
 \(0.4 \times 0.16\)%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm211748832240}%
+\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm533824316976}%
 \(1.2 \times 0.8\)%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{}{0.2}{g:exercise:idm211748830336}%
+\begin{divisionexercise}{7}{}{0.2}{g:exercise:idm533824315216}%
 \(2.3 \times 3.7 \)%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1658,38 +1695,38 @@ Model the following multiplication expressions using an area model and find the 
 \par
 Exploration 1: For the following story problems, write the corresponding numerical division expression (e.g.,  24÷6 ), decide what each number represents and which interpretation of division is involved. Find the quotient!%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.04}{g:exercise:idm211748827856}%
+\begin{divisionexercise}{1}{}{0.04}{g:exercise:idm533824313008}%
 The month of February in 2018 has 28 days. How many weeks are there in February 2018?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.04}{g:exercise:idm211748826464}%
+\begin{divisionexercise}{2}{}{0.04}{g:exercise:idm533824311616}%
 If you drive 324 miles at a constant speed for 6 hours, then how fast did you go?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.04}{g:exercise:idm211748824960}%
+\begin{divisionexercise}{3}{}{0.04}{g:exercise:idm533824310128}%
 The month of February in 2018 has 28 days. How many weeks are there in February 2018?%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{}{}{g:exercise:idm211748823376}%
+\begin{divisionexercise}{4}{}{}{g:exercise:idm533824308640}%
 If 75 fluid ounces of mouthwash costs \textdollar{}5, then how much of this mouthwash will you get for \textdollar{}1?%
 \end{divisionexercise}%
 \clearpage
 \begin{introduction}{}%
 Exploration 2: Write an expression involving division that would correspond to the following problems and find the answer if possible.%
 \end{introduction}%
-\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm211748820800}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533824306208}%
 I have 0 candies.  I want to make goodie bags with 5 candies each.  How many goodie bags can I make?%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm211748819200}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm533824304704}%
 I have 20 candies.  I want to make goodie bags with 0 candies each.  How many goodie bags can I make?%
 \end{divisionexercise}%
 \begin{introduction}{}%
 Exploration 3: Solve each of the following problems. Explain how the context affects what form the answer might take.%
 \end{introduction}%
-\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm211748816656}%
+\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm533824302304}%
 Nicole has 100 Halloween stickers that need to be distributed to her 32 students. How many stickers does each student receive?%
 \end{divisionexercise}%
-\begin{divisionexercise}{8}{}{0.1}{g:exercise:idm211748815040}%
+\begin{divisionexercise}{8}{}{0.1}{g:exercise:idm533824300784}%
 Marci has 100 second graders who are going to the zoo. Each bus will hold 32 students. How many buses does she need?%
 \end{divisionexercise}%
-\begin{divisionexercise}{9}{}{0.1}{g:exercise:idm211748813424}%
+\begin{divisionexercise}{9}{}{0.1}{g:exercise:idm533824299264}%
 Olivia has 100 square yards to make ghost costumes for Halloween. She needs to make 32 ghost costumes. How much material does she have for each costume?%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1718,27 +1755,27 @@ Exploration 1: Discuss how many \(\frac{1}{2} \) (halves) there are in one whole
 \begin{introduction}{}%
 Exploration 2: Use one of the models (Cuisenaire rods, fraction bars, fraction models, rectangles, pattern blocks, double number lines, etc.) to answer the following questions. Discuss which interpretation of division is suitable for each problem.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm211748945312}%
+\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm533824293248}%
 A carton containing \(\frac{1}{2} \)  a quart of cream is used to fill creamers that hold \(\frac{1}{6} \)  quart each.  How many creamers can be filled?%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm211748803552}%
+\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm533824291200}%
 A cookie recipe calls for \(\frac{1}{3} \) cup of sugar for one batch.  If you have \(\frac{1}{2} \) a cup of sugar, how many batches of cookies can you make?%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm211748801104}%
+\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm533824289152}%
 Katie wants to make a recipe that calls for \(2 \frac{1}{2} \) cups of flour but finds that she only has \(1 \frac{3}{4} \) cups of flour. Assuming she wants to keep all the ingredient ratios the same as in the recipe, what fraction of the recipe can she make?%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{4}{}{0.2}{g:exercise:idm211748798288}%
+\begin{divisionexercise}{4}{}{0.2}{g:exercise:idm533824286592}%
 You used 6 cans of paint for 3 walls, how many cans of paint do you need to paint one wall?  What if you used \(\frac{3}{4} \) of a can to paint \(\frac{2}{3} \) of a wall. How many cans of paint do you need to paint one wall?%
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{}{0.2}{g:exercise:idm211748795776}%
+\begin{divisionexercise}{5}{}{0.2}{g:exercise:idm533824284320}%
 If \(\frac{1}{4} \)  cup of water fills \(\frac{1}{3} \)  of a plastic container, then how much water will the full container hold?%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm211748793360}%
+\begin{divisionexercise}{6}{}{0.2}{g:exercise:idm533824282080}%
 If you have \(\frac{3}{4} \) pound of candy and you divide the candy in half, how much candy will you have in each portion? What if, you have \(\frac{3}{4} \) pound of candy and you divide the candy by half, how much candy will you have in each?%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{7}{}{0.2}{g:exercise:idm211748790560}%
+\begin{divisionexercise}{7}{}{0.2}{g:exercise:idm533824279456}%
 Explain why when is 4 divided by 8, the quotient is less than 4, but when \(\frac{1}{4} \)  is divided by \(\frac{1}{8} \) , the quotient is greater than \(\frac{1}{4} \)?%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1759,7 +1796,7 @@ Dividing Fractions with Pattern Blocks. (Use TWO yellow hexagons as the whole fo
 \end{sbspanel}%
 \end{sidebyside}%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{}{g:exercise:idm211748939664}%
+\begin{divisionexercise}{1}{}{}{g:exercise:idm533825489408}%
 \(\frac{3}{4} \div \frac{1}{12} \)%
 \begin{sidebyside}{1}{0.15}{0.15}{0}%
 \begin{sbspanel}{0.7}%
@@ -1775,7 +1812,7 @@ Dividing Fractions with Pattern Blocks. (Use TWO yellow hexagons as the whole fo
 \end{sbspanel}%
 \end{sidebyside}%
 \end{introduction}%
-\begin{divisionexercise}{2}{}{}{g:exercise:idm211748784432}%
+\begin{divisionexercise}{2}{}{}{g:exercise:idm533824273568}%
 \(\frac{1}{2} \div \frac{3}{4} \)%
 \begin{sidebyside}{1}{0.15}{0.15}{0}%
 \begin{sbspanel}{0.7}%
@@ -1791,7 +1828,7 @@ Dividing Fractions with Pattern Blocks. (Use TWO yellow hexagons as the whole fo
 \end{sbspanel}%
 \end{sidebyside}%
 \end{introduction}%
-\begin{divisionexercise}{3}{}{}{g:exercise:idm211748779696}%
+\begin{divisionexercise}{3}{}{}{g:exercise:idm533824269216}%
 \(\frac{3}{4} \div \frac{5}{12} \)%
 \begin{sidebyside}{1}{0.15}{0.15}{0}%
 \begin{sbspanel}{0.7}%
@@ -1812,7 +1849,7 @@ Dividing Fractions with Pattern Blocks. (Use TWO yellow hexagons as the whole fo
 \begin{introduction}{}%
 Exploration 4: Dividing Fractions with Rectangles.  Refer to the examples provided in class and Exploration \#1 to illustrate the following problems.  In each problem, one rectangle is the whole.%
 \end{introduction}%
-\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm211748942240}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm533824295552}%
 \(\frac{2}{3} \div \frac{1}{6} \)%
 \begin{sidebyside}{1}{0.1}{0.1}{0}%
 \begin{sbspanel}{0.8}%
@@ -1820,7 +1857,7 @@ Exploration 4: Dividing Fractions with Rectangles.  Refer to the examples provid
 \end{sbspanel}%
 \end{sidebyside}%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm211748775264}%
+\begin{divisionexercise}{2}{}{0.1}{g:exercise:idm533824265504}%
 \(\frac{5}{6} \div \frac{2}{5} \)%
 \begin{sidebyside}{1}{0.1}{0.1}{0}%
 \begin{sbspanel}{0.8}%
@@ -1828,7 +1865,7 @@ Exploration 4: Dividing Fractions with Rectangles.  Refer to the examples provid
 \end{sbspanel}%
 \end{sidebyside}%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm211748772160}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533824262656}%
 \(\frac{2}{5} \div \frac{3}{4} \)%
 \begin{sidebyside}{1}{0.1}{0.1}{0}%
 \begin{sbspanel}{0.8}%
@@ -1846,13 +1883,13 @@ Exploration 4: Dividing Fractions with Rectangles.  Refer to the examples provid
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Fraction Division Problems}{}{Fraction Division Problems}{}{}{x:worksheet:ws-div-frac-problems}
-\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm211748940864}%
+\begin{divisionexercise}{1}{}{0.2}{g:exercise:idm533825497024}%
 One serving of rice is \(\frac{2}{3} \) of a cup.  Sarah ate \(2 \frac{1}{2} \) cups of rice.  How many servings did Sarah eat?  Use a math drawing to illustrate your solution.  Write a division statement that represents the problem.%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm211748767680}%
+\begin{divisionexercise}{2}{}{0.2}{g:exercise:idm533824258288}%
 Running at a steady pace, Johanna ran 5 miles in  \(\frac{3}{4} \)  of an hour.  How many miles will she run in one hour?  Use a model\slash{}diagram to solve this.  Write a division statement that represents the problem.%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm211748765584}%
+\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm533824256464}%
 A crew is building a road.  So far the road is  \(\frac{3}{4} \) of a mile long.  This is  \(\frac{2}{3} \) the length of the road when it is finished.  How long will the road be when it’s finished? Use a model\slash{}diagram to solve this.  Write a division statement that represents the problem.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
@@ -1865,7 +1902,7 @@ A crew is building a road.  So far the road is  \(\frac{3}{4} \) of a mile long.
 %
 \newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
 \begin{worksheet-section-numberless}{Dividing Decimals}{}{Dividing Decimals}{}{}{x:worksheet:ws-div-decimals}
-\begin{divisionexercise}{1}{}{}{g:exercise:idm211748961648}%
+\begin{divisionexercise}{1}{}{}{g:exercise:idm533825495104}%
 Use the ``How many groups?'' meaning of division to find the following quotients using decimal squares.%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -1892,7 +1929,7 @@ Use the ``How many groups?'' meaning of division to find the following quotients
 \end{enumerate}
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{2}{}{}{g:exercise:idm211748743360}%
+\begin{divisionexercise}{2}{}{}{g:exercise:idm533824235984}%
 Use the ``How many in each group?''  meaning of division to find the following quotients using decimal squares.%
 %
 \begin{enumerate}[label=(\alph*)]
@@ -1918,12 +1955,152 @@ Use the ``How many in each group?''  meaning of division to find the following q
 %
 \end{enumerate}
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm211748736064}%
+\begin{divisionexercise}{3}{}{0.2}{g:exercise:idm533824229264}%
 Show how to perform decimal long division using \(23.7 \div 0.16 \) as an example.%
 \end{divisionexercise}%
 \clearpage
-\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm211748733808}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533824227248}%
 On the previous problem, did you move the decimal points when you divided? If so, why does your method make sense?  Explain in at least two ways. You might consider using base ten blocks, converting to fractions, etc.%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Exploring Numbers Through Rectangles}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Exploring Numbers Through Rectangles}{}{Exploring Numbers Through Rectangles}{}{}{x:worksheet:ws-exploring-numbers-tiles}
+\begin{introduction}{}%
+%
+\begin{itemize}[label=\textbullet]
+\item{}Materials:  Colored tiles (21 per student)%
+\item{}Directions: Using one tile, then two, then three, and so on, make all possible rectangles for each number of tiles, one through twenty-one. Record the dimensions (width in number of tiles by length in number of tiles) for each rectangle you could make. Record your results below.%
+\end{itemize}
+%
+\begin{sidebyside}{1}{0.15}{0.15}{0}%
+\begin{sbspanel}{0.7}%
+\includegraphics[width=1\linewidth]{images/number-tiles.png}
+\end{sbspanel}%
+\end{sidebyside}%
+\begin{sidebyside}{1}{0}{0}{0}%
+\begin{sbspanel}{1}%
+{\centering%
+\begin{tabular}{lllllllllll}
+1 Tile&&&&&2 Tiles&&&&&3 Tiles\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+4 Tiles&&&&&5 Tiles&&&&&6 Tiles\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+7 Tiles&&&&&8 Tiles&&&&&9 Tiles\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+10 Tiles&&&&&11 Tiles&&&&&12 Tiles\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+13 Tiles&&&&&14 Tiles&&&&&15 Tiles\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+16 Tiles&&&&&17 Tiles&&&&&18 Tiles\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+&&&&&&&&&&\tabularnewline[0pt]
+19 Tiles&&&&&20 Tiles&&&&&21 Tiles
+\end{tabular}
+\par}
+\captionof{table}{\label{g:table:idm533824106592}}
+\end{sbspanel}%
+\end{sidebyside}%
+\end{introduction}%
+\clearpage
+\begin{divisionexercise}{1}{}{0.05}{g:exercise:idm533823990112}%
+List all numbers of tiles that have a rectangle width of two. What kind of numbers are these?%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.05}{g:exercise:idm533823988624}%
+List all of the other numbers. What kind of numbers are these?%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.1}{g:exercise:idm533823987248}%
+List all numbers of tiles that had exactly two possible rectangles. What are these numbers called?%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{0.1}{g:exercise:idm533823985744}%
+How does your answer to number 3 relate to the definition that you learned in school?%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533823984256}%
+How does the number of different rectangle representations for a given number relate to the number of factors of that number?  Use 12 as an example.%
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{}{0.1}{g:exercise:idm533823982704}%
+Without making the rectangles, what rectangles could be made with 24 blocks? List their dimensions below.%
+\end{divisionexercise}%
+\begin{divisionexercise}{7}{}{0.1}{g:exercise:idm533823981200}%
+List all numbers of tiles that allow you to make squares.%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 GCF and LCM}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{GCF and LCM}{}{GCF and LCM}{}{}{x:worksheet:ws-gcf-lcm}
+\begin{divisionexercise}{1}{}{0.03}{g:exercise:idm533824224448}%
+%
+\begin{itemize}[label=\textbullet]
+\item{}List all of the factors of 18:%
+\item{}List all of the factors of 24:%
+\item{}Which factors are common?%
+\item{}What is the greatest common factor (GCF) between 18 and 24?%
+\end{itemize}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.03}{g:exercise:idm533824206832}%
+%
+\begin{itemize}[label=\textbullet]
+\item{}List the first ten multiples of 6:%
+\item{}List the first ten multiples of 9:%
+\item{}Which multiples are common?%
+\item{}What is the least common multiple (LCM) of 6 and 9?%
+\end{itemize}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.08}{g:exercise:idm533824201488}%
+What is the greatest common factor of 20 and 30?%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{0.08}{g:exercise:idm533824199936}%
+What is the least common multiple of 20 and 30?%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.1}{g:exercise:idm533824198400}%
+How is the least common multiple related to the addition of fractions?  Use   \(\frac{5}{6} + \frac{7}{9} \) as an example.%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 0 Even and Odd Numbers}
+\typeout{************************************************}
+%
+\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Even and Odd Numbers}{}{Even and Odd Numbers}{}{}{x:worksheet:ws-even-odd}
+\begin{divisionexercise}{1}{}{0.15}{g:exercise:idm533824222848}%
+Explain why an even counting number can always be written in the form of 2N for some whole number N.%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.15}{g:exercise:idm533824216896}%
+Explain why an odd counting number can always be written in the form of 2M+1 for some whole number M.%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.15}{g:exercise:idm533824215488}%
+If you add an even number and an odd number, what kind of number do you get? Explain.%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{0.15}{g:exercise:idm533824214000}%
+If you multiply an even number by 3 and then add 5, what kind of number do you get? Explain.%
 \end{divisionexercise}%
 \end{worksheet-section-numberless}
 \restoregeometry

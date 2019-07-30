@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-even-odd">
+
+  <title>Even and Odd Numbers</title>
+
+  <exercise workspace="15%">
+    <statement>
+      <p>
+        Explain why an even counting number can always be written in the form of 2N for some whole number N.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="15%">
+    <statement>
+      <p>
+        Explain why an odd counting number can always be written in the form of 2M+1 for some whole number M.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="15%">
+    <statement>
+      <p>
+        If you add an even number and an odd number, what kind of number do you get? Explain.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise workspace="15%">
+    <statement>
+      <p>
+        If you multiply an even number by 3 and then add 5, what kind of number do you get? Explain.
+      </p>
+    </statement>
+  </exercise>
+
+</worksheet>
