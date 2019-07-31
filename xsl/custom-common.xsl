@@ -116,8 +116,8 @@
 <xsl:param name="address.html" select="''" />
 <xsl:param name="address.pdf" select="''" />
 
-<!-- To start chapters at 0 (might change later)-->
-<xsl:param name="debug.chapter.start" select="'0'" />
+<!-- To start chapters at 2 (might change later)-->
+<xsl:param name="debug.chapter.start" select="'2'" />
 
 <!-- Forward links to solutions -->
 <!-- very temporary, just for testing -->
