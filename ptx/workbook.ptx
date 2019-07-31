@@ -9,19 +9,41 @@
 
     <xi:include href="./frontmatter.ptx"/>
     <chapter>
-      <title>Worksheets</title>
+      <title>Chapter 2 (Place Value and Different Bases)</title>
+      <introduction>
+        See Chapter 2 of the online text for reference with these activities.
+      </introduction>
 
-    <xi:include href="./worksheets/ws-quintopia-1-intro.ptx"/>
-    <xi:include href="./worksheets/ws-quintopia-2-shopping.ptx"/>
-    <xi:include href="./worksheets/ws-quintopia-3-base-connections.ptx"/>
-    <xi:include href="./worksheets/ws-add-sub-algorithms.ptx"/>
-    <xi:include href="./worksheets/ws-different-bases.ptx"/>
-    <xi:include href="./worksheets/ws-EP-add-sub.ptx"/>
-    <xi:include href="./worksheets/ws-mental-add-properties.ptx"/>
-    <xi:include href="./worksheets/ws-numberline-add-sub.ptx"/>
-    <xi:include href="./worksheets/ws-decimals-add-sub.ptx"/>
-    <xi:include href="./worksheets/ws-add-sub-strip-diagrams.ptx"/>
-    <xi:include href="./worksheets/ws-add-sub-reasoning.ptx"/>
+    <xi:include href="./ch2/ws-quintopia-1-intro.ptx"/>
+    <xi:include href="./ch2/ws-quintopia-2-shopping.ptx"/>
+    <xi:include href="./ch2/ws-quintopia-3-base-connections.ptx"/>
+    <xi:include href="./ch2/ws-different-bases.ptx"/>
+
+    </chapter>
+
+    <chapter>
+      <title>Chapter 3 (Number and Operations with Whole Numbers)</title>
+      <introduction>
+        See Chapter 3 of the online text for reference with these activities.
+      </introduction>
+    <xi:include href="./ch3/ws-add-sub-algorithms.ptx"/>
+    <xi:include href="./ch3/ws-EP-add-sub.ptx"/>
+    <xi:include href="./ch3/ws-mental-add-properties.ptx"/>
+    <xi:include href="./ch3/ws-numberline-add-sub.ptx"/>
+    <xi:include href="./ch3/ws-add-sub-strip-diagrams.ptx"/>
+    <xi:include href="./ch3/ws-add-sub-reasoning.ptx"/>
+    <xi:include href="./ch3/ws-multiplication-models.ptx"/>
+    <xi:include href="./ch3/ws-div-meaning.ptx"/>
+
+    </chapter>
+
+    <!-- <xi:include href="./backmatter.ptx"/> -->
+  </book>
+</pretext>
+
+
+
+    <!-- <xi:include href="./worksheets/ws-decimals-add-sub.ptx"/>
     <xi:include href="./worksheets/ws-fractions-intro-rectangle.ptx"/>
     <xi:include href="./worksheets/ws-fractions-intro-sets.ptx"/>
     <xi:include href="./worksheets/ws-fractions-intro-Cuisenaire.ptx"/>
@@ -34,11 +56,9 @@
     <xi:include href="./worksheets/ws-add-sub-fractions-extension.ptx"/>
     <xi:include href="./worksheets/ws-add-sub-integers.ptx"/>
     <xi:include href="./worksheets/ws-integer-arithmetic-situations.ptx"/>
-    <xi:include href="./worksheets/ws-multiplication-models.ptx"/>
     <xi:include href="./worksheets/ws-mult-fractions.ptx"/>
     <xi:include href="./worksheets/ws-mult-fractions-EP.ptx"/>
     <xi:include href="./worksheets/ws-mult-decimals.ptx"/>
-    <xi:include href="./worksheets/ws-div-meaning.ptx"/>
     <xi:include href="./worksheets/ws-div-frac-1.ptx"/>
     <xi:include href="./worksheets/ws-div-frac-2.ptx"/>
     <xi:include href="./worksheets/ws-div-frac-3.ptx"/>
@@ -47,13 +67,4 @@
     <xi:include href="./worksheets/ws-div-decimals.ptx"/>
     <xi:include href="./worksheets/ws-exploring-numbers-tiles.ptx"/>
     <xi:include href="./worksheets/ws-gcf-lcm.ptx"/>
-    <xi:include href="./worksheets/ws-even-odd.ptx"/>
-
-
-
-
-    </chapter>
-
-    <!-- <xi:include href="./backmatter.ptx"/> -->
-  </book>
-</pretext>
+    <xi:include href="./worksheets/ws-even-odd.ptx"/> -->
